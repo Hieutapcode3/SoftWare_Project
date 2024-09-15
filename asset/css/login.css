@@ -124,7 +124,7 @@
   color: #cd0303;
 }
 #success-message {
-  color: #28a745; /* Green color for success messages */
+  color: #00ff3a; /* Green color for success messages */
 }
   .form__icon {
     object-fit: contain;

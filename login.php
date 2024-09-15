@@ -16,7 +16,7 @@ if ($_POST) {
             $row = mysqli_fetch_assoc($result);
             if ($pass === $row['password']) {
                 $_SESSION['user'] = $user;
-                header("Location: index.php");  
+                header("Location: index.html");  
                 exit();
             } else {
                 $_SESSION['error_login_message'] = "Incorrect username or password!";
