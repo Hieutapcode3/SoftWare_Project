@@ -13,6 +13,31 @@ button i {
 .input-select {
     display: none;
 }
+.next-question-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.next-question-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 16px;
+    background-color: #FF4400;
+}
+.next-question-btn button p {
+    margin: 0;
+    padding-right: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: sans-serif;
+}
+.next-question-btn button i {
+    font-weight: bold;
+    font-size: 16px;
+}
 
 
 
@@ -167,6 +192,7 @@ nav .container-nav-bar i {
 }
 
 .container-body {
+
 }
 .container-body .container-complete-percent {
     padding: 0 24px;
@@ -209,7 +235,8 @@ nav .container-nav-bar i {
     top: 0px;
     height: 4px;
     position: absolute;
-    width: 5%;
+    width: var(--progress-width, 0%);
+    transition: width 0.5s ease-in-out;
 
 }
 .container-complete-percent .complete-percent .completed-text {
@@ -220,15 +247,13 @@ nav .container-nav-bar i {
     font-weight: 400;
     line-height: 16px;
 }
-.container-body form {
-
-}
 .container-body form .container-form-select {
     padding: 0 24px;
     width: 100%;
 }
 .container-form-select .form-selection {
     max-width: 470px;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -237,6 +262,12 @@ nav .container-nav-bar i {
 .container-form-select .form-selection .question {
     width: 100%;
     margin-bottom: 40px;
+}
+.form-selection .question p {
+    color: #fff;
+    margin: 0;
+    font-weight: 450;
+    font-size: 17px;    
 }
 .form-selection .question h1 {
     color: #fff;
@@ -251,8 +282,68 @@ nav .container-nav-bar i {
     display: flex;
     flex-direction: column;
 }
-.form-selection .container-options .options {
+.form-selection .container-options.water-drink {
+    margin-bottom: 40px;
+}
+.container-options.water-drink .options {
+}
+.container-options.water-drink .options label {
+    height: auto;
+    padding: 14px;
+    margin-bottom: 16px;
+    color: #fff;
+    align-items: flex-start;
+}
+.container-options.water-drink .options label input {
+    display: flex;
+    appearance: none;
+    margin-top: 4px;
 
+}
+.container-options.water-drink .options label input::before {
+    content: "";
+    width: 22px; 
+    display: block;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #212529;
+    border: 3px solid #B3B3B3; 
+}
+.container-options.water-drink .options label input:checked::before {
+    display: none;
+}
+.container-options.water-drink .options label input:checked {
+    display: flex;
+    width: 24px; 
+    height: 22px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #FF6025; 
+}
+
+.container-options.water-drink .options label input:checked::after {
+    content: "";
+    display: block;
+    width: 12px; 
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF6025;
+}
+.container-options.water-drink .options label span {
+    font-size: 18px;
+    padding-left: 16px;
+    line-height: 26px;
+}
+.container-options.water-drink .options label span p:first-child {
+    margin: 0;
+    font-weight: 600;
+}
+.container-options.water-drink .options label span p:nth-child(2) {
+    margin: 0;
+    font-weight:100;
+    font-size: 14px;
+    color: #DADADA;
 }
 .container-options .options label {
     height: 168px;
@@ -292,4 +383,170 @@ nav .container-nav-bar i {
     right: 12px;
     width: 120px;
     height: 300px;
+}
+.container-form-select .form-selection.body-fat {
+    max-width: 100%;
+    display: flex;
+}
+.form-selection .container-body-fat {
+    display: flex;
+}
+.form-selection .container-body-fat .container-img-body-fat {
+    width: 50%;
+    min-height: calc(100vh - 133px);
+    display: flex;
+    justify-content: center;
+}
+.container-body-fat .container-img-body-fat .img-body-fat {
+    width: 190px;
+    position: relative;
+
+}
+.container-img-body-fat .img-body-fat .layout {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.container-img-body-fat .img-body-fat .layout img {
+    width: 350px;
+    position: absolute;
+    top:12%;
+}
+.container-img-body-fat .img-body-fat>img {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 0;
+    height: 480px;
+}
+.form-selection .container-body-fat .container-range-slider {
+    background-color: #1E1E1E;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 64px;
+}
+.container-body-fat .container-range-slider .range-slider {
+    max-width: 470px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container-range-slider .range-slider .container-range-percent {
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+.range-slider .container-range-percent .range-percent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 14px;
+    width: 100%;
+}
+.container-range-percent .range-percent .index-range {
+    padding: 3px 8px;
+    margin-bottom: 10px;
+    background-color: #393939;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    min-width: 32px;
+    transform: translateX(-50%);
+    position: relative;
+}
+.container-range-percent .range-percent .index-range::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - 6px);
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7px 6px 0px;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: #393939;
+    transition: left 0.3s ease;
+}
+.range-percent .index-range p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 26px;
+}
+.container-range-percent .range-percent input {
+    width: 100%;
+    height: 28px;
+    cursor: pointer;
+    appearance: none;
+    background: transparent;
+    z-index: 1;
+}
+.container-range-percent .range-percent input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ff4d00;
+    border: 2px solid #000;
+    transform: translateX(var(--thumb-transform, -50%));
+    transition: transform 0.1s;
+}
+.container-range-percent .range-percent .background-input {
+    position: absolute;
+    bottom: 41%;
+    width: 100%;
+    height: 8px;
+    background-color: rgb(163, 43, 0);
+}
+.container-range-percent .range-percent .background-input::after {
+    content: "";
+    position: relative;
+    bottom: 2px;
+    display: flex;
+    height: 12px;
+    width: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(to left, #121212, 1px, transparent 1px);
+    background-size: calc(100%/7) ;
+}
+.container-range-percent .range-percent .value-range {
+    margin-top: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.range-percent .value-range p {
+    color: #fff;
+    margin: 0;
+}
+.container-range-slider .range-slider .next-question-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.range-slider .next-question-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 16px;
+    background-color: #FF4400;
+}
+.range-slider .next-question-btn button p {
+    margin: 0;
+    padding-right: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: sans-serif;
+}
+.range-slider .next-question-btn button i {
+    font-weight: bold;
+    font-size: 16px;
 }

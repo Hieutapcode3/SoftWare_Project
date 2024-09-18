@@ -41,38 +41,246 @@
                 <div class="complete-percent">
                     <button type="button" title="Go back" class="back-btn"><i class="ti-angle-left"></i></button>
                     <span class="completed-bar"></span>
-                    <p class="completed-text">1/31</p>
+                    <p class="completed-text"></p>
                 </div>
             </div>
             <form action="">
                 <div class="container-form-select">
-                    <div class="form-selection">
+                    <div class="form-selection" id = "question-1" data-question ="1" style="display: none;">
                         <div class="question">
                             <h1>Chọn tạng người của bạn</h1>
                         </div>
                         <div class="container-options">
                             <div class="options">
-                                <label for="">
-                                    <input type="radio" name="bodyType" class="input-select">
+                                <label for="" class="label">
+                                    <input type="radio" name="bodyType" class="input-select" value="Mảnh khảnh">
                                     <span>Mảnh khảnh</span>
                                     <img src="./asset/img/bodytype_1.jpg" alt="">
                                 </label>
                             </div>
                             <div class="options">
-                                <label for="">
-                                    <input type="radio" name="bodyType" class="input-select">
+                                <label for="" class="label">
+                                    <input type="radio" name="bodyType" class="input-select" value="Trung bình">
                                     <span>Trung bình</span>
-                                    <img src="./asset/img/bodytype_2.jpg" alt="">
+                                    <img src="./asset/img/bodytype_2.jpg" alt="" >
                                 </label>
                             </div>
                             <div class="options">
-                                <label for="">
-                                    <input type="radio" name="bodyType" class="input-select">
+                                <label for="" class="label">
+                                    <input type="radio" name="bodyType" class="input-select" value="Nặng">
                                     <span>Nặng</span>
                                     <img src="./asset/img/bodytype_3.jpg" alt="">
                                 </label>
                             </div>
                         </div>
+                    </div>
+                    <div class="form-selection" id = "question-2" data-question="2" style="display: none;">
+                        <div class="question">
+                            <h1>Chọn mục tiêu của bạn</h1>
+                        </div>
+                        <div class="container-options">
+                            <div class="options">
+                                <label for="" class="label">
+                                    <input type="radio" name="bodyTarget" class="input-select" value="Giảm Cân">
+                                    <span>Giảm Cân</span>
+                                    <img src="./asset/img/bodytarget_1.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="" class="label">
+                                    <input type="radio" name="bodyTarget" class="input-select" value="Tăng Cơ Bắp">
+                                    <span>Tăng Cơ Bắp</span>
+                                    <img src="./asset/img/bodytarget_2.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="" class="label">
+                                    <input type="radio" name="bodyTarget" class="input-select" value="Cắt Nét Cơ">
+                                    <span>Cắt Nét Cơ</span>
+                                    <img src="./asset/img/bodytarget_3.jpg" alt="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-3" data-question="3" style="display: none;">
+                        <div id="reduce-weight" style="display: none;">
+                            <div class="question">
+                                <p>Ok, vậy mục tiêu của bạn là Giảm Cân</p>
+                                <h1>Chọn thân hình bạn muốn</h1>
+                            </div>
+                            <div class="container-options">
+                                <div class="options">
+                                    <label for="" class="label">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình mảnh mai">
+                                        <span>Thân hình mảnh mai</span>
+                                        <img src="./asset/img/bodytype_1.jpg" alt="">
+                                    </label>
+                                </div>
+                                <div class="options">
+                                    <label for="" class="label">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình mảnh, cắt nét">
+                                        <span>Thân hình mảnh, cắt nét</span>
+                                        <img src="./asset/img/bodytarget_1.jpg" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gain-muscal" style="display: none;">
+                            <div class="question">
+                                <p>Ok, vậy mục tiêu của bạn là Tăng Cơ Bắp</p>
+                                <h1>Chọn thân hình bạn muốn</h1>
+                            </div>
+                            <div class="container-options">
+                                <div class="options">
+                                    <label for="" class="label">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Vận động viên">
+                                        <span>Vận động viên</span>
+                                        <img src="./asset/img/bodytarget_5.jpg" alt="">
+                                    </label>
+                                </div>
+                                <div class="options">
+                                    <label for="" class="label">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Anh hùng">
+                                        <span>Anh hùng</span>
+                                        <img src="./asset/img/bodytarget_6.jpg" alt="">
+                                    </label>
+                                </div>
+                                <div class="options">
+                                    <label for="" class="label">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thể hình">
+                                        <span>Thể hình</span>
+                                        <img src="./asset/img/bodytarget_7.jpg" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cut-muscal" style="display: none;">
+                            <div class="question">
+                                <p>Ok, vậy mục tiêu của bạn là Cắt Nét Cơ</p>
+                                <h1>Chọn thân hình bạn muốn</h1>
+                            </div>
+                            <div class="container-options">
+                                <div class="options">
+                                    <label for="" class="label">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình săn chắc">
+                                        <span>Thân hình săn chắc</span>
+                                        <img src="./asset/img/bodytarget_2.jpg" alt="">
+                                    </label>
+                                </div>
+                                <div class="options">
+                                    <label for="">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình tập luyện">
+                                        <span>Thân hình tập luyện</span>
+                                        <img src="./asset/img/bodytarget_3.jpg" alt="">
+                                    </label>
+                                </div>
+                                <div class="options">
+                                    <label for="">
+                                        <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình vừa vặn">
+                                        <span>Thân hình vừa vặn</span>
+                                        <img src="./asset/img/bodytarget_4.jpg" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-selection body-fat" id = "question-4" data-question="4" style="display: none;">
+                        <div class="container-body-fat">
+                            <div class="container-img-body-fat">
+                                <div class="img-body-fat">
+                                    <span class="layout">
+                                        <img src="./asset/img/bg.svg" alt="">
+                                    </span>
+                                    <img src="./asset/img/bodyfat_1.jpg" alt="" id="bodyFatImg">
+                                </div>
+                            </div>
+                            <div class="container-range-slider">
+                                <div class="range-slider">
+                                    <div class="question">
+                                        <h1>Chọn mức độ mỡ trong cơ thể của bạn</h1>
+                                    </div>
+                                    <div class="container-range-percent">
+                                        <div class="range-percent">
+                                            <div class="index-range">
+                                                <p id="rangeValue">5-9%</p>
+                                            </div>
+                                            <input type="range" min="0" max="7" step="1" name="bodyFat" value="0" class="range-input" id="myRange">
+                                            <div class="background-input"></div>
+                                            <div class="value-range">
+                                                <p>5-9%</p>
+                                                <p>>40%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-question-btn">
+                                        <button type="button">
+                                            <p>Tiếp tục</p>
+                                            <i class="ti-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-5" data-question="5" style="display: none;">
+                        <div class="question">
+                            <h1>Hằng ngày bạn uống bao nhiêu nước?</h1>
+                        </div>
+                        <div class="container-options water-drink">
+                            <div class="options">
+                                <label for="water-1"">
+                                    <input type="radio" name="water-drink" class="input-select" value="Chỉ cà phê hoặc trà " id="water-1">
+                                    <span>
+                                        <p>Chỉ cà phê hoặc trà ☕️</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="water-2"">
+                                    <input type="radio" name="water-drink" class="input-select" value="Ít hơn 2 cốc "id="water-2">
+                                    <span>
+                                        <p>Ít hơn 2 cốc 💧</p>
+                                        <p>lên đến 0,5 l / 17 oz</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="water-3"">
+                                    <input type="radio" name="water-drink" class="input-select" value="2-6 cốc " id="water-3">
+                                    <span>
+                                        <p>2-6 cốc 💧💧</p>
+                                        <p>0,5-1,5 l / 17-50 oz</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="water-4"">
+                                    <input type="radio" name="water-drink" class="input-select" value="7-10 cốc " id="water-4">
+                                    <span>
+                                        <p>7-10 cốc 💧💧💧</p>
+                                        <p>1,5-2,5 l / 50-85 oz</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="water-5"">
+                                    <input type="radio" name="water-drink" class="input-select" value="Hơn 10 cốc " id="water-5">
+                                    <span>
+                                        <p>Hơn 10 cốc 🐳</p>
+                                        <p>hơn 2,5 l / 85 oz</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection">
+
                     </div>
                 </div>
             </form>
@@ -111,4 +319,5 @@ document.addEventListener("click", (event) => {
   }
 });
 </script>
+<script src="./asset/js/form.js"></script>
 </html>
