@@ -1,0 +1,143 @@
+.combined-section {
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  padding-top: 50px;
+  
+}
+
+
+.combined-content-left {
+  width: 100%;
+}
+
+.nutrition-plan,
+.workout-plan {
+  margin-bottom: 50px; /* Tăng khoảng cách giữa các phần */
+}
+
+.nutrition-plan h3,
+.workout-plan h3 {
+  font-size: 24px;
+  margin-bottom: 20px; /* Tăng khoảng cách dưới tiêu đề phần */
+}
+
+.nutrition-plan p,
+.workout-plan p {
+  margin: 10px 0; /* Tăng khoảng cách giữa các đoạn văn */
+  line-height: 1.8; /* Tăng chiều cao dòng để dễ đọc */
+}
+
+.cta-button {
+  display: inline-block;
+  font-size: 22px;
+  padding: 12px 25px; /* Tăng kích thước nút */
+  background-color: #ff4d00;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 15px; /* Tạo khoảng cách giữa nút và nội dung trên */
+}
+
+.cta-button:hover {
+  background-color: #f58757;
+}
+
+#main-slider {
+  width: 100%; /* Tăng chiều rộng lớn hơn 100% */
+  z-index: 0; /* Đảm bảo slider nằm dưới các phần tử khác nếu cần */
+  list-style: none; /* Xóa dấu chấm hoặc ký hiệu của <ul> */
+  
+}
+
+#main-slider .slides {
+  padding: 0; /* Xóa khoảng đệm mặc định của <ul> */
+  margin: 0; /* Xóa margin của ul */
+}
+
+#main-slider .slides > li {
+  display: none;
+  list-style: none; /* Xóa dấu chấm hoặc ký hiệu của li */
+  margin: 0; /* Xóa margin của li */
+  padding: 0; /* Xóa padding của li */
+  background: radial-gradient(87.54% 59.7% at 50.13% 54.1%, rgba(31, 147, 255, 0.275) 0%, rgba(30, 30, 30, 0) 100%);
+}
+
+#main-slider .slides >li:last-child{
+  background: radial-gradient(87.54% 59.7% at 50.13% 54.1%, rgba(4, 138, 155, 0.959) 0%, rgba(30, 30, 30, 0) 100%);
+}
+
+/* Hiển thị slide hiện tại */
+#main-slider .slides > li.active {
+  animation: fade-in 1s ease-in-out;
+}
+
+/* Caption (Text) on Slide */
+.flex-caption {
+  width: 100%;
+  background: transparent; 
+  color: white;
+  text-align: center;
+}
+
+/* Caption Title Styling */
+.flex-caption h3 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  
+}
+
+/* Caption Paragraph Styling */
+.flex-caption p {
+  margin: 5px 0 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.flex-caption ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-caption li{
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.flex-caption span{
+  margin-right: 10px;
+}
+
+/* Keyframe animation for slide transition */
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .flex-caption {
+      bottom: 30px;
+      left: 20px;
+      padding: 10px 15px;
+      max-width: 90%;
+  }
+
+  .flex-caption h3 {
+      font-size: 24px;
+  }
+
+  .flex-caption p {
+      font-size: 16px;
+  }
+}

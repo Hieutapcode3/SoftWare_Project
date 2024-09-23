@@ -1,0 +1,914 @@
+body {
+    margin: 0;
+    font-family:'__Inter_da7b88', '__Inter_Fallback_da7b88';
+    background-color:#121212;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  /* Header */
+.head {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.header-container {
+  width: 100%;
+  z-index: 10; /* Đảm bảo phần đầu trang ở trên hình ảnh */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0); /* Nền trong suốt */
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box; /* Đảm bảo padding không làm phần tử rộng hơn 100% */
+  overflow: hidden; /* Ngăn chặn nội dung tràn ra ngoài */
+}
+
+/* Brand */
+.brand {
+display: flex;
+align-items: center;
+}
+
+.brand i {
+color: #06ff8f;
+font-size: 32px;
+margin-right: 10px;
+}
+
+.brand h2 {
+color: #11ad67;
+margin: 0;
+font-size: 32px;
+font-weight: 700;
+font-family: 'Bebas Neue', sans-serif;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+}
+
+.nav a {
+  color: #ffffff; /* Darker text for nav items */
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff4d00;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: #ff4d00;
+}
+
+
+  .container {
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+
+  .muscle {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 608px;
+    margin: 0px auto;
+    box-sizing: border-box;
+  }
+  
+  .muscle .part1 {
+    flex: 1;
+  }
+  
+  .part1 .arrow {
+    background-image: url("/SoftWare_Project/asset/img/arrows.png"); /* Hình mũi tên chỉ từ trái sang phải */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 265px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .arrow .body_img {
+    position: relative;
+    width: 50%;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .body_img img {
+    width: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh vừa khít trong vùng hiển thị */
+    object-position: top; /* Hiển thị phần thân, không hiển thị chân */
+  }
+
+  .body_img .body_muscle{
+    width: 140px;
+    margin: 0px auto;
+  }
+  
+  .muscle .part2 {
+    display: flex;
+    background-color: #1E1E1E;
+    justify-content: center; 
+    align-items: center; 
+    height: 42px; 
+  }
+  
+  .part2 .time {
+    border: 2px solid #2A2A2A;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0 24px; 
+    height: 100%; 
+    width: 50%;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .time:first-child{
+    border-left: none;
+  }
+
+  .time:last-child{
+    border-right: none;
+    border-left: none;
+  }
+  
+  .time p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: none;
+    color: #fff;
+  }
+
+  .muscle .part3{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-top: 2px solid #2A2A2A;
+    border-bottom: 2px solid #2A2A2A;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px ;
+    overflow: hidden;
+    
+  }
+
+  .part3 .body-time{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 22px 36px 8px;
+  }
+
+  .body-time:first-child{
+    border-right: 2px solid #2A2A2A;
+  }
+
+  .body-time .span1{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 3px;
+  }
+
+  .body-time .span2{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: #FF6025;
+  }
+
+  .muscle-progress {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    max-width: 138px;
+  }
+
+  .muscle-progress .muscle-bar{
+    display: flex;
+    width: 24px;
+    height: 4px;
+    background-color: #661B00;
+  }
+
+  .muscle-progress .muscle-bar-show{
+    display: flex;
+    width: 24px;
+    height: 4px;
+    background-color: #FF6025;
+  }
+  
+  .muscle .canh-cao{
+    margin: 8px 0px;
+    text-align: center;
+    color: #8D8D8D;
+  }
+  
+
+
+
+
+  .summary {
+    background-color: #00000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 648px;
+    margin: 0 auto;
+}
+
+.summary h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.summary p{
+  color: #fff;
+  font-size: 24;
+}
+
+/* Bố cục cho các phần tóm tắt */
+.summary-item {
+    margin-bottom: 20px;
+    background-color: #2A2A2A;
+    padding: 30px 16px 16px;
+    position: relative;
+    
+}
+
+.sumary-container{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.recommended-label {
+  position: absolute;
+  top: 0px; 
+  right: 0px; 
+  background-color: transparent; 
+  color: #FF6025; 
+  padding: 4px 8px;
+  border: 1px solid #ff4d00;
+  font-size: 12px; 
+  z-index: 2; 
+}
+
+
+.summary-header{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.summary-header .icon-sum{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 34px;
+  border: 2px solid gray;
+  margin-right: 16px;
+  line-height: 48px;
+}
+
+.summary-item h4 {
+    color: #f8fcff;
+    font-size: 18px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.bmi-value, .calories-value, .water-value {
+    font-size: 28px;
+    font-weight:bolder;
+    color: #fff;
+    margin-bottom: 16px;
+    
+}
+
+
+.bmi-progress {
+  width: 100%;
+  height: 20px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
+  display: none;
+}
+
+.bmi-progress.show{
+  display: block;
+}
+
+.bmi-progress-bar {
+  height: 100%;
+  background-color: #fff; /* Màu mặc định cho thanh tiến trình */
+  width: 0%; /* Độ dài của thanh sẽ được cập nhật bằng JavaScript */
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  
+}
+
+/* Các mức phân loại màu sắc */
+.bmi-underweight {
+  background-color: #1a66bc; /* Màu cho thiếu cân */
+}
+
+.bmi-normal {
+  background-color: #2ecc71; /* Màu cho bình thường */
+}
+
+.bmi-overweight {
+  background-color: #f39c12; /* Màu cho thừa cân */
+}
+
+.bmi-obese {
+  background-color: #e74c3c; /* Màu cho béo phì */
+}
+
+.bmiResult {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+
+
+/*calo */
+.calories-progress {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(270deg, rgba(255, 68, 0, 0.7) 0%, rgba(255, 68, 0, 0.07) 100%);
+  position: relative;
+  border-radius: 4px;
+}
+
+.calories-progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.progress-indicator {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px; /* Kích thước của chỉ báo */
+  height: 14px;
+  background: #FF6025; /* Màu nền của chỉ báo */
+  border: 2px solid #1E1E1E; /* Màu viền của chỉ báo */
+  box-shadow: 0 2px 2px #1E1E1E; /* Đổ bóng cho chỉ báo */
+  border-radius: 30px; /* Góc bo tròn của chỉ báo */
+  opacity: 0; /* Khởi đầu ẩn */
+  left: 0; /* Vị trí bắt đầu */
+  transition: opacity 0.3s ease-in, left 1s ease-in; /* Hiệu ứng chuyển động */
+  z-index: 1; /* Đảm bảo chỉ báo nằm trên thanh tiến trình */
+}
+
+.calories-progress.active .progress-indicator {
+  opacity: 1;
+  left: 55%;
+}
+
+.calories-progress[data-value] .progress-indicator {
+  left: calc((var(--progress-value) * 1%) - 17px); /* 17px là một nửa width để canh giữa chỉ báo */
+  transition: left 1s ease-in;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #f8fcff;
+}
+
+.label-left,
+.label-right {
+  position: relative;
+  top: 8px; 
+}
+
+
+/* Flexbox để chia đều 2 div ngang nhau */
+.summary-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.summary-grid .summary-item {
+    flex: 1; /* Chia đều mỗi div */
+}
+
+
+/* !!! */
+.info-icon {
+  font-size: 20px;
+  color: #fff; /* Màu cam nổi bật */
+  margin-left: 8px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+  z-index: 1000; /* Đảm bảo lớp phủ nổi lên trên các phần tử khác */
+}
+
+.info-popup {
+  display: none; /* Ẩn hộp thoại ban đầu */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #393939;
+  z-index: 1001; /* Đảm bảo hộp thoại nổi lên trên lớp phủ */
+}
+
+.info-popup .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.info-popup h4{
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.water-progress {
+  display: flex;
+}
+
+.water-progress-bar {
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.water {
+  width: 22px; /* Kích thước của mỗi hình ảnh */
+  height: 32px;
+  background-size: cover;
+  background-image: url('/SoftWare_Project/asset/img/glass_empty.svg');
+  margin-right: 4px; /* Khoảng cách giữa các hình ảnh */
+} 
+
+
+
+
+
+
+
+.target {
+  max-width: 648px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px #ff4d00;
+  color: #333;
+}
+
+.target h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.target p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fbfdfe;
+  margin-bottom: 20px;
+}
+
+.target div {
+  margin-bottom: 20px;
+}
+
+.target .receive {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.target .receive ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.target .receive li {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 40px; /* Tạo khoảng cách cho biểu tượng */
+}
+
+.target .receive li i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff4d00; /* Màu biểu tượng */
+  font-size: 20px; /* Kích thước biểu tượng */
+}
+
+.workoutPlanSection{
+  text-align: center;
+}
+
+.workoutPlanSection h2{
+  font-size: 26px;
+}
+
+.workoutPlanSection p{
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+}
+
+.workoutPlanSection .one{
+  font-size: 18px;
+  margin-bottom: 40px;
+  margin-top: 25px;
+}
+
+.workoutPlanSection .half-circle{
+  margin: 0px auto 24px;
+  text-align: center;
+  width: 252px;
+}
+
+.workoutPlanSection figcaption{
+  margin-top: -68px;
+}
+
+.workoutPlanSection figcaption span{
+  display: block;
+  margin-bottom: 4px;
+}
+
+.workoutPlanSection figcaption p{
+  display: flex;
+  justify-content: space-between;
+}
+
+.workoutPlanSection figcaption strong{
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 6px;
+}
+
+.workoutPlanSection ul{
+  list-style: none;
+  margin: 0px auto;
+  max-width: 560px;
+}
+
+.workoutPlanSection li{
+  align-items: center;
+  display: flex;
+  padding-bottom: 24px;
+  text-align: left;
+  width: 100%;
+}
+
+.workoutPlanSection i{
+  align-items: center;
+  background-color: #2A2A2A;
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  margin-right: 16px;
+  min-width: 32px;
+  width: 32px;
+}
+
+
+.mealPlanSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto ;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.mealPlanSection img {
+  width: 460px;
+}
+
+.mealPlanText {
+  flex: 1;
+  text-align: left;
+  margin-right: 16px;
+}
+
+.habitSystemSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto ;
+  flex-direction: row; 
+  margin-top: 20px;
+}
+
+.habitSystemSection img {
+  width: 460px;
+}
+
+.habitSystemText {
+  flex: 1;
+  text-align: left;
+  margin-left: 24px;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 32px;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+
+#content {
+  padding: 20px;
+}
+
+#content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-4 {
+  width: 32%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-box {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Can be changed to flex-start for left alignment */
+}
+
+.service-content i {
+  margin-right: 10px; /* Space between icon and heading */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.service-box h3 {
+  font-size: 20px;
+}
+
+.service-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+.material-icons {
+  font-size: 40px;
+  color: #ff4d00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the BMI section */
+.bmi-section {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #ff4d00; /* Subtle shadow */
+  max-width: 360px; 
+  margin: 0 auto; 
+  margin-top: 40px;
+}
+
+.bmi-section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333; /* Dark gray text */
+  text-align: center;
+}
+
+.bmi-calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+.bmi-calculator-form label {
+  font-size: 16px;
+  color: #555; /* Medium gray text */
+}
+
+.bmi-calculator-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%;
+}
+
+.bmi-calculator-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d00; /* Green background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 80%; /* Width of the button */
+  margin: 0 auto; /* Center align button */
+  display: block; /* Ensure it behaves as a block element */
+}
+
+
+.bmi-calculator-form button:hover {
+  background-color: #f1723b; /* Darker green on hover */
+}
+
+.bmi-result {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+
+  .footer {
+    padding: 20px;
+    background: radial-gradient(64.53% 62.88% at 50.13% 45.92%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgb(35, 35, 35), rgb(35, 35, 35));;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+.contact-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+.contact-follow h2 {
+    margin-bottom: 15px;
+    color: #bebcbc;
+}
+.contact-follow .facebook,
+.contact-follow .instagram {
+    margin-bottom: 10px;
+}
+.contact-follow a {
+    text-decoration: none;
+    color: #bebcbc;
+    font-size: 16px;
+    margin: 5px;
+}
+.contact-follow a:hover {
+    color: #ffff;
+}
+.contact-follow img {
+    vertical-align: middle;
+}
+.address {
+    flex: 1;
+}
+.address p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #bebcbc;
+}
+
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .content-left, .content-right {
+      width: 100%;
+    }
+
+    .content-right {
+      margin-top: 20px;
+    }
+  }
