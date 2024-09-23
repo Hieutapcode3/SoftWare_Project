@@ -31,12 +31,14 @@
 .cta-button {
   display: inline-block;
   font-size: 22px;
+  font-weight: bold;
   padding: 12px 25px; /* Tăng kích thước nút */
   background-color: #ff4d00;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-top: 15px; /* Tạo khoảng cách giữa nút và nội dung trên */
+  margin-top: 35px; /* Tạo khoảng cách giữa nút và nội dung trên */
+  border-radius: 6px;
 }
 
 .cta-button:hover {
@@ -59,12 +61,14 @@
   display: none;
   list-style: none; /* Xóa dấu chấm hoặc ký hiệu của li */
   margin: 0; /* Xóa margin của li */
-  padding: 0; /* Xóa padding của li */
-  background: radial-gradient(87.54% 59.7% at 50.13% 54.1%, rgba(31, 147, 255, 0.275) 0%, rgba(30, 30, 30, 0) 100%);
+  padding: 104px 0; /* Xóa padding của li */
+  background: linear-gradient(0deg, #121212 0%, rgba(31, 147, 255, 0.275) 50%, #121212 100%);
+
 }
 
 #main-slider .slides >li:last-child{
-  background: radial-gradient(87.54% 59.7% at 50.13% 54.1%, rgba(4, 138, 155, 0.959) 0%, rgba(30, 30, 30, 0) 100%);
+  background: linear-gradient(0deg, #121212 0%, rgba(4, 138, 155, 0.8) 50%, #121212 100%);
+
 }
 
 /* Hiển thị slide hiện tại */

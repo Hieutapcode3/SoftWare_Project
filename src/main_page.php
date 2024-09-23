@@ -1,12 +1,49 @@
+<?php
+session_start();
+require 'connect.php';
+
+$customerID = $_SESSION['CustomerID'];
+
+$sql = "SELECT bi.bodyFat, bi.height, bi.weightPresent, u.customerName 
+        FROM bodyinformation bi
+        JOIN user u ON bi.CustomerID = u.CustomerID 
+        WHERE bi.CustomerID = '$customerID'";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $bodyFat = $row['bodyFat'];
+    $height = $row['height'];
+    $weight = $row['weightPresent'];
+    $customerName = $row['customerName'];
+    $currentBodyFat = ($bodyFat - 0) . '-' . ($bodyFat + 4) . '%';
+    
+    if ($bodyFat <= 15) {
+        $targetBodyFat = ($bodyFat + 6) . '-' . ($bodyFat + 9) . '%';
+    } else {
+        $targetBodyFat = ($bodyFat - 6) . '-' . ($bodyFat - 9) . '%';
+    }
+} else {
+    echo "Không có dữ liệu";
+}
+
+$conn->close();
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/SoftWare_Project/asset/css/main_page.css">
+  <link rel="stylesheet" href="../asset/css/main_page.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/SoftWare_Project/asset/css/flexslider.css"">
+  <link rel="stylesheet" href="../asset/icon/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="../asset/css/flexslider.css"">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -15,15 +52,29 @@
   <!-- Thanh điều hướng -->
   <div class="head">
     <div class="header-container">
-      <div class="brand">
-        <i class="fa-solid fa-heart-pulse"></i>
-        <h2>HealthTrack System</h2>
-      </div>
+      <a href="#" class="app-name">
+        <div class="health"><p>HEALTH</p></div>
+        <div class="system"><p>SYSTEM</p></div>
+      </a>
       <div class="nav">
         <a href="#section2">Dinh dưỡng</a>
         <a href="#section3">Tập luyện</a>
         <a href="#service">Dịch vụ</a>
         <a href="#bmi">Tính BMI</a>
+      </div>
+      <button type="button" class="nav-bar">
+        <i class="ti-align-justify"></i>
+      </button>
+      <div class="container-nav-bar">
+          <div class="close-btn">
+              <button><i class="ti-close"></i></button> 
+          </div>
+          <ul>
+              <li><button>Điều khoản & Chính sách <i class="ti-angle-right"></i></button></li>
+              <li><button>Tài khoản của tôi <i class="ti-angle-right"></i></button></li>
+              <li><button>Hỗ trợ</button></li>
+              <li><button>Về chúng tôi</button></li>
+          </ul>
       </div>
     </div>
   </div>
@@ -35,12 +86,12 @@
           <div class="arrow">
             <div class="body_img">
               <div class="body_muscle">
-                <img src="/SoftWare_Project/asset/img/main_page_body1.webp" alt="">
+                <img src="../asset/img/main_page_body1.webp" alt="">
               </div>
             </div>
             <div class="body_img">
               <div class="body_muscle">
-                <img src="/SoftWare_Project/asset/img/main_page_body2.webp" alt="">
+                <img src="../asset/img/main_page_body2.webp" alt="">
               </div>
             </div>
           </div>
@@ -56,7 +107,7 @@
       <div class="part3">
         <div class="body-time">
             <span class="span1">Mỡ cơ thể</span>
-            <span class="span2">20-24%</span>
+            <span class="span2 current-bodyFat"><?php echo $currentBodyFat; ?></span>
             <p>Cơ bắp cơ thể</p>
             <div class="muscle-progress">
               <div class="muscle-bar-show"></div>
@@ -68,7 +119,7 @@
         </div>
         <div class="body-time">
             <span class="span1">Mỡ cơ thể</span>
-            <span class="span2">8-10%</span>
+            <span class="span2 target-bodyFat"><?php echo $targetBodyFat; ?></span>
             <p>Cơ bắp cơ thể</p>
             <div class="muscle-progress">
               <div class="muscle-bar-show"></div>
@@ -87,14 +138,17 @@
       <!-- Chỉ số BMI hiện tại -->
       <div class="summary-item">
         <h4>Chỉ số BMI hiện tại 
-          <span class="info-icon" onclick="showBMIInfo()">&#9432;</span> <!-- Dấu chấm than -->
+          <span class="info-icon" onclick="showBMIInfo()"><i class="ti-help-alt"></i></span> <!-- Dấu chấm than -->
         </h4>
         <div class="summary-content">
           <div class="bmi-value"></div> <!-- Dữ liệu BMI -->
           <div class="bmi-progress">
             <div class="bmi-progress-bar"></div>
           </div>
-          <div class="bmiResult"></div>
+          <div class="bmiResult">
+            <p>Thiếu cân</p>
+            <p>Béo phì</p>
+          </div>
           <p>Chỉ số khối cơ thể (BMI) là chỉ số sử dụng chiều cao và cân nặng của bạn để tính xem cân nặng của bạn có khỏe mạnh hay không.</p>
         </div>
       </div>
@@ -171,7 +225,7 @@
     </div>
 
     <div class="target">
-      <h2>Kế hoạch được cá nhân hoá dành cho Hiếu đã sẵn sàng!</h2>
+      <h2>Kế hoạch được cá nhân hoá dành cho <?php echo $customerName; ?> đã sẵn sàng!</h2>
       <div></div>
       <div></div>
       <div class="receive">
@@ -192,12 +246,12 @@
       <figure class="half-circle">
         <div>
           <span>
-            <img src="/SoftWare_Project/asset/img/circle.svg" alt="">
+            <img src="../asset/img/circle.svg" alt="">
           </span>
         </div>
         <figcaption>
           <span>Hiện tại</span>
-          <strong>88 kg</strong>
+          <strong><?php echo $weight; ?>kg</strong>
           <p>
             <span>100</span>
             <span>70</span>
@@ -225,11 +279,11 @@
         <p>Kế hoạch ăn được điều chỉnh theo sở thích và yêu cầu của bạn</p>
         <p>Công thức nấu ăn rất dễ thực hiện, bạn có thể ăn bất cứ thứ gì bạn muốn và có được vóc dáng đẹp hơn</p>
       </div>
-      <img src="/SoftWare_Project/asset/img/mealPlan.webp" alt="meal plan image">
+      <img src="../asset/img/mealPlan.webp" alt="meal plan image">
     </div>
     
     <div class="habitSystemSection">
-      <img src="/SoftWare_Project/asset/img/habitSystem.webp" alt="habit system image">
+      <img src="../asset/img/habitSystem.webp" alt="habit system image">
       <div class="habitSystemText">
         <h2>Hệ thống xây dựng thói quen</h2>
         <p>Cải thiện không chỉ vóc dáng mà còn phát triển những thói quen và thể lực lành mạnh</p>
@@ -347,12 +401,12 @@
       <div class="bmi-section-title">Tính chỉ số BMI của bạn</div>
       <form class="bmi-calculator-form" id="bmiForm">
         <label for="height">Chiều cao (cm):</label>
-        <input type="number" id="height" placeholder="Nhập chiều cao của bạn">
+        <input type="number" id="height" placeholder="Nhập chiều cao của bạn" value = "<?php echo $height; ?>">
     
         <label for="weight">Cân nặng (kg):</label>
-        <input type="number" id="weight" placeholder="Nhập cân nặng của bạn">
+        <input type="number" id="weight" value = "<?php echo $weight; ?>" placeholder="Nhập cân nặng của bạn" >
     
-        <button type="button" onclick="calculateBMI()">Tính BMI</button>
+        <button id ="bmiBtn" type="button" onclick="calculateBMI()">Tính BMI</button>
       </form>
       <div class="bmi-result" id="bmiResult"></div>
     </div>
@@ -387,6 +441,6 @@
 
 </div>
 
-  <script src="/SoftWare_Project/asset/js/main_page.js"></script>
+  <script src="../asset/js/main_page.js"></script>
 
 </body>

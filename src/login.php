@@ -16,6 +16,7 @@ if ($_POST) {
             $row = mysqli_fetch_assoc($result);
             if ($pass === $row['password']) {
                 $_SESSION['user'] = $user;
+                $_SESSION['CustomerID'] = $row['CustomerID'];
                 header("Location: index.html");  
                 exit();
             } else {
@@ -78,7 +79,7 @@ if (isset($_SESSION['error_signup_message'])) {
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./asset/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../asset/css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -93,7 +94,7 @@ if (isset($_SESSION['error_signup_message'])) {
                 <h2 class="form_title title">Sign in to Website</h2>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="./google/google_config.php" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="../google/google_config.php" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <div id="error-message" style="<?php echo !empty($error_login_message) ? 'display: block;' : 'display: none;'; ?>;">
                     <?php echo $error_login_message; ?>
@@ -141,6 +142,6 @@ if (isset($_SESSION['error_signup_message'])) {
             </div>
         </div>
     </div>
-    <script src="./asset/js/login.js"></script>
+    <script src="../asset/js/login.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family:'__Inter_da7b88', '__Inter_Fallback_da7b88';
+    font-family: Arial, Helvetica, sans-serif ;
     background-color:#121212;
     padding: 0;
     box-sizing: border-box;
@@ -13,9 +13,12 @@ body {
 
   /* Header */
 .head {
-  position: relative;
+  position: fixed;
+  top: 0;
+  background-color: #121212;
   width: 100%;
   height: auto;
+  z-index: 10;
 }
 
 .header-container {
@@ -24,11 +27,51 @@ body {
   padding: 20px;
   background: rgba(255, 255, 255, 0); /* Nền trong suốt */
   display: flex;
-  justify-content: space-around;
   box-sizing: border-box; /* Đảm bảo padding không làm phần tử rộng hơn 100% */
   overflow: hidden; /* Ngăn chặn nội dung tràn ra ngoài */
+  align-items: center;
 }
+.header-container .app-name {
+  text-decoration: none;
+  display: flex;
+  box-shadow: 5px 5px 10px 0 #ff4d00;
 
+}
+.header-container .app-name p {
+  margin: 0;
+}
+.header-container .app-name .health {
+  background-color: #ff4d00; 
+  color: #000; 
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+.app-name .health p {
+  font-family: 'FutureSport';
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+@font-face {
+  font-family: 'FutureSport'; /* Đặt tên cho font */
+  src: url('../font/TechnoRaceItalic-eZRWe.otf') format('truetype'); /* Đường dẫn đến file font */
+  font-weight: normal;
+  font-style: normal;
+}
+.header-container .app-name .system {
+  color: #ff4d00; 
+  padding: 8px 14px;
+  background-color: black; 
+  margin-left: 5px;
+  border: 2px solid #ff4d00;
+}
+.app-name .system p{
+  letter-spacing: 4px;
+  font-family: 'FutureSport';
+  font-weight: bold;
+  font-size: 14px;
+}
 /* Brand */
 .brand {
 display: flex;
@@ -54,6 +97,8 @@ text-transform: uppercase;
 /* Navigation */
 .nav {
   display: flex;
+  margin-left: auto;
+  margin-right: 40px;
 }
 
 .nav a {
@@ -85,11 +130,102 @@ text-transform: uppercase;
 .nav a:hover {
   color: #ff4d00;
 }
+.header-container .nav-bar {
+  display: flex;
+  font-weight: bold;
+  padding: 8px;
+  border: none;
+  background-color: #121212;
+  cursor: pointer;
+}
+.header-container .nav-bar:hover i {
+  color: #FF6025;
+}
+.header-container .nav-bar i {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.header-container .container-nav-bar {
+  opacity: 0;
+  position: fixed;
+  inset: 0px;
+  z-index: 1;
+  display: none;
+  background-color: #000000a1;
+  transition: opacity 0.5s linear;
+}
+.container-nav-bar.show {
+  opacity: 1;
+}
+.header-container .container-nav-bar i {
+  font-weight: bold;
+  font-size: 16px;
+}
+.container-nav-bar .close-btn {
+  display: flex;
+  max-width: 375px;
+  background-color: #2A2A2A;
+  padding: 12px 24px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  justify-content: flex-end;
+  z-index: 3;
+}
+.container-nav-bar .close-btn button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.container-nav-bar .close-btn i {
+  color: #fff;
+
+}
+.container-nav-bar ul {
+  background: #2A2A2A;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 24px;
+  position: absolute;
+  top: 44px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  max-width: 375px;
+  z-index: 2;
+  list-style: none;
+  margin: 0;
+}
+.container-nav-bar ul li {
+  border-bottom: 1px solid #ffffff14;
+  cursor: pointer;
+}
+.container-nav-bar ul li button{
+  color: #fff;
+  font-size: 18px;
+  padding: 16px 24px 16px 40px;
+  margin: 0 -24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  line-height: 26px;
+  width: calc(100% + 48px);
+  font-family: sans-serif;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.container-nav-bar ul li button:hover {
+  background-color: #393939;
+}
 
 
   .container {
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 142px;
   }
 
   .muscle {
@@ -106,7 +242,7 @@ text-transform: uppercase;
   }
   
   .part1 .arrow {
-    background-image: url("/SoftWare_Project/asset/img/arrows.png"); /* Hình mũi tên chỉ từ trái sang phải */
+    background-image: url("../img/arrows.png"); /* Hình mũi tên chỉ từ trái sang phải */
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -252,7 +388,7 @@ text-transform: uppercase;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 648px;
-    margin: 0 auto;
+    margin: 0 auto 64px;
 }
 
 .summary h2 {
@@ -265,9 +401,10 @@ text-transform: uppercase;
 
 .summary p{
   color: #fff;
-  font-size: 24;
 }
-
+.summary > .summary-item {
+  padding: 30px 40px 16px;
+}
 /* Bố cục cho các phần tóm tắt */
 .summary-item {
     margin-bottom: 20px;
@@ -321,6 +458,7 @@ text-transform: uppercase;
     font-size: 18px;
     margin: 0px;
     margin-bottom: 10px;
+    display: flex;
 }
 
 .summary-content {
@@ -341,48 +479,51 @@ text-transform: uppercase;
 
 .bmi-progress {
   width: 100%;
-  height: 20px;
-  background-color: #ecf0f1;
-  border-radius: 10px;
+  background-color: #2A2A2A;
   overflow: hidden;
   position: relative;
   margin-top: 15px;
-  display: none;
-}
-
-.bmi-progress.show{
   display: block;
 }
-
 .bmi-progress-bar {
-  height: 100%;
-  background-color: #fff; /* Màu mặc định cho thanh tiến trình */
-  width: 0%; /* Độ dài của thanh sẽ được cập nhật bằng JavaScript */
-  border-radius: 10px;
-  transition: width 0.3s ease;
-  
+  background: linear-gradient(90deg, rgb(74, 89, 230) 0%, rgb(86, 158, 242) 21.35%, rgb(117, 198, 179) 39.58%, rgb(191, 228, 139) 55.21%, rgb(255, 229, 147) 68.75%, rgb(250, 133, 87) 84.93%, rgb(236, 62, 79) 100%);
+  height: 8px;
+  position: relative;
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+.bmi-progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  height: 14px;
+  width: 14px;
+  background: url(../img/triangle.svg) center center no-repeat;
+  transition: left 1s ease-in-out;
+  opacity: 1;
+  left: var(--marker-left, 0%);
 }
 
-/* Các mức phân loại màu sắc */
-.bmi-underweight {
-  background-color: #1a66bc; /* Màu cho thiếu cân */
-}
-
-.bmi-normal {
-  background-color: #2ecc71; /* Màu cho bình thường */
-}
-
-.bmi-overweight {
-  background-color: #f39c12; /* Màu cho thừa cân */
-}
-
-.bmi-obese {
-  background-color: #e74c3c; /* Màu cho béo phì */
-}
 
 .bmiResult {
   font-size: 16px;
   color: #2c3e50;
+  display: flex;
+  font-family: sans-serif;
+}
+.bmiResult p:first-child {
+  width: 50%;
+  text-align: left;
+  font-size: 14px;
+  margin: 0;
+}
+.bmiResult p:last-child {
+  width: 50%;
+  text-align: right;
+  font-size: 14px;
+  margin: 0;
 }
 
 
@@ -459,11 +600,9 @@ text-transform: uppercase;
 .info-icon {
   font-size: 20px;
   color: #fff; /* Màu cam nổi bật */
-  margin-left: 8px;
+  margin-left: auto;
   cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  color: #bdbaba;
 }
 
 .overlay {
@@ -518,7 +657,7 @@ text-transform: uppercase;
   width: 22px; /* Kích thước của mỗi hình ảnh */
   height: 32px;
   background-size: cover;
-  background-image: url('/SoftWare_Project/asset/img/glass_empty.svg');
+  background-image: url('../img/glass_empty.svg');
   margin-right: 4px; /* Khoảng cách giữa các hình ảnh */
 } 
 
@@ -530,7 +669,7 @@ text-transform: uppercase;
 
 .target {
   max-width: 648px;
-  margin: 0 auto;
+  margin: 0 auto 64px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px #ff4d00;
@@ -588,6 +727,7 @@ text-transform: uppercase;
 
 .workoutPlanSection{
   text-align: center;
+  padding-bottom: 64px;
 }
 
 .workoutPlanSection h2{
@@ -687,7 +827,7 @@ text-transform: uppercase;
   max-width: 1000px;
   margin: 0 auto ;
   flex-direction: row; 
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .habitSystemSection img {
@@ -790,20 +930,19 @@ p {
 
 
 /* Styles for the BMI section */
-.bmi-section {
-  background-color: #f4f4f4; /* Light gray background */
+.bmi-section { 
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 6px #ff4d00; /* Subtle shadow */
   max-width: 360px; 
   margin: 0 auto; 
   margin-top: 40px;
+  color: #fff;
 }
 
 .bmi-section-title {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333; /* Dark gray text */
   text-align: center;
 }
 
@@ -815,15 +954,21 @@ p {
 
 .bmi-calculator-form label {
   font-size: 16px;
-  color: #555; /* Medium gray text */
 }
 
 .bmi-calculator-form input {
   padding: 10px;
   font-size: 16px;
+  background-color: transparent;
   border: 1px solid #ddd; /* Light border */
   border-radius: 4px; /* Rounded corners */
   width: 100%;
+  color: #fff;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .bmi-calculator-form button {
@@ -850,6 +995,7 @@ p {
   font-size: 18px;
   text-align: center;
 }
+
 
 
 

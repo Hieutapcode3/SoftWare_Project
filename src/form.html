@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/css/form.css">
-    <link rel="stylesheet" href="./asset/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../asset/css/form.css">
+    <link rel="stylesheet" href="../asset/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../asset/css/checkbox.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <title>HealthTrack System</title>
@@ -36,7 +37,7 @@
                 </div>
             </nav>
         </header>
-        <div class="container-body">
+        <div class="container-body" style="display: block;">
             <div class="container-complete-percent">
                 <div class="complete-percent">
                     <button type="button" title="Go back" class="back-btn"><i class="ti-angle-left"></i></button>
@@ -44,7 +45,7 @@
                     <p class="completed-text"></p>
                 </div>
             </div>
-            <form action="">
+            <form method="POSt" action="main_page.php">
                 <div class="container-form-select">
                     <div class="form-selection" id = "question-1" data-question ="1" style="display: none;">
                         <div class="question">
@@ -55,21 +56,21 @@
                                 <label for="" class="label">
                                     <input type="radio" name="bodyType" class="input-select" value="Mảnh khảnh">
                                     <span>Mảnh khảnh</span>
-                                    <img src="./asset/img/bodytype_1.jpg" alt="">
+                                    <img src="../asset/img/bodytype_1.jpg" alt="">
                                 </label>
                             </div>
                             <div class="options">
                                 <label for="" class="label">
                                     <input type="radio" name="bodyType" class="input-select" value="Trung bình">
                                     <span>Trung bình</span>
-                                    <img src="./asset/img/bodytype_2.jpg" alt="" >
+                                    <img src="../asset/img/bodytype_2.jpg" alt="" >
                                 </label>
                             </div>
                             <div class="options">
                                 <label for="" class="label">
                                     <input type="radio" name="bodyType" class="input-select" value="Nặng">
                                     <span>Nặng</span>
-                                    <img src="./asset/img/bodytype_3.jpg" alt="">
+                                    <img src="../asset/img/bodytype_3.jpg" alt="">
                                 </label>
                             </div>
                         </div>
@@ -83,21 +84,21 @@
                                 <label for="" class="label">
                                     <input type="radio" name="bodyTarget" class="input-select" value="Giảm Cân">
                                     <span>Giảm Cân</span>
-                                    <img src="./asset/img/bodytarget_1.jpg" alt="">
+                                    <img src="../asset/img/bodytarget_1.jpg" alt="">
                                 </label>
                             </div>
                             <div class="options">
                                 <label for="" class="label">
                                     <input type="radio" name="bodyTarget" class="input-select" value="Tăng Cơ Bắp">
                                     <span>Tăng Cơ Bắp</span>
-                                    <img src="./asset/img/bodytarget_2.jpg" alt="">
+                                    <img src="../asset/img/bodytarget_2.jpg" alt="">
                                 </label>
                             </div>
                             <div class="options">
                                 <label for="" class="label">
                                     <input type="radio" name="bodyTarget" class="input-select" value="Cắt Nét Cơ">
                                     <span>Cắt Nét Cơ</span>
-                                    <img src="./asset/img/bodytarget_3.jpg" alt="">
+                                    <img src="../asset/img/bodytarget_3.jpg" alt="">
                                 </label>
                             </div>
                         </div>
@@ -113,14 +114,14 @@
                                     <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình mảnh mai">
                                         <span>Thân hình mảnh mai</span>
-                                        <img src="./asset/img/bodytype_1.jpg" alt="">
+                                        <img src="../asset/img/bodytype_1.jpg" alt="">
                                     </label>
                                 </div>
                                 <div class="options">
                                     <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình mảnh, cắt nét">
                                         <span>Thân hình mảnh, cắt nét</span>
-                                        <img src="./asset/img/bodytarget_1.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_1.jpg" alt="">
                                     </label>
                                 </div>
                             </div>
@@ -135,21 +136,21 @@
                                     <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Vận động viên">
                                         <span>Vận động viên</span>
-                                        <img src="./asset/img/bodytarget_5.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_5.jpg" alt="">
                                     </label>
                                 </div>
                                 <div class="options">
                                     <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Anh hùng">
                                         <span>Anh hùng</span>
-                                        <img src="./asset/img/bodytarget_6.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_6.jpg" alt="">
                                     </label>
                                 </div>
                                 <div class="options">
                                     <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thể hình">
                                         <span>Thể hình</span>
-                                        <img src="./asset/img/bodytarget_7.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_7.jpg" alt="">
                                     </label>
                                 </div>
                             </div>
@@ -164,21 +165,21 @@
                                     <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình săn chắc">
                                         <span>Thân hình săn chắc</span>
-                                        <img src="./asset/img/bodytarget_2.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_2.jpg" alt="">
                                     </label>
                                 </div>
                                 <div class="options">
-                                    <label for="">
+                                    <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình tập luyện">
                                         <span>Thân hình tập luyện</span>
-                                        <img src="./asset/img/bodytarget_3.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_3.jpg" alt="">
                                     </label>
                                 </div>
                                 <div class="options">
-                                    <label for="">
+                                    <label for="" class="label">
                                         <input type="radio" name="bodyTarget-specifical" class="input-select" value="Thân hình vừa vặn">
                                         <span>Thân hình vừa vặn</span>
-                                        <img src="./asset/img/bodytarget_4.jpg" alt="">
+                                        <img src="../asset/img/bodytarget_4.jpg" alt="">
                                     </label>
                                 </div>
                             </div>
@@ -189,9 +190,9 @@
                             <div class="container-img-body-fat">
                                 <div class="img-body-fat">
                                     <span class="layout">
-                                        <img src="./asset/img/bg.svg" alt="">
+                                        <img src="../asset/img/bg.svg" alt="">
                                     </span>
-                                    <img src="./asset/img/bodyfat_1.jpg" alt="" id="bodyFatImg">
+                                    <img src="../asset/img/bodyfat_1.jpg" alt="" id="bodyFatImg">
                                 </div>
                             </div>
                             <div class="container-range-slider">
@@ -212,7 +213,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="next-question-btn">
+                                    <div class="next-question-btn type_1">
                                         <button type="button">
                                             <p>Tiếp tục</p>
                                             <i class="ti-arrow-right"></i>
@@ -272,52 +273,335 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="next-question-btn">
+                        <div class="next-question-btn type_2">
                             <button type="button">
                                 <p>Tiếp tục</p>
                                 <i class="ti-arrow-right"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="form-selection">
-
+                    <div class="form-selection" id= "question-6" data-question="sport-type" style = "display:none;">
+                        <div class="question">
+                            <h1>Bạn quan tâm đến môn thể thao nào?</h1>
+                        </div>
+                        <div class="container-options sport-type">
+                            <div class="options">
+                                <label for="sport-type-1">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="sport-type-1" value="Tập luyện tại phòng gym" />
+                                        <label for="sport-type-1" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Tập luyện tại phòng gym</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="sport-type-2">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="sport-type-2" value="Tập luyện tại nhà"/>
+                                        <label for="sport-type-2" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Tập luyện tại nhà</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="sport-type-3">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="sport-type-3" value="Boxing"/>
+                                        <label for="sport-type-3" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Boxing</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="sport-type-4">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="sport-type-4" value="Chạy bộ"/>
+                                        <label for="sport-type-4" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Chạy bộ</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="sport-type-5">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="sport-type-5" value="Võ thuật khác"/>
+                                        <label for="sport-type-5" class="check-box">
+                                    </div>
+                                        <span>
+                                            <p>Võ thuật khác</p>
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="sport-type-6">
+                                    <input type="checkbox" id="sport-type-6" value="Không có cái nào ở trên">
+                                    <span>
+                                        <i class="ti-close"></i>
+                                        <p>Không có cái nào ở trên</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id= "question-7" data-question="problem" style = "display:none;">
+                        <div class="question">
+                            <h1>Trong những vấn đề này, bạn có gặp phải vấn đề nào khi tập thể dục trước đây không?</h1>
+                        </div>
+                        <div class="container-options sport-type problem">
+                            <div class="options">
+                                <label for="problem-1">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="problem-1" value="Thiếu động lực" />
+                                        <label for="problem-1" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Thiếu động lực</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="problem-2">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="problem-2" value="Đã thử nhiều lần nhưng không thấy tiến triển"/>
+                                        <label for="problem-2" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Đã thử nhiều lần nhưng không thấy tiến triển</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="problem-3">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="problem-3" value="Cảm thấy thiếu tự tin ở phòng gym"/>
+                                        <label for="problem-3" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Cảm thấy thiếu tự tin ở phòng gym</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="problem-4">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="problem-4" value="Không có kế hoạch rõ ràng"/>
+                                        <label for="problem-4" class="check-box">
+                                    </div>
+                                    <span>
+                                        <p>Không có kế hoạch rõ ràng</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="problem-5">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="problem-5" value="Việc tập luyện của tôi quá vất vả"/>
+                                        <label for="problem-5" class="check-box">
+                                    </div>
+                                        <span>
+                                            <p>Việc tập luyện của tôi quá vất vả</p>
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="problem-6">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="problem-6" value="Huấn luyện tệ"/>
+                                        <label for="problem-5" class="check-box">
+                                    </div>
+                                        <span>
+                                            <p>Huấn luyện tệ</p>
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="problem-7">
+                                    <input type="checkbox" id="problem-7" value="Không có cái nào ở trên">
+                                    <span>
+                                        <i class="ti-close"></i>
+                                        <p>Không có cái nào ở trên</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_4">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id= "question-8" data-question="height-fit" style = "display:none;">
+                        <div class="question">
+                            <h1>Chiều cao của bạn là bao nhiêu?</h1>
+                        </div>
+                        <div class="container-options height-fit index-body">
+                            <div class="container-unit">
+                                <p>Đơn vị</p>
+                                <p>cm</p>
+                            </div>
+                            <label for="">
+                                <span>Chiều cao (cm)</span>
+                                <span>
+                                    <input type="text" class="input-height" maxlength="3"> 
+                                    <span>
+                                        <span class="height-display">___</span>
+                                        <span> cm</span>
+                                    </span>
+                                </span>
+                                <span class="height-qualify"></span>
+                            </label>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id= "question-9" data-question="weight-fit" style = "display:block;">
+                        <div class="question">
+                            <h1>Cân nặng hiện tại và mục tiêu của bạn là bao nhiêu?</h1>
+                        </div>
+                        <div class="container-options weight-fit index-body">
+                            <div class="container-unit">
+                                <p>Đơn vị</p>
+                                <p>kg</p>
+                            </div>
+                            <label for="">
+                                <span>Cân nặng Hiện tại (kg)</span>
+                                <span>
+                                    <input type="text" class="input-weight" maxlength="3"> 
+                                    <span>
+                                        <span class="weight-display">__</span>
+                                        <span> kg</span>
+                                    </span>
+                                </span>
+                                <span class="weight-qualify-present"></span>
+                            </label>
+                            <label for="">
+                                <span>Cân nặng mục tiêu (kg)</span>
+                                <span>
+                                    <input type="text" class="input-weight" maxlength="3"> 
+                                    <span>
+                                        <span class="weight-display">__</span>
+                                        <span> kg</span>
+                                    </span>
+                                </span>
+                                <span class="weight-qualify-target"></span>
+                            </label>
+                        </div>
+                        <div class="next-question-btn submit">
+                            <button type="submit">
+                                <p>Hoàn thành</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>
+
         </div>
+        <div class="container-evalute" style="display: none;">
+            <div class="container-img-action">
+                <div class="image-container">
+                    <img src="../asset/img/bodytarget_5.jpg" alt="Muscle Body" class="muscle-body">
+                    <div class="transition-line"></div>
+                    <img src="../asset/img/bodytarget_1.jpg" alt="Thin Body" class="thin-body">
+                    <img src="../asset/img/bg.svg" alt="" class="bg-circle">
+                </div>
+            </div>
+            <div class="container-evalute-results">
+                <div class="evalute-result">
+                    <h1><span>81%</span> kết quả của bạn là về dinh dưỡng</h1>
+                    <p>Để đạt được nhiều nhất về khối lượng cơ và sức mạnh, bạn cần:</p>
+                    <ul>
+                        <li><span><i class="ti-check"></i></span>
+                            Đủ tổng lượng calo mỗi ngày.</li>
+                        <li><span><i class="ti-check"></i></span>Hấp thụ đủ protein để cơ thể tái tạo nhiều mô cơ hơn.</li>
+                    </ul>
+                    <div class="next-question-btn type_3">
+                        <button type="button">
+                            <p>Đã hiểu</p>
+                            <i class="ti-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container-health-status" style="display: none;">
+            <div class="container-img-health-status">
+                <img src="../asset/img/health-status.png" alt="">
+            </div>
+            <div class="container-des-health-status">
+                <div class="des-health-status">
+                    <h1>Chúng tôi quan tâm đến sức khỏe của bạn</h1>
+                    <p>Nếu bạn có bất kỳ tình trạng nào sau đây:</p>
+                    <ul>
+                        <li>Bệnh tim</li>
+                        <li>Vẹo cột sống nặng</li>
+                        <li>Tổn thương cột sống</li>
+                        <li>Khối u lành tính hoặc ác tính</li>
+                        <li>Tăng huyết áp</li>
+                    </ul>
+                    <p>Vui lòng liên hệ với bác sĩ của bạn trước khi bắt đầu theo chương trình HealthSystem.</p>
+                    <div class="next-question-btn type_1">
+                        <button type="button">
+                            <p>Đã hiểu</p>
+                            <i class="ti-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="container-evalute abdicate-reason" style="display: none;">
+            <div class="container-img-action">
+                <div class="image-container">
+                    <img src="../asset/img/bodytarget_5.jpg" alt="Muscle Body" class="muscle-body">
+                    <div class="transition-line"></div>
+                    <img src="../asset/img/bodytarget_1.jpg" alt="Thin Body" class="thin-body">
+                    <img src="../asset/img/bg.svg" alt="" class="bg-circle">
+                </div>
+            </div>
+            <div class="container-evalute-results">
+                <div class="evalute-result">
+                    <h1>Tại sao mọi người từ bỏ tập thể dục?</h1>
+                    <p>Lý do số 1 là bắt đầu tập luyện quá nặng và quá nhanh</p>
+                    <ul>
+                        <li>Bạn sẽ đạt được nhiều thành tựu hơn là chỉ vài tuần tập thể dục.</li>
+                        <li>Chúng tôi sẽ không hứa là bạn sẽ có kết quả nhanh chóng. Mục tiêu chính của chương trình của chúng tôi là thay đổi lối sống của bạn theo hướng tốt hơn.</li>
+                    </ul>
+                    <div class="next-question-btn type_1">
+                        <button type="button">
+                            <p>Đã hiểu</p>
+                            <i class="ti-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-    const navBarButton = document.querySelector(".nav-bar");
-const containerNavBar = document.querySelector(".container-nav-bar");
-const closeButton = document.querySelector(".close-btn button");
-const ulElement = document.querySelector(".container-nav-bar ul");
-navBarButton.addEventListener("click", () => {
-  containerNavBar.style.display = "block";
-  setTimeout(() => {
-    containerNavBar.classList.add("show");
-  }, 100);
-});
-closeButton.addEventListener("click", () => {
-  containerNavBar.classList.remove("show");
-  setTimeout(() => {
-    containerNavBar.style.display = "none";
-  }, 500);
-});
-document.addEventListener("click", (event) => {
-  const isClickInside =
-    ulElement.contains(event.target) ||
-    closeButton.contains(event.target) ||
-    navBarButton.contains(event.target);
-
-  if (!isClickInside) {
-    containerNavBar.classList.remove("show");
-    setTimeout(() => {
-      containerNavBar.style.display = "none";
-    }, 500);
-  }
-});
-</script>
-<script src="./asset/js/form.js"></script>
+<script src="../asset/js/form.js"></script>
+<script src="../asset/js/ActionTrans.js" ></script>
 </html>
