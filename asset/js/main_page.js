@@ -18,45 +18,61 @@ function calculateBMI() {
       behavior: "smooth", // Cuộn mượt mà
     });
   });
-
   const bmi = (weight / (height * height)).toFixed(2);
-  const leftPercentage = (bmi / 50) * 100;
-  const progressBar = document.querySelector(".bmi-progress-bar");
-  if (leftPercentage > 100)
-    progressBar.style.setProperty("--marker-left", `100%`);
-  else progressBar.style.setProperty("--marker-left", `${leftPercentage}%`);
-  let resultMessage = `Chỉ số BMI của bạn là: ${bmi}. `;
 
+  const progressBar = document.querySelector(".bmi-progress-bar");
+  const calcuResult = document.querySelector(".calcu-result");
+  let resultMessage = `Chỉ số BMI của bạn là: ${bmi}. `;
+  let leftPercentage;
+  const minBMI = 15;
+  const maxBMI = 40;
   if (bmi < 18.5) {
     resultMessage += "Cơ thể bạn đang thiếu cân.";
-  } else if (bmi < 24.9) {
+    calcuResult.textContent = "Thiếu Cân";
+    if (bmi < 16) leftPercentage = (bmi / 300) * 100;
+    else if (bmi < 17) leftPercentage = (bmi / 150) * 100;
+    else leftPercentage = (bmi / 100) * 100;
+  } else if (bmi < 25) {
     resultMessage += "Bạn có cơ thể cân đối.";
-  } else if (bmi < 29.9) {
+    calcuResult.textContent = "Cân Đối";
+    if (bmi < 20) leftPercentage = (bmi / 75) * 100;
+    else if (bmi < 23) leftPercentage = (bmi / 65) * 100;
+    else leftPercentage = (bmi / 55) * 100;
+  } else if (bmi < 30) {
     resultMessage += "Cơ thể bạn đang thừa cân.";
+    calcuResult.textContent = "Thừa Cân";
+    if (bmi < 26.5) leftPercentage = (bmi / 50) * 100;
+    else if (bmi < 29) leftPercentage = (bmi / 45) * 100;
+    else leftPercentage = (bmi / 42) * 100;
   } else {
     resultMessage += "Cơ thể bạn đang béo phì.";
+    calcuResult.textContent = "Béo Phì";
+    if (bmi < 33.5) leftPercentage = (bmi / 41) * 100;
+    else if (bmi < 36.5) leftPercentage = (bmi / 40.5) * 100;
+    else leftPercentage = (bmi / 41) * 100;
   }
+  if (bmi <= minBMI) leftPercentage = 0.5;
+  else if (bmi >= maxBMI) leftPercentage = 99.5;
 
+  leftPercentage = Math.max(0, Math.min(leftPercentage, 100));
   document.querySelector(".bmi-value").textContent = `${bmi} BMI`;
   document.getElementById("bmiResult").textContent = resultMessage;
-
-  // Tính toán lượng calo (Công thức đơn giản: cân nặng * 24 kcal)
+  console.log(
+    `BMI: ${bmi}, ${resultMessage}, Left Percentage: ${leftPercentage}`
+  );
+  progressBar.style.setProperty("--marker-left", `${leftPercentage}%`);
   const dailyCalories = weight * 24;
   calo.textContent = `${Math.round(dailyCalories)} kcal`;
-
-  // Tính toán lượng nước (cân nặng * 35ml)
   const waterIntake = weight * 35;
   water.textContent = `${Math.round(waterIntake)} ml`;
-
-  // Cập nhật thanh tiến trình với giá trị lượng calo
   updateCaloriesProgress(dailyCalories);
 
-  updateWaterProgress(waterIntake / 1000); // Chia cho 1000 để chuyển đổi từ ml sang lít
+  updateWaterProgress(waterIntake / 1000);
 }
 
 const slides = document.querySelectorAll("#main-slider .slides > li");
 let currentSlide = 0;
-const slideInterval = setInterval(nextSlide, 5000); // Thay đổi ảnh sau mỗi 3 giây
+const slideInterval = setInterval(nextSlide, 5000);
 
 function nextSlide() {
   slides[currentSlide].style.display = "none"; // Ẩn slide hiện tại

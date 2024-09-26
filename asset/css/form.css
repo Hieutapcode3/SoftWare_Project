@@ -18,6 +18,7 @@ button i {
     display: flex;
     justify-content: flex-end;
 }
+
 .next-question-btn button:disabled{
     opacity: 0.4;
     cursor: auto;
@@ -31,6 +32,10 @@ button i {
     padding: 16px;
     background-color: #FF4400;
 }
+.next-question-btn button:hover,
+.next-question-btn button:focus-visible {
+    background-color: #FF6025;
+} 
 .next-question-btn button p {
     margin: 0;
     padding-right: 32px;
@@ -51,6 +56,10 @@ button i {
 
 #page{
     background-color: #121212;
+    overflow: auto;
+}
+#page::-webkit-scrollbar {
+    display: none;
 }
 .p-default {
     font-size: 13px;

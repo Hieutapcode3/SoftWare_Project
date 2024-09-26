@@ -1,8 +1,6 @@
 <?php
 session_start();
 require 'connect.php';  
-echo "Session ID: " . session_id();
-print_r($_SESSION); // Kiểm tra các giá trị trong session
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_SESSION['CustomerID'])) {
         $customerID = $_SESSION['CustomerID'];

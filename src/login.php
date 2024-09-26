@@ -4,7 +4,6 @@ require 'connect.php';
 $error_login_message = '';
 $success_signup_message = '';
 $error_signup_message = '';
-
 if ($_POST) {
     if (isset($_POST['dangnhap'])) {
         $user = $_POST['user_name'];
@@ -15,8 +14,9 @@ if ($_POST) {
         if (mysqli_num_rows($result) > 0 && !empty($user) && !empty($pass)) {
             $row = mysqli_fetch_assoc($result);
             if ($pass === $row['password']) {
-                $_SESSION['user'] = $user;
+                $_SESSION['user'] = $row['CustomerName'];
                 $_SESSION['CustomerID'] = $row['CustomerID'];
+                echo 'wtf';
                 header("Location: index.html");  
                 exit();
             } else {

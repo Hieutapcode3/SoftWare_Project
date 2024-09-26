@@ -3,7 +3,6 @@ session_start();
 require 'connect.php';
 
 $customerID = $_SESSION['CustomerID'];
-
 $sql = "SELECT bi.bodyFat, bi.height, bi.weightPresent, u.customerName 
         FROM bodyinformation bi
         JOIN user u ON bi.CustomerID = u.CustomerID 
@@ -24,6 +23,10 @@ if ($result->num_rows > 0) {
     } else {
         $targetBodyFat = ($bodyFat - 6) . '-' . ($bodyFat - 9) . '%';
     }
+    if($bodyFat < 8)
+      $bodyFatIndex = $bodyFat / 5 + 1;
+    else
+      $bodyFatIndex = $bodyFat / 5 ;
 } else {
     echo "Không có dữ liệu";
 }
@@ -86,12 +89,12 @@ $conn->close();
           <div class="arrow">
             <div class="body_img">
               <div class="body_muscle">
-                <img src="../asset/img/main_page_body1.webp" alt="">
+                <img src="../asset/img/bodyfat_<?php echo $bodyFatIndex; ?>.jpg" alt="" class="img-1">
               </div>
             </div>
             <div class="body_img">
               <div class="body_muscle">
-                <img src="../asset/img/main_page_body2.webp" alt="">
+                <img src="../asset/img/bodytarget_6.jpg" alt="" class="img-2">
               </div>
             </div>
           </div>
@@ -111,7 +114,7 @@ $conn->close();
             <p>Cơ bắp cơ thể</p>
             <div class="muscle-progress">
               <div class="muscle-bar-show"></div>
-              <div class="muscle-bar"></div>
+              <div class="muscle-bar-show"></div>
               <div class="muscle-bar"></div>
               <div class="muscle-bar"></div>
               <div class="muscle-bar"></div>
@@ -126,7 +129,7 @@ $conn->close();
               <div class="muscle-bar-show"></div>
               <div class="muscle-bar-show"></div>
               <div class="muscle-bar-show"></div>
-              <div class="muscle-bar-show"></div>
+              <div class="muscle-bar"></div>
             </div>
         </div>
       </div>
@@ -141,7 +144,14 @@ $conn->close();
           <span class="info-icon" onclick="showBMIInfo()"><i class="ti-help-alt"></i></span> <!-- Dấu chấm than -->
         </h4>
         <div class="summary-content">
-          <div class="bmi-value"></div> <!-- Dữ liệu BMI -->
+          <div class="bmi-value"></div>
+          <div class="index-bmi">
+            <span>15</span>
+            <span>18.5</span>
+            <span>25</span>
+            <span>30</span>
+            <span>40</span>
+          </div> 
           <div class="bmi-progress">
             <div class="bmi-progress-bar"></div>
           </div>
@@ -149,6 +159,7 @@ $conn->close();
             <p>Thiếu cân</p>
             <p>Béo phì</p>
           </div>
+          <p class="calcu-result">Béo phì</p>
           <p>Chỉ số khối cơ thể (BMI) là chỉ số sử dụng chiều cao và cân nặng của bạn để tính xem cân nặng của bạn có khỏe mạnh hay không.</p>
         </div>
       </div>

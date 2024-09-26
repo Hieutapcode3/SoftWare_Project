@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       rangeValueDisplay.textContent = `${parseInt(value) * 5 + 5}-${
         parseInt(value) * 5 + 9
       }%`;
-    else rangeValueDisplay.textContent = `>${parseInt(value) * 5 + 5}%`;
+    else rangeValueDisplay.textContent = `${parseInt(value) * 5 + 5}%`;
     userAnswers[questionNumber] = rangeValueDisplay.textContent;
     console.log(userAnswers);
   });

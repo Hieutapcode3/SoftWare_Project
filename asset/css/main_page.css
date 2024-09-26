@@ -1,10 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif ;
-    background-color:#121212;
     padding: 0;
     box-sizing: border-box;
     color: #ffffff;
+    background: linear-gradient(rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.95) 2.1%, rgb(18, 18, 18) 100%);
   }
 
   *{
@@ -264,8 +267,8 @@ text-transform: uppercase;
   
   .body_img img {
     width: 100%;
-    object-fit: cover; /* Đảm bảo hình ảnh vừa khít trong vùng hiển thị */
-    object-position: top; /* Hiển thị phần thân, không hiển thị chân */
+    object-fit: contain; 
+    height: 350px;
   }
 
   .body_img .body_muscle{
@@ -475,14 +478,44 @@ text-transform: uppercase;
     margin-bottom: 16px;
     
 }
-
-
+.summary-content .calcu-result {
+  padding: 0;
+  margin: 8px 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #75C6AC;
+}
+.summary-content .index-bmi {
+  display: flex;
+  justify-content: space-between;
+}
+.summary-content .index-bmi span {
+  width: 20%;
+  text-align: center;
+  color: #a5d999;
+}
+.summary-content .index-bmi span:nth-child(2) {
+  padding-right: 45px;
+  color: #5ca5e6;
+}
+.summary-content .index-bmi span:nth-child(4) {
+  padding-left: 45px;
+  color: #fdc780;
+}
+.summary-content .index-bmi span:first-child {
+  text-align: start;
+  color: #4e6fea;
+}
+.summary-content .index-bmi span:last-child {
+  text-align: end;
+  color: #ed4350;
+}
 .bmi-progress {
   width: 100%;
   background-color: #2A2A2A;
   overflow: hidden;
   position: relative;
-  margin-top: 15px;
+  margin-top: 6px;
   display: block;
 }
 .bmi-progress-bar {
@@ -889,6 +922,12 @@ p {
   padding: 20px;
   border-radius: 8px;
   background-color: #1c1c1c;
+}
+.service-box:hover .service-content,
+.service-box:hover p
+ {
+  transform: scale(1.05);
+  transition: transform 0.5s linear;
 }
 
 .service-content {

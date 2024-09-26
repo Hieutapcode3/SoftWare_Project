@@ -1,0 +1,351 @@
+html{
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+button {
+    border: none;
+    background: none;
+}
+button i {
+    color: white;
+}
+.input-select {
+    display: none;
+}
+.next-question-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.next-question-btn button:disabled{
+    opacity: 0.4;
+    cursor: auto;
+    background-color: #782d12;
+}
+.next-question-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 16px;
+    background-color: #FF4400;
+}
+.next-question-btn button:hover,
+.next-question-btn button:focus-visible {
+    background-color: #FF6025;
+} 
+.next-question-btn button p {
+    margin: 0;
+    padding-right: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: sans-serif;
+}
+.next-question-btn button i {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+
+
+#page{
+    background: linear-gradient(rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.8) 0%, rgb(18, 18, 18) 100%);
+    overflow: auto;
+}
+#page::-webkit-scrollbar {
+    display: none;
+}
+.p-default {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.002em;
+    color: #8D8D8D;
+    margin: 0;
+}
+
+
+header {
+    padding: 16px 24px 18px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+}
+header .app-name {
+    text-decoration: none;
+    display: flex;
+    box-shadow: 5px 5px 10px 0 #ff4d00;
+    z-index: 100;
+}
+header .app-name p {
+    margin: 0;
+}
+header .app-name .health {
+    background-color: #ff4d00; 
+    color: #000; 
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+}
+.app-name .health p {
+    font-family: 'FutureSport';
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+@font-face {
+    font-family: 'FutureSport'; /* Đặt tên cho font */
+    src: url('../font/TechnoRaceItalic-eZRWe.otf') format('truetype'); /* Đường dẫn đến file font */
+    font-weight: normal;
+    font-style: normal;
+  }
+header .app-name .system {
+    color: #ff4d00; 
+    padding: 8px 14px;
+    background-color: black; 
+    margin-left: 5px;
+    border: 2px solid #ff4d00;
+}
+.app-name .system p{
+    letter-spacing: 4px;
+    font-family: 'FutureSport';
+    font-weight: bold;
+    font-size: 14px;
+}
+header nav {
+    display: flex;
+    margin-left: auto;
+    z-index: 100;
+}
+nav .language {
+    color: white;
+    font-weight: bold;
+    padding: 6px 16px;
+    margin-right: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav .nav-bar {
+    display: flex;
+    font-weight: bold;
+    padding: 8px;
+}
+nav .nav-bar i {
+    font-size: 20px;
+    font-weight: bold;
+}
+nav .container-nav-bar {
+    opacity: 0;
+    position: fixed;
+    inset: 0px;
+    z-index: 1;
+    display: none;
+    background-color: #000000a1;
+    transition: opacity 0.5s linear;
+}
+.container-nav-bar.show {
+    opacity: 1;
+}
+nav .container-nav-bar i {
+    font-weight: bold;
+    font-size: 16px;
+}
+.container-nav-bar .close-btn {
+    display: flex;
+    max-width: 375px;
+    background-color: #2A2A2A;
+    padding: 12px 24px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 3;
+}
+.container-nav-bar .close-btn i {
+    color: #fff;
+
+}
+.container-nav-bar ul {
+    background: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 24px;
+    position: absolute;
+    top: 46px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    max-width: 375px;
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+}
+.container-nav-bar ul li {
+    border-bottom: 1px solid #ffffff14;
+}
+.container-nav-bar ul li button{
+    color: #fff;
+    font-size: 18px;
+    padding: 16px 24px 16px 40px;
+    margin: 0 -24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    line-height: 26px;
+    width: calc(100% + 48px);
+    font-family: sans-serif;
+}
+.container-nav-bar ul li button:hover {
+    background-color: #393939;
+}
+.container-body {
+    height: 100vh;
+}
+.container-body .container-complete-percent {
+    padding: 80px 24px 0;
+    margin: 0 0 24px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #000;
+}
+.container-complete-percent .complete-percent {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+}
+.container-complete-percent .complete-percent .back-btn {
+    width: 24px;
+    height: 24px;
+    background-color: #393939;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+}
+.complete-percent .back-btn:hover {
+    background-color: #757575;
+}
+.complete-percent .back-btn i {
+    font-weight: bold;
+    font-size: 14px;
+}
+.container-complete-percent .complete-percent .completed-bar {
+    background-color: #393939;
+    display: flex;
+    height: 4px;
+    position: relative;
+    margin: 0 3px;
+    width: 100%;
+}
+.complete-percent .completed-bar::before{
+    background-color: #FF6025;
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 4px;
+    position: absolute;
+    width: var(--progress-width, 0%);
+    transition: width 0.5s ease-in-out;
+
+}
+.container-complete-percent .complete-percent .completed-text {
+    color: #DADADA;
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.container-body form {
+    padding-top: 140px;
+    min-height: 100vh;
+    background-color: #000;
+}
+.container-body form .container-form-select {
+    padding: 0 24px 80px;
+    width: 100%;
+}
+.container-form-select .form-selection {
+    max-width: 470px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.container-form-select .form-selection .question {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.form-selection .question p {
+    color: #fff;
+    margin: 0;
+    font-weight: 450;
+    font-size: 17px;    
+}
+.form-selection .question h1 {
+    color: #fff;
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-form-select .form-selection .container-options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.container-options .options > label {
+    height: 168px;
+    padding: 22px;
+    margin-bottom: 16px;
+    width: 100%;
+    background-color: #1E1E1E;
+    cursor: pointer;
+    border: 2px solid transparent; 
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.container-options .options > label:focus-visible {
+    border: 2px solid #FF6025;
+}
+.container-options .options > label:hover {
+    background-color: #2A2A2A;
+}
+.container-options .options > label:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+}
+.options > label .checkbox-wrapper-19 {
+    --checkbox-height: 24px;
+    margin: 3px 8px 0 0;
+}
+.container-options .options span {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding-right: 16px;
+}
+.container-options .options img {
+    top: 5px;
+    position: absolute;
+    right: 12px;
+    width: 120px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/form-workout.css">
+    <link rel="stylesheet" href="../asset/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../asset/css/checkbox.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Workout Plan</title>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <a href="#" class="app-name">
+                <div class="health"><p>HEALTH</p></div>
+                <div class="system"><p>SYSTEM</p></div>
+            </a>
+            <nav>
+                <button type="button" title="Việt Nam" class="language">
+                    <span>Việt Nam</span>
+                </button>
+                <button type="button" class="nav-bar">
+                    <i class="ti-align-justify"></i>
+                </button>
+                <div class="container-nav-bar">
+                    <div class="close-btn">
+                        <button><i class="ti-close"></i></button> 
+                    </div>
+                    <ul>
+                        <li><button>Điều khoản & Chính sách <i class="ti-angle-right"></i></button></li>
+                        <li><button>Tài khoản của tôi <i class="ti-angle-right"></i></button></li>
+                        <li><button>Hỗ trợ</button></li>
+                        <li><button>Về chúng tôi</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container-body" style="display: block;">
+            <div class="container-complete-percent">
+                <div class="complete-percent">
+                    <button type="button" title="Go back" class="back-btn"><i class="ti-angle-left"></i></button>
+                    <span class="completed-bar"></span>
+                    <p class="completed-text"></p>
+                </div>
+            </div>
+            <form method="POST" action="main_page.php">
+                <div class="container-form-select">
+                    <div class="form-selection" id = "question-1" data-question ="1">
+                        <div class="question">
+                            <h1>Chọn vùng có vấn đề</h1>
+                        </div>
+                        <div class="container-options">
+                            <div class="options">
+                                <label for="chest" class="label">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="chest" value="Ngực yếu" />
+                                        <label for="chest" class="check-box">
+                                    </div>
+                                    <span>Ngực yếu</span>
+                                    <img src="../asset/img/chest.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="arms" class="label">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="arms" value="Cánh tay mảnh khảnh" />
+                                        <label for="arms" class="check-box">
+                                    </div>
+                                    <span>Cánh tay mảnh khảnh</span>
+                                    <img src="../asset/img/arms.jpg" alt="" >
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="tummy" class="label">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="tummy" value="Bụng bia" />
+                                        <label for="tummy" class="check-box">
+                                    </div>
+                                    <span>Bụng bia</span>
+                                    <img src="../asset/img/tummy.jpg" alt="">
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="legs" class="label">
+                                    <div class="checkbox-wrapper-19">
+                                        <input type="checkbox" id="legs" value="Đôi chân mảnh khảnh" />
+                                        <label for="legs" class="check-box">
+                                    </div>
+                                    <span>Đôi chân mảnh khảnh</span>
+                                    <img src="../asset/img/legs.jpg" alt="">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../asset/js/form-nutri.js"></script>
+</html>
