@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Loại Đồ Ăn</title>
+    <link rel="stylesheet" href="../asset/css/nutrition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="filterFood('all')">Tổng hợp <i class="fas fa-list"></i></a></li>
+            <li><a href="#" onclick="filterFood('fruit')">Hoa quả <i class="fas fa-apple-alt"></i></a></li>
+            <li><a href="#" onclick="filterFood('vegetable')">Rau củ <i class="fas fa-carrot"></i></a></li>
+            <li><a href="#" onclick="filterFood('meat')">Thịt <i class="fas fa-drumstick-bite"></i></a></li>
+            <li><a href="#" onclick="filterFood('seafood')">Hải sản <i class="fas fa-fish"></i></a></li>
+            <li><a href="#" onclick="filterFood('legume')">Đậu hạt <i class="fas fa-seedling"></i></a></li>
+            <li><a href="#" onclick="filterFood('fast_food')">Thức ăn nhanh<i class="fas fa-hamburger"></i></a></li>
+        </ul>
+        
+        
+    </nav>
+    <main class="container">
+        
+        <table class="food-table">        
+            <div class="searchInfo">
+                <div class="infoDisplay">
+                    <h2>Bảng tính lượng calo tổng hợp</h2>
+                </div>
+                <div class="search">
+                    <i class="fa fa-search"></i> 
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm thực phẩm..." onkeyup="searchFood()">
+                </div>
+            </div>
+
+            <thead>
+                <tr>
+                    <th>
+                        <div class="header-container">
+                            STT 
+                            <button class="sort-button" onclick="sortByIndex()"><i class="fa-solid fa-sort" id="indexSortIcon"></i></button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="header-container">
+                            ảnh
+                        </div>
+                    </th>
+                    <th>
+                        <div class="header-container">
+                            Tên thực phẩm 
+                            <button class="sort-button" onclick="sortByName()"><i class="fa-solid fa-sort" id="nameSortIcon"></i></button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="header-container">
+                            Khối lượng 
+                        </div>
+                    </th>
+                    <th>
+                        <div class="header-container">
+                            Calo 
+                            <button class="sort-button" onclick="sortByCalories()"><i class="fa-solid fa-sort" id="caloriesSortIcon"></i></button>
+                        </div>
+                    </th>                    
+                </tr>
+            </thead>
+            <tbody id="foodList">
+            </tbody>
+        </table>
+        <div id="pagination">
+            <button id="prevPage" onclick="changePage(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span id="pageNumbers"></span>
+            <button id="nextPage" onclick="changePage(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        
+                    
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/unorm/1.4.1/unorm.js"></script>
+    <script src="../asset/js/nutrition.js"></script>
+</body>
+</html>
