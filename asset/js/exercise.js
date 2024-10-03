@@ -1,14 +1,15 @@
-let foodData;
+let exerciseData;
+
 // Hàm tải dữ liệu từ file JSON
-async function loadFoodData() {
+async function loadExerciseData() {
     try {
-        const response = await fetch("/asset/data/foodData.json");
+        const response = await fetch("/asset/data/exercise.json");
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        foodData = await response.json();
-        // Chỉ gọi filterFood ở đây sau khi dữ liệu đã được tải
-        filterFood('all'); // Hiển thị tất cả thực phẩm khi tải xong dữ liệu
+        exerciseData = await response.json();
+        // Chỉ gọi filterExercise ở đây sau khi dữ liệu đã được tải
+        filterExercise('all'); // Hiển thị tất cả bài tập khi tải xong dữ liệu
     } catch (error) {
         console.error('Có lỗi xảy ra khi tải dữ liệu:', error);
     }
@@ -16,7 +17,7 @@ async function loadFoodData() {
 
 // Khi trang load, tải dữ liệu và hiển thị
 window.onload = () => {
-    loadFoodData();  // Tải dữ liệu thực phẩm từ file JSON
+    loadExerciseData();  // Tải dữ liệu thực phẩm từ file JSON
 };
 
 // Biến lưu bộ lọc hiện tại
@@ -25,63 +26,70 @@ let currentPage = 1;
 const itemsPerPage = 20;
 let totalPages = 0;
 
-function displayFood(filteredData) {
+// Hàm hiển thị bài tập
+function displayExercise(filteredData) {
     totalPages = Math.ceil(filteredData.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const pageData = filteredData.slice(startIndex, endIndex);
     
-    const foodList = document.getElementById('foodList');
+    const exerciseList = document.getElementById('exerciseList');
     
     // Ẩn các hàng hiện tại trước khi cập nhật nội dung
-    Array.from(foodList.querySelectorAll('tr')).forEach(row => {
+    Array.from(exerciseList.querySelectorAll('tr')).forEach(row => {
         row.classList.add('hidden');
     });
     
     setTimeout(() => {
-        foodList.innerHTML = ''; // Xóa nội dung bảng sau khi đã ẩn xong
+        exerciseList.innerHTML = ''; // Xóa nội dung bảng sau khi đã ẩn xong
 
-        pageData.forEach((food, index) => {
+        // Tạo các hàng mới với dữ liệu đã lọc
+        pageData.forEach((exercise, index) => {
             const row = document.createElement('tr');
+
             const indexCell = document.createElement('td');
             const imageCell = document.createElement('td');
             const nameCell = document.createElement('td');
             const unitCell = document.createElement('td');
             const caloriesCell = document.createElement('td');
+            const difficultyCell = document.createElement('td'); // Thêm ô cho độ khó
 
             indexCell.textContent = startIndex + index + 1;
+
             let imgElement = document.createElement('img');
-            imgElement.src = food.img;
-            imgElement.alt = food.name;
+            imgElement.src = exercise.img;
+            imgElement.alt = exercise.name;
             imgElement.width = 100;
             imgElement.height = 100;
             
             imageCell.appendChild(imgElement);
-            nameCell.textContent = food.name;
-            unitCell.textContent = food.unit;
-            caloriesCell.textContent = food.calories;
+            nameCell.textContent = exercise.name;
+            unitCell.textContent = exercise.unit;
+            caloriesCell.textContent = exercise.calories;
+            difficultyCell.textContent = exercise.difficulty; // Thêm dữ liệu độ khó
 
             row.appendChild(indexCell);
             row.appendChild(imageCell);
             row.appendChild(nameCell);
             row.appendChild(unitCell);
             row.appendChild(caloriesCell);
+            row.appendChild(difficultyCell); // Thêm ô vào hàng
             row.classList.add('hidden'); // Bắt đầu với trạng thái ẩn
-            foodList.appendChild(row);
+            exerciseList.appendChild(row);
         });
 
         // Hiển thị các hàng sau khi đã cập nhật nội dung
         setTimeout(() => {
-            Array.from(foodList.querySelectorAll('tr')).forEach(row => {
+            Array.from(exerciseList.querySelectorAll('tr')).forEach(row => {
                 row.classList.remove('hidden');
             });
         }, 20);
 
         updatePaginationControls(); // Cập nhật điều khiển phân trang
-    }, 70); // Đợi 300ms để hiệu ứng ẩn hoàn thành trước khi xóa nội dung
+    }, 70); // Đợi 70ms để hiệu ứng ẩn hoàn thành trước khi xóa nội dung
 }
 
-
+// Hàm cập nhật các điều khiển phân trang
 function updatePaginationControls() {
     const paginationContainer = document.getElementById('pagination');
     const pageNumbersContainer = document.getElementById('pageNumbers');
@@ -102,11 +110,13 @@ function updatePaginationControls() {
     document.getElementById('nextPage').disabled = currentPage === totalPages;
 }
 
+// Hàm chuyển đến trang cụ thể
 function goToPage(pageNumber) {
     currentPage = pageNumber;
-    displayFood(getFilteredData());
+    displayExercise(getFilteredData());
 }
 
+// Hàm thay đổi trang theo hướng (Prev/Next)
 function changePage(direction) {
     const newPage = currentPage + direction;
     if (newPage > 0 && newPage <= totalPages) {
@@ -114,9 +124,10 @@ function changePage(direction) {
     }
 }
 
-function filterFood(category) {
-    if (!foodData) {
-        console.error('Dữ liệu thực phẩm chưa được tải.');
+// Hàm lọc bài tập theo loại
+function filterExercise(category) {
+    if (!exerciseData) {
+        console.error('Dữ liệu bài tập chưa được tải.');
         return;
     }
 
@@ -129,132 +140,71 @@ function filterFood(category) {
     switch (category) {
         case 'all':
             filteredData = [
-                ...foodData.meat,
-                ...foodData.drinks,
-                ...foodData.fruit,
-                ...foodData.vegetable,
-                ...foodData.seafood,
-                ...foodData.fast_food,
-                ...foodData.legume,
-                ...foodData.main_food
+                ...exerciseData.arms,
+                ...exerciseData.back,
+                ...exerciseData.thighs,
+                ...exerciseData.shoulders,
+                ...exerciseData.abs
             ];
             infoDisplay.innerHTML = "<h2>Bảng tính lượng calo tổng hợp</h2>";
             break;
-        case 'meat':
-            filteredData = foodData.meat;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho thịt</h2>";
+        case 'arms':
+            filteredData = exerciseData.arms;
+            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho tay</h2>";
             break;
-        case 'drinks':
-            filteredData = foodData.drinks;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho đồ uống</h2>";
+        case 'back':
+            filteredData = exerciseData.back;
+            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho lưng</h2>";
             break;
-        case 'fruit':
-            filteredData = foodData.fruit;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho hoa quả</h2>";
+        case 'thighs':
+            filteredData = exerciseData.thighs;
+            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho đùi</h2>";
             break;
-        case 'vegetable':
-            filteredData = foodData.vegetable;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho rau củ</h2>";
+        case 'shoulders':
+            filteredData = exerciseData.shoulders;
+            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho vai</h2>";
             break;
-        case 'seafood':
-            filteredData = foodData.seafood;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho hải sản</h2>";
-            break;
-        case 'fast_food':
-            filteredData = foodData.fast_food;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho fast food</h2>";
-            break;
-        case 'legume':
-            filteredData = foodData.legume;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho đậu hạt</h2>";
-            break;
-        case 'main_food':
-            filteredData = foodData.main_food;
-            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho thức ăn chính</h2>";
+        case 'abs':
+            filteredData = exerciseData.abs;
+            infoDisplay.innerHTML = "<h2>Bảng tính lượng calo cho bụng</h2>";
             break;
         default:
             console.error('Bộ lọc không hợp lệ.');
             return;
     }
 
-    displayFood(filteredData);
+    displayExercise(filteredData);
 }
 
+// Hàm lấy dữ liệu đã lọc theo bộ lọc hiện tại
 function getFilteredData() {
     switch (currentFilter) {
         case 'all':
             return [
-                ...foodData.meat,
-                ...foodData.drinks,
-                ...foodData.fruit,
-                ...foodData.vegetable,
-                ...foodData.seafood,
-                ...foodData.fast_food,
-                ...foodData.legume,
-                ...foodData.main_food
+                ...exerciseData.arms,
+                ...exerciseData.back,
+                ...exerciseData.thighs,
+                ...exerciseData.shoulders,
+                ...exerciseData.abs
             ];
-        case 'meat':
-            return foodData.meat;
-        case 'drinks':
-            return foodData.drinks;
-        case 'fruit':
-            return foodData.fruit;
-        case 'vegetable':
-            return foodData.vegetable;
-        case 'seafood':
-            return foodData.seafood;
-        case 'fast_food':
-            return foodData.fast_food;
-        case 'legume':
-            return foodData.legume;
-        case 'main_food':
-            return foodData.main_food;
+        case 'arms':
+            return exerciseData.arms;
+        case 'back':
+            return exerciseData.back;
+        case 'thighs':
+            return exerciseData.thighs;
+        case 'shoulders':
+            return exerciseData.shoulders;
+        case 'abs':
+            return exerciseData.abs;
         default:
             return [];
     }
 }
 
-// Khởi tạo hiển thị thực phẩm ban đầu
-document.addEventListener('DOMContentLoaded', function () {
-    filterFood('all');
-});
 
 
-// Hàm lấy dữ liệu đã lọc theo bộ lọc hiện tại
-function getFilteredData() {
-    if (currentFilter === 'all') {
-        return [
-            ...foodData.meat,
-            ...foodData.drinks,
-            ...foodData.fruit,
-            ...foodData.vegetable,
-            ...foodData.seafood,
-            ...foodData.fast_food,
-            ...foodData.legume,
-            ...foodData.main_food
-        ];  // Trả về tất cả thực phẩm
-    } else if (currentFilter === 'meat') {
-        return foodData.meat;
-    } else if (currentFilter === 'seafood') {
-        return foodData.seafood;
-    } else if (currentFilter === 'fruit') {
-        return foodData.fruit;
-    } else if (currentFilter === 'vegetable') {
-        return foodData.vegetable;
-    } else if (currentFilter === 'drinks') {
-        return foodData.drinks;
-    } else if (currentFilter === 'fast_food') {
-        return foodData.fast_food;
-    } else if (currentFilter === 'legume') {
-        return foodData.legume;
-    } else if (currentFilter === 'main_food') {
-        return foodData.main_food;
-    }
-}
-
-
-
-function searchFood() {
+function searchexercise() {
     const input = document.getElementById('searchInput');
     const filter = input.value.toLowerCase().trim();
     
@@ -266,11 +216,11 @@ function searchFood() {
     } else {
         // Duyệt qua tất cả dữ liệu để tìm kiếm
         const allData = getFilteredData();
-        filteredData = allData.filter(food => food.name.toLowerCase().includes(filter));
+        filteredData = allData.filter(exercise => exercise.name.toLowerCase().includes(filter));
     }
 
-    const foodList = document.getElementById('foodList'); // Đối tượng chứa danh sách thực phẩm
-    foodList.innerHTML = ""; // Xóa nội dung trước đó
+    const exerciseList = document.getElementById('exerciseList'); // Đối tượng chứa danh sách thực phẩm
+    exerciseList.innerHTML = ""; // Xóa nội dung trước đó
 
     if (filteredData.length === 0) {
         // Nếu không tìm thấy dữ liệu, hiển thị thông báo ở giữa
@@ -282,12 +232,12 @@ function searchFood() {
         cell.style.fontSize = '24px'; 
         cell.textContent = "Không tìm thấy thực phẩm nào trong hệ thống"; // Nội dung thông báo
         message.appendChild(cell); // Thêm ô vào hàng
-        foodList.appendChild(message); // Thêm hàng vào bảng
+        exerciseList.appendChild(message); // Thêm hàng vào bảng
     } else {
         // Cập nhật số trang và hiển thị dữ liệu tìm kiếm
         currentPage = 1; // Reset về trang đầu tiên
         totalPages = Math.ceil(filteredData.length / itemsPerPage); // Cập nhật số trang
-        displayFood(filteredData); // Hiển thị dữ liệu đã tìm kiếm
+        displayExercise(filteredData); // Hiển thị dữ liệu đã tìm kiếm
     }
 }
 
@@ -302,7 +252,7 @@ let isAscendingWeight = true;
 let isAscendingCalories = true;
 
 function sortByIndex() {
-    const table = document.querySelector(".food-table");
+    const table = document.querySelector(".exercise-table");
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
 
@@ -328,7 +278,7 @@ function sortByIndex() {
 }
 
 function sortByName() {
-    const table = document.querySelector(".food-table");
+    const table = document.querySelector(".exercise-table");
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
 
@@ -352,7 +302,7 @@ function sortByName() {
 }
 
 function sortByWeight() {
-    const table = document.querySelector(".food-table");
+    const table = document.querySelector(".exercise-table");
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
 
@@ -380,15 +330,15 @@ function sortByWeight() {
 }
 
 function sortByCalories() {
-    const filteredFoodItems = getFilteredData(); // Lấy danh sách thực phẩm đã lọc
+    const filteredexerciseItems = getFilteredData(); // Lấy danh sách thực phẩm đã lọc
 
     // Sắp xếp danh sách thực phẩm
-    const sortedFoodItems = filteredFoodItems.sort((a, b) => {
+    const sortedexerciseItems = filteredexerciseItems.sort((a, b) => {
         return isAscendingCalories ? a.calories - b.calories : b.calories - a.calories;
     });
 
     // Hiển thị danh sách thực phẩm đã sắp xếp
-    displayFood(sortedFoodItems);
+    displayExercise(sortedexerciseItems);
 
     // Thay đổi biểu tượng
     const sortIcon = document.getElementById('caloriesSortIcon');
