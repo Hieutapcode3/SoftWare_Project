@@ -1,0 +1,217 @@
+{
+    "male": {
+        "weight_loss": {
+            "Thứ 2": {
+                "workout": "Tập cardio cường độ cao",
+                "duration": "45 phút",
+                "calories": 400,
+                "details": [
+                    { "exercise": "Chạy bộ cường độ cao", "sets": 12, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ cường độ cao", "sets": 2, "reps": 12 }
+                ]
+            },
+            "Thứ 3": {
+                "workout": "Tập nhóm cơ ngực, bụng với tay trước",
+                "duration": "50 phút",
+                "calories": 450,
+                "details": [
+                    { "exercise": "Incline dumbbell press", "sets": 4, "reps": 15 },
+                    { "exercise": "Incline dumbbell flyes", "sets": 4, "reps": 15 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 4, "reps": 15 },
+                    { "exercise": "Plank", "sets": 4, "reps": 45 }
+                ]
+            },
+            "Thứ 4": {
+                "workout": "Tập cardio cường độ cao",
+                "duration": "45 phút",
+                "calories": 400,
+                "details": [
+                    { "exercise": "Chạy bộ cường độ cao", "sets": 12, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ cường độ cao", "sets": 2, "reps": 12 }
+                ]
+            },
+            "Thứ 5": {
+                "workout": "Tập nhóm cơ vai, lưng, bụng với tay sau",
+                "duration": "50 phút",
+                "calories": 450,
+                "details": [
+                    { "exercise": "Seated dumbbell press", "sets": 4, "reps": 15 },
+                    { "exercise": "Lat pulldown", "sets": 4, "reps": 15 },
+                    { "exercise": "Bicep dumbbell curl", "sets": 4, "reps": 15 },
+                    { "exercise": "Russian twist", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Thứ 6": {
+                "workout": "Tập cardio cường độ cao",
+                "duration": "45 phút",
+                "calories": 400,
+                "details": [
+                    { "exercise": "Chạy bộ cường độ cao", "sets": 12, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ cường độ cao", "sets": 2, "reps": 12 }
+                ]
+            },
+            "Thứ 7": {
+                "workout": "Tập nhóm cơ chân và bụng",
+                "duration": "50 phút",
+                "calories": 450,
+                "details": [
+                    { "exercise": "Squat", "sets": 4, "reps": 15 },
+                    { "exercise": "Leg press", "sets": 4, "reps": 15 },
+                    { "exercise": "Calf raise", "sets": 4, "reps": 15 },
+                    { "exercise": "Plank", "sets": 4, "reps": 45 }
+                ]
+            },
+            "Chủ nhật": {
+                "workout": "Nghỉ ngơi",
+                "duration": "",
+                "calories": 0
+            }
+        },
+        "weight_gain": {
+            "Thứ 2": {
+                "workout": "Tập nhóm cơ ngực, vai với cơ tay sau",
+                "duration": "50 phút",
+                "calories": 450,
+                "details": [
+                    { "exercise": "Incline dumbbell press", "sets": 4, "reps": 15 },
+                    { "exercise": "Seated dumbbell press", "sets": 4, "reps": 15 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 4, "reps": 15 },
+                    { "exercise": "Lateral raise", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Thứ 3": {
+                "workout": "Tập nhóm cơ lưng, cơ tay trước và cẳng tay",
+                "duration": "50 phút",
+                "calories": 500,
+                "details": [
+                    { "exercise": "Lat pulldown", "sets": 4, "reps": 15 },
+                    { "exercise": "Bicep dumbbell curl", "sets": 4, "reps": 15 },
+                    { "exercise": "Hammer curl", "sets": 4, "reps": 15 },
+                    { "exercise": "Wrist curl", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Thứ 4": {
+                "workout": "Tập cơ chân, mông, bụng với cơ bắp chân",
+                "duration": "50 phút",
+                "calories": 550,
+                "details": [
+                    { "exercise": "Squat", "sets": 4, "reps": 15 },
+                    { "exercise": "Leg press", "sets": 4, "reps": 15 },
+                    { "exercise": "Lunges", "sets": 4, "reps": 15 },
+                    { "exercise": "Calf raise", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Thứ 5": {
+                "workout": "Tập phần cơ ngực, tay sau và cơ vai",
+                "duration": "50 phút",
+                "calories": 600,
+                "details": [
+                    { "exercise": "Incline dumbbell press", "sets": 4, "reps": 15 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 4, "reps": 15 },
+                    { "exercise": "Lateral raise", "sets": 4, "reps": 15 },
+                    { "exercise": "Rear delt fly", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Thứ 6": {
+                "workout": "Thực hiện bài hỗ trợ cơ lưng, cẳng tay và tay trước",
+                "duration": "50 phút",
+                "calories": 500,
+                "details": [
+                    { "exercise": "Lat pulldown", "sets": 4, "reps": 15 },
+                    { "exercise": "Bicep dumbbell curl", "sets": 4, "reps": 15 },
+                    { "exercise": "Hammer curl", "sets": 4, "reps": 15 },
+                    { "exercise": "Wrist curl", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Thứ 7": {
+                "workout": "Bài tập nhóm cơ chân, mông, bụng với bắp chân",
+                "duration": "50 phút",
+                "calories": 450,
+                "details": [
+                    { "exercise": "Squat", "sets": 4, "reps": 15 },
+                    { "exercise": "Leg press", "sets": 4, "reps": 15 },
+                    { "exercise": "Lunges", "sets": 4, "reps": 15 },
+                    { "exercise": "Calf raise", "sets": 4, "reps": 15 }
+                ]
+            },
+            "Chủ nhật": {
+                "workout": "Nghỉ ngơi",
+                "duration": "",
+                "calories": 0
+            }
+        },
+        "keep_body": {
+            "Thứ 2": {
+                "workout": "Tập cơ ngực",
+                "duration": "40 phút",
+                "calories": 250,
+                "details": [
+                    { "exercise": "Incline dumbbell press", "sets": 3, "reps": 12 },
+                    { "exercise": "Dumbbell flyes", "sets": 3, "reps": 12 },
+                    { "exercise": "Chest press", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 3": {
+                "workout": "Tập cơ chân",
+                "duration": "40 phút",
+                "calories": 300,
+                "details": [
+                    { "exercise": "Squat", "sets": 3, "reps": 12 },
+                    { "exercise": "Leg press", "sets": 3, "reps": 12 },
+                    { "exercise": "Lunges", "sets": 3, "reps": 12 },
+                    { "exercise": "Calf raise", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Thứ 4": {
+                "workout": "Tập cơ vai",
+                "duration": "40 phút",
+                "calories": 350,
+                "details": [
+                    { "exercise": "Seated dumbbell press", "sets": 3, "reps": 12 },
+                    { "exercise": "Lateral raise", "sets": 3, "reps": 12 },
+                    { "exercise": "Rear delt fly", "sets": 3, "reps": 12 },
+                    { "exercise": "Shoulder press", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Thứ 5": {
+                "workout": "Tập cơ lưng xô",
+                "duration": "40 phút",
+                "calories": 300,
+                "details": [
+                    { "exercise": "Lat pulldown", "sets": 3, "reps": 12 },
+                    { "exercise": "Seated row", "sets": 3, "reps": 12 },
+                    { "exercise": "Deadlift", "sets": 3, "reps": 12 },
+                    { "exercise": "Superman", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Thứ 6": {
+                "workout": "Tập cơ chân với cơ vai",
+                "duration": "40 phút",
+                "calories": 350,
+                "details": [
+                    { "exercise": "Squat", "sets": 3, "reps": 12 },
+                    { "exercise": "Leg press", "sets": 3, "reps": 12 },
+                    { "exercise": "Seated dumbbell press", "sets": 3, "reps": 12 },
+                    { "exercise": "Lateral raise", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Thứ 7": {
+                "workout": "Tập cơ tay",
+                "duration": "40 phút",
+                "calories": 250,
+                "details": [
+                    { "exercise": "Bicep dumbbell curl", "sets": 3, "reps": 12 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 3, "reps": 12 },
+                    { "exercise": "Hammer curl", "sets": 3, "reps": 12 },
+                    { "exercise": "Wrist curl", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Chủ nhật": {
+                "workout": "Nghỉ ngơi",
+                "duration": "",
+                "calories": 0
+            }
+        }
+    }
+}

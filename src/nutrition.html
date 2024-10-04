@@ -9,6 +9,32 @@
 
 </head>
 <body>
+    <div class="head">
+        <div class="header-container">
+            <a href="#" class="app-name">
+                <div class="health"><p>HEALTH</p></div>
+                <div class="system"><p>SYSTEM</p></div>
+            </a>
+            <div class="nav">
+                <a href="./main_page.php">Trang chủ</a>
+                <a href="./exercise.html">Tập luyện</a>
+            </div>
+            <button type="button" class="nav-bar">
+                <i class="ti-align-justify"></i>
+            </button>
+            <div class="container-nav-bar">
+                <div class="close-btn">
+                    <button><i class="ti-close"></i></button> 
+                </div>
+                <ul>
+                    <li><button>Điều khoản & Chính sách <i class="ti-angle-right"></i></button></li>
+                    <li><button>Tài khoản của tôi <i class="ti-angle-right"></i></button></li>
+                    <li><button>Hỗ trợ</button></li>
+                    <li><button>Về chúng tôi</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <nav>
         <ul>
             <li><a href="#" onclick="filterFood('all')">Tổng hợp <i class="fas fa-list"></i></a></li>
@@ -17,12 +43,11 @@
             <li><a href="#" onclick="filterFood('meat')">Thịt <i class="fas fa-drumstick-bite"></i></a></li>
             <li><a href="#" onclick="filterFood('seafood')">Hải sản <i class="fas fa-fish"></i></a></li>
             <li><a href="#" onclick="filterFood('legume')">Đậu hạt <i class="fas fa-seedling"></i></a></li>
-            <li><a href="#" onclick="filterFood('fast_food')">Đồ ăn nhanh<i class="fas fa-hamburger"></i></a></li>
-            <li><a href="#" onclick="filterFood('main_food')">Đồ ăn truyền thống<i class="fas fa-hamburger"></i></a></li>
+            <li><a href="#" onclick="filterFood('fast_food')">Đồ ăn nhanh <i class="fas fa-hamburger"></i></a></li>
+            <li><a href="#" onclick="filterFood('main_food')">Đồ ăn truyền thống <i class="fas fa-hamburger"></i></a></li>
         </ul>
-        
-        
     </nav>
+    
     <main class="container">
         
         <table class="food-table">        
@@ -86,5 +111,6 @@
                     
     </main>
     <script src="../asset/js/nutrition.js"></script>
+    <script src="../asset/js/main_page.js"></script>
 </body>
 </html>

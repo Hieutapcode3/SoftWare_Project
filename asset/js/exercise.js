@@ -3,7 +3,7 @@ let exerciseData;
 // Hàm tải dữ liệu từ file JSON
 async function loadExerciseData() {
     try {
-        const response = await fetch("/asset/data/exercise.json");
+        const response = await fetch("/asset/data/exerciseData.json");
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -23,7 +23,7 @@ window.onload = () => {
 // Biến lưu bộ lọc hiện tại
 let currentFilter = 'all';
 let currentPage = 1;
-const itemsPerPage = 20;
+const itemsPerPage = 10;
 let totalPages = 0;
 
 // Hàm hiển thị bài tập
@@ -46,30 +46,40 @@ function displayExercise(filteredData) {
         // Tạo các hàng mới với dữ liệu đã lọc
         pageData.forEach((exercise, index) => {
             const row = document.createElement('tr');
-
+        
             const indexCell = document.createElement('td');
-            const imageCell = document.createElement('td');
+            const videoCell = document.createElement('td');
             const nameCell = document.createElement('td');
             const unitCell = document.createElement('td');
             const caloriesCell = document.createElement('td');
             const difficultyCell = document.createElement('td'); // Thêm ô cho độ khó
-
+        
             indexCell.textContent = startIndex + index + 1;
-
-            let imgElement = document.createElement('img');
-            imgElement.src = exercise.img;
-            imgElement.alt = exercise.name;
-            imgElement.width = 100;
-            imgElement.height = 100;
+        
+            // Chuyển đổi link thành định dạng nhúng
+            let videoId = exercise.vid.split('/').pop().split('?')[0]; // Lấy ID video từ URL
+            let videoEmbedUrl = `https://www.youtube.com/embed/${videoId}`;
             
-            imageCell.appendChild(imgElement);
+            let videoElement = document.createElement('iframe');
+            videoElement.src = videoEmbedUrl; // Sử dụng URL nhúng
+            videoElement.width = 400;
+            videoElement.height = 200;
+            videoElement.frameBorder = 0;
+            videoElement.allowFullscreen = true; // Cho phép chế độ toàn màn hình
+            videoElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"; // Thêm thuộc tính allow
+            
+            // Căn giữa video
+            videoElement.style.display = "block";
+            videoElement.style.margin = "0 auto";
+        
+            videoCell.appendChild(videoElement);
             nameCell.textContent = exercise.name;
             unitCell.textContent = exercise.unit;
             caloriesCell.textContent = exercise.calories;
-            difficultyCell.textContent = exercise.difficulty; // Thêm dữ liệu độ khó
-
+            difficultyCell.textContent = exercise.difficulty; 
+        
             row.appendChild(indexCell);
-            row.appendChild(imageCell);
+            row.appendChild(videoCell);
             row.appendChild(nameCell);
             row.appendChild(unitCell);
             row.appendChild(caloriesCell);
@@ -77,6 +87,7 @@ function displayExercise(filteredData) {
             row.classList.add('hidden'); // Bắt đầu với trạng thái ẩn
             exerciseList.appendChild(row);
         });
+        
 
         // Hiển thị các hàng sau khi đã cập nhật nội dung
         setTimeout(() => {
@@ -250,6 +261,9 @@ let isAscendingIndex = true;
 let isAscendingName = true;
 let isAscendingWeight = true;
 let isAscendingCalories = true;
+let isAscendingDuration = true;
+let isAscendingDifficulty = true;
+
 
 function sortByIndex() {
     const table = document.querySelector(".exercise-table");
@@ -301,33 +315,38 @@ function sortByName() {
     updateSortIcons(1, isAscendingName);
 }
 
-function sortByWeight() {
-    const table = document.querySelector(".exercise-table");
-    const tbody = table.querySelector("tbody");
-    const rows = Array.from(tbody.querySelectorAll("tr"));
+function sortByDifficulty() {
+    const filteredExerciseItems = getFilteredData(); // Lấy danh sách bài tập đã lọc
 
-    rows.sort((a, b) => {
-        const cellA = parseFloat(a.cells[3].textContent.trim());
-        const cellB = parseFloat(b.cells[3].textContent.trim());
-        return isAscendingWeight ? cellA - cellB : cellB - cellA; // Sắp xếp Khối lượng
+    // Định nghĩa thứ tự độ khó
+    const difficultyOrder = {
+        "Dễ": 1,
+        "Trung bình": 2,
+        "Khó": 3
+    };
+
+    // Sắp xếp danh sách bài tập theo độ khó
+    const sortedExerciseItems = filteredExerciseItems.sort((a, b) => {
+        return isAscendingDifficulty 
+            ? difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty]
+            : difficultyOrder[b.difficulty] - difficultyOrder[a.difficulty];
     });
 
-    tbody.innerHTML = "";
-    rows.forEach(row => tbody.appendChild(row));
+    // Hiển thị danh sách bài tập đã sắp xếp
+    displayExercise(sortedExerciseItems);
 
-    const sortIcon = document.getElementById('wheightSortIcon');
-    if (isAscendingWeight) {
+    // Thay đổi biểu tượng sắp xếp
+    const sortIcon = document.getElementById('difficultySortIcon');
+    if (isAscendingDifficulty) {
         sortIcon.className = "fa-solid fa-arrow-up-wide-short"; // Biểu tượng cho sắp xếp tăng
     } else {
         sortIcon.className = "fa-solid fa-arrow-down-wide-short"; // Biểu tượng cho sắp xếp giảm
     }
 
     // Đảo ngược trạng thái sắp xếp
-    isAscendingWeight = !isAscendingWeight;
-    
-    // Cập nhật biểu tượng
-    updateSortIcons(2, isAscendingWeight);
+    isAscendingDifficulty = !isAscendingDifficulty;
 }
+
 
 function sortByCalories() {
     const filteredexerciseItems = getFilteredData(); // Lấy danh sách thực phẩm đã lọc
@@ -350,6 +369,31 @@ function sortByCalories() {
 
     // Đảo ngược trạng thái sắp xếp
     isAscendingCalories = !isAscendingCalories;
+}
+
+function sortByDuration() {
+    const filteredexerciseItems = getFilteredData(); // Lấy danh sách thực phẩm đã lọc
+
+    // Sắp xếp danh sách thực phẩm
+    const sortedexerciseItems = filteredexerciseItems.sort((a, b) => {
+        const durationA = parseInt(a.unit); 
+        const durationB = parseInt(b.unit); 
+        return isAscendingDuration ? durationA - durationB : durationB - durationA;
+    });
+
+    // Hiển thị danh sách thực phẩm đã sắp xếp
+    displayExercise(sortedexerciseItems);
+
+    // Thay đổi biểu tượng
+    const sortIcon = document.getElementById('durationSortIcon');
+    if (isAscendingDuration) {
+        sortIcon.className = "fa-solid fa-arrow-up-wide-short"; // Biểu tượng cho sắp xếp tăng
+    } else {
+        sortIcon.className = "fa-solid fa-arrow-down-wide-short"; // Biểu tượng cho sắp xếp giảm
+    }
+
+    // Đảo ngược trạng thái sắp xếp
+    isAscendingDuration = !isAscendingDuration;
 }
 
 // Cập nhật biểu tượng sắp xếp
