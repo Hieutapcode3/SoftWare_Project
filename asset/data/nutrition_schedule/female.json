@@ -1,0 +1,1231 @@
+{
+    "female": {
+      "weight_loss": {
+        "eat_clean": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "low_carb": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "paleo": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "vegan": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trái cây",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Đậu phụ", "calories": 400 },
+              "snack": { "name": "Sữa hạt + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Mì Ý với rau củ", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Đậu lăng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cà rốt nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Bơ",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Đậu phụ", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cà chua nhồi quinoa", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": { "name": "Sinh tố bơ + Hạt chia", "calories": 350 },
+              "lunch": { "name": "Đậu lăng hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa hạt + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cà ri đậu chickpea", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa hạt", "calories": 150 },
+              "dinner": { "name": "Rau xào + Đậu phụ", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Đậu lăng", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Bánh pizza chay", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa hạt + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Đậu phụ + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cơm chiên rau củ", "calories": 500 }
+            }
+          }
+        ],
+
+        "hcg": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ]
+      },
+      "weight_gain": {
+        "eat_clean": [
+          {
+            "day": "Thứ 2",
+            "meals": {
+                "breakfast": { "name": "1 tô bún bò Huế, 1 ly nước dừa, 1 quả kiwi", "calories": 450 },
+                "lunch": { "name": "3 chén cơm, 1 chén canh hến nấu chua, 80g thịt gà xào chua ngọt, 1 đĩa rau muống xào tỏi", "calories": 700 },
+                "dinner": { "name": "2 chén cơm, 80g cá kho tộ, 1 bát canh bí đao, 1 đĩa salad trộn", "calories": 600 },
+                "snack": { "name": "1 hũ sữa chua, 1 nắm hạt điều", "calories": 250 }
+            }
+        },
+        {
+            "day": "Thứ 3",
+            "meals": {
+                "breakfast": { "name": "1 phần trứng bác, 1 lát bánh mì nguyên cám, 1 ly sữa hạnh nhân", "calories": 400 },
+                "lunch": { "name": "2 chén cơm, 1 bát canh cà chua, 80g thịt lợn xào ớt chuông, 1 đĩa rau cải xanh", "calories": 650 },
+                "dinner": { "name": "1 tô phở gà, 1 đĩa rau sống, 1 ly trà xanh", "calories": 500 },
+                "snack": { "name": "1 quả táo, 1 ít hạt chia", "calories": 150 }
+            }
+        },
+        {
+            "day": "Thứ 4",
+            "meals": {
+                "breakfast": { "name": "1 đĩa ngũ cốc, 1 ly sữa đậu nành, 1 quả chuối", "calories": 350 },
+                "lunch": { "name": "3 chén cơm, 1 bát canh đậu hũ, 80g cá nướng, 1 đĩa rau xà lách", "calories": 700 },
+                "dinner": { "name": "1 phần spaghetti sốt cà chua, 1 đĩa rau củ hấp", "calories": 600 },
+                "snack": { "name": "Trái cây tùy chọn, 1 hũ yogurt", "calories": 250 }
+            }
+        },
+        {
+            "day": "Thứ 5",
+            "meals": {
+                "breakfast": { "name": "1 tô cháo gà, 1 ly nước cam", "calories": 400 },
+                "lunch": { "name": "3 chén cơm, 1 bát canh hến, 80g thịt bò xào măng tây, 1 đĩa salad rau củ", "calories": 700 },
+                "dinner": { "name": "1 phần gà nướng, 1 chén cơm, 1 bát canh rau ngót", "calories": 600 },
+                "snack": { "name": "Hạt dẻ rang, 1 ly sinh tố bơ", "calories": 250 }
+            }
+        },
+        {
+            "day": "Thứ 6",
+            "meals": {
+                "breakfast": { "name": "1 tô bánh canh, 1 ly sữa tươi", "calories": 450 },
+                "lunch": { "name": "3 chén cơm, 1 bát canh chua cá, 80g mực xào bông cải", "calories": 700 },
+                "dinner": { "name": "1 đĩa thịt heo kho tàu, 1 chén cơm, 1 bát canh rau muống", "calories": 600 },
+                "snack": { "name": "Chè, 1 quả cam", "calories": 200 }
+            }
+        },
+        {
+            "day": "Thứ 7",
+            "meals": {
+                "breakfast": { "name": "1 tô xôi, 1 cốc sữa tươi", "calories": 500 },
+                "lunch": { "name": "2 chén cơm, 80g thịt gà xào sả ớt, canh bí nấu tôm, 1 đĩa đậu bắp xào", "calories": 700 },
+                "dinner": { "name": "3 chén cơm, 1 bát canh bí, 80g cá kho dứa", "calories": 600 },
+                "snack": { "name": "1 hộp trái cây tươi, 1 ít socola", "calories": 250 }
+            }
+        },
+        {
+            "day": "Chủ nhật",
+            "meals": {
+                "breakfast": { "name": "1 tô mì quảng, 1 ly sinh tố", "calories": 450 },
+                "lunch": { "name": "3 chén cơm, 80g thịt kho, 1 bát canh mướp, 1 đĩa rau sống", "calories": 700 },
+                "dinner": { "name": "1 phần sushi, 1 bát canh miso", "calories": 600 },
+                "snack": { "name": "1 chiếc bánh flan, khoai lang nướng", "calories": 300 }
+            }
+        }
+        ],
+        "low_carb": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "paleo": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "vegan": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trái cây",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Đậu phụ", "calories": 400 },
+              "snack": { "name": "Sữa hạt + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Mì Ý với rau củ", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Đậu lăng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cà rốt nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Bơ",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Đậu phụ", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cà chua nhồi quinoa", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": { "name": "Sinh tố bơ + Hạt chia", "calories": 350 },
+              "lunch": { "name": "Đậu lăng hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa hạt + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cà ri đậu chickpea", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa hạt", "calories": 150 },
+              "dinner": { "name": "Rau xào + Đậu phụ", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Đậu lăng", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Bánh pizza chay", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa hạt + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Đậu phụ + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cơm chiên rau củ", "calories": 500 }
+            }
+          }
+        ],
+
+        "hcg": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ]
+      },
+      "keep_body": {
+        "eat_clean": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "low_carb": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "paleo": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ],
+        "vegan": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trái cây",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Đậu phụ", "calories": 400 },
+              "snack": { "name": "Sữa hạt + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Mì Ý với rau củ", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Đậu lăng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cà rốt nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Bơ",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Đậu phụ", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cà chua nhồi quinoa", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": { "name": "Sinh tố bơ + Hạt chia", "calories": 350 },
+              "lunch": { "name": "Đậu lăng hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa hạt + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cà ri đậu chickpea", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa hạt", "calories": 150 },
+              "dinner": { "name": "Rau xào + Đậu phụ", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Đậu lăng", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Bánh pizza chay", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa hạt + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Đậu phụ + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cơm chiên rau củ", "calories": 500 }
+            }
+          }
+        ],
+
+        "hcg": [
+          {
+            "day": "Thứ Hai",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Trứng luộc",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad rau củ + Ức gà", "calories": 400 },
+              "snack": { "name": "Sữa chua + Hạt điều", "calories": 200 },
+              "dinner": { "name": "Cá hồi nướng + Rau xanh", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Ba",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố chuối + Hạnh nhân",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà nướng", "calories": 450 },
+              "snack": { "name": "Táo + Bơ đậu phộng", "calories": 150 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Tư",
+            "meals": {
+              "breakfast": {
+                "name": "Bánh mì nguyên cám + Trứng",
+                "calories": 300
+              },
+              "lunch": { "name": "Salad + Thịt gà", "calories": 400 },
+              "snack": { "name": "Sinh tố trái cây", "calories": 200 },
+              "dinner": { "name": "Cá hấp + Salad", "calories": 450 }
+            }
+          },
+          {
+            "day": "Thứ Năm",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố bơ + Hạnh nhân",
+                "calories": 350
+              },
+              "lunch": { "name": "Thịt gà hấp + Rau xanh", "calories": 400 },
+              "snack": { "name": "Sữa chua + Trái cây", "calories": 200 },
+              "dinner": { "name": "Cá nướng + Khoai tây", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Sáu",
+            "meals": {
+              "breakfast": {
+                "name": "Cháo yến mạch + Hạt chia",
+                "calories": 300
+              },
+              "lunch": { "name": "Gà nướng + Rau xanh", "calories": 450 },
+              "snack": { "name": "Táo + Sữa chua", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Rau hấp", "calories": 500 }
+            }
+          },
+          {
+            "day": "Thứ Bảy",
+            "meals": {
+              "breakfast": {
+                "name": "Sinh tố dâu + Hạt chia",
+                "calories": 250
+              },
+              "lunch": { "name": "Salad rau củ + Gà hấp", "calories": 400 },
+              "snack": { "name": "Trái cây tươi", "calories": 100 },
+              "dinner": { "name": "Cá nướng + Khoai lang", "calories": 500 }
+            }
+          },
+          {
+            "day": "Chủ Nhật",
+            "meals": {
+              "breakfast": { "name": "Sữa chua + Yến mạch", "calories": 300 },
+              "lunch": { "name": "Thịt gà + Rau xanh", "calories": 400 },
+              "snack": { "name": "Hạt điều", "calories": 150 },
+              "dinner": { "name": "Cá hồi + Salad", "calories": 500 }
+            }
+          }
+        ]
+      }
+    }
+  }

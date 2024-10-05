@@ -1,0 +1,167 @@
+{
+    "arms": [
+      {
+        "name": "Bài tập tạ tay",
+        "calories": 40,
+        "unit": "10 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://www.youtube.com/embed/qEwKCR5JCog"
+      },
+      {
+        "name": "Chống đẩy",
+        "calories": 70,
+        "unit": "10 phút",
+        "difficulty": "Dễ",
+        "vid": "https://youtu.be/IODxDxX7oi4?si=leC-ZubLcGXCyctD"
+      },
+      {
+        "name": "Kéo xà đơn",
+        "calories": 150,
+        "unit": "15 phút",
+        "difficulty": "Khó",
+        "vid": "https://youtu.be/eGo4IYlbE5g?si=C0O-d2taxDHlw1tW"
+      },
+      {
+        "name": "Bench Press",
+        "calories": 130,
+        "unit": "15 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/SCVCLChPQFY?si=GBzdTJ6E8F_Y0EP4"
+      },
+      {
+        "name": "Biceps Curl",
+        "calories": 50,
+        "unit": "10 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtube.com/shorts/803JIAWBj_c?si=13OTFZg6oZizvSA4"
+      }
+    ],
+    "back": [
+      {
+        "name": "Lat Pulldown",
+        "calories": 150,
+        "unit": "30 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/JGeRYIZdojU?si=ewXtv5CMHnttq2bG"
+      },
+      {
+        "name": "Deadlift",
+        "calories": 300,
+        "unit": "30 phút",
+        "difficulty": "Khó",
+        "vid": "https://youtube.com/shorts/8np3vKDBJfc?si=dkyKEXB-MTmtPKbO"
+      },
+      {
+        "name": "Bent-over Row",
+        "calories": 200,
+        "unit": "20 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/6gvmcqr226U?si=PpyNB_zVQjt4PqPL"
+      },
+      {
+        "name": "Pull-ups",
+        "calories": 120,
+        "unit": "15 phút",
+        "difficulty": "Khó",
+        "vid": "https://youtube.com/shorts/ZPG8OsHKXLw?si=B0KVuEGp3TCHAOKj"
+      },
+      {
+        "name": "Seated Cable Row",
+        "calories": 150,
+        "unit": "30 phút",
+        "difficulty": "Khó",
+        "vid": "https://youtu.be/lJoozxC0Rns?si=V6bR4BPfZNZWETQI"
+      }
+    ],
+    "thighs": [
+      {
+        "name": "Squats",
+        "calories": 180,
+        "unit": "30 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/xqvCmoLULNY?si=PBM2mVBFT2JRUJP0"
+      },
+      {
+        "name": "Lunges",
+        "calories": 120,
+        "unit": "20 phút",
+        "difficulty": "Dễ",
+        "vid": "/asset/img/dinhduong/exercises/dui/lunges.jpg"
+      },
+      {
+        "name": "Leg Press",
+        "calories": 220,
+        "unit": "30 phút",
+        "difficulty": "Khó",
+        "vid": "https://youtu.be/qCR9bN3G1t4?si=4j2SbfC9JxqufIVy"
+      },
+      {
+        "name": "Leg Extensions",
+        "calories": 160,
+        "unit": "20 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/4ZDm5EbiFI8?si=8Cm0aISAPVpoyAYn"
+      }
+    ],
+    "shoulders": [
+      {
+        "name": "Barbell Front Raise",
+        "calories": 150,
+        "unit": "15 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/_od0CCC6DEM?si=umvDG6w47KWTeEmB"
+      },
+      {
+        "name": "Dumbbell Front Raise",
+        "calories": 180,
+        "unit": "20 phút",
+        "difficulty": "Khó",
+        "vid": "https://youtu.be/zkP0MsTcIVU?si=FP1yDPfJAbZY7kmC"
+      },
+      {
+        "name": "Dumbbell Lateral Raise",
+        "calories": 100,
+        "unit": "15 phút",
+        "difficulty": "Dễ",
+        "vid": "https://youtu.be/XPPfnSEATJA?si=xLaVSYNrJMX6ROyK"
+      },
+      {
+        "name": "Rear Delt Machine Fly",
+        "calories": 80,
+        "unit": "15 phút",
+        "difficulty": "Dễ",
+        "vid": "https://youtu.be/VoscK_FHNbw?si=kwU9ua6TI5pOMRkx"
+      }
+    ],
+    "abs": [
+      {
+        "name": "Crunches",
+        "calories": 70,
+        "unit": "10 phút",
+        "difficulty": "Dễ",
+        "vid": "https://youtube.com/shorts/eeJ_CYqSoT4?si=fOhgwGispiDAm8jo"
+      },
+      {
+        "name": "Plank",
+        "calories": 90,
+        "unit": "10 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtube.com/shorts/v25dawSzRTM?si=pl0G2M-b38UB2ARO"
+      },
+      {
+        "name": "Bicycle Crunches",
+        "calories": 80,
+        "unit": "10 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/wnuLak2onoA?si=99SbCCSm1EiF27HE"
+      },
+      {
+        "name": "Leg Raises",
+        "calories": 60,
+        "unit": "10 phút",
+        "difficulty": "Trung bình",
+        "vid": "https://youtu.be/-1k2b8dG16g?si=B27s2yFV7nd7WZl-"
+      }
+    ]
+  }
+  

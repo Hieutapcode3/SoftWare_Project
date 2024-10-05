@@ -1,0 +1,209 @@
+{
+    "female": {
+        "weight_loss": {
+            "Thứ 2": {
+                "workout": "Tập cardio",
+                "duration": "30 phút",
+                "calories": 180,
+                "details": [
+                    { "exercise": "Chạy bộ nhẹ nhàng", "sets": 10, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ", "sets": 1, "reps": 10 }
+                ]
+            },
+            "Thứ 3": {
+                "workout": "Tập gym (cơ ngực, cơ tay trước, cơ bụng)",
+                "duration": "40 phút",
+                "calories": 280,
+                "details": [
+                    { "exercise": "Incline dumbbell flyes", "sets": 3, "reps": 12 },
+                    { "exercise": "Incline dumbbell press", "sets": 3, "reps": 12 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 4": {
+                "workout": "Yoga",
+                "duration": "30 phút",
+                "calories": 120,
+                "details": [
+                    { "exercise": "Downward-facing dog", "sets": 3, "reps": 30 },
+                    { "exercise": "Warrior pose", "sets": 3, "reps": 30 },
+                    { "exercise": "Triangle pose", "sets": 3, "reps": 30 },
+                    { "exercise": "Seated forward fold", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 5": {
+                "workout": "Tập gym (cơ vai, cơ lưng, cơ tay sau, cơ bụng)",
+                "duration": "40 phút",
+                "calories": 280,
+                "details": [
+                    { "exercise": "Seated dumbbell press", "sets": 3, "reps": 12 },
+                    { "exercise": "Lat pulldown", "sets": 3, "reps": 12 },
+                    { "exercise": "Bicep dumbbell curl", "sets": 3, "reps": 12 },
+                    { "exercise": "Russian twist", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Thứ 6": {
+                "workout": "Tập cardio",
+                "duration": "30 phút",
+                "calories": 180,
+                "details": [
+                    { "exercise": "Chạy bộ nhẹ nhàng", "sets": 10, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ", "sets": 1, "reps": 10 }
+                ]
+            },
+            "Thứ 7": {
+                "workout": "Tập gym (cơ chân, cơ bụng)",
+                "duration": "40 phút",
+                "calories": 280,
+                "details": [
+                    { "exercise": "Squat", "sets": 3, "reps": 12 },
+                    { "exercise": "Leg press", "sets": 3, "reps": 12 },
+                    { "exercise": "Calf raise", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Chủ nhật": {
+                "workout": "Nghỉ ngơi",
+                "duration": "",
+                "calories": 0
+            }
+        },
+        "weight_gain": {
+            "Thứ 2": {
+                "workout": "Tập gym (cơ ngực, cơ tay trước, cơ bụng)",
+                "duration": "45 phút",
+                "calories": 350,
+                "details": [
+                    { "exercise": "Incline dumbbell press", "sets": 3, "reps": 8 },
+                    { "exercise": "Incline dumbbell flyes", "sets": 3, "reps": 12 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 3": {
+                "workout": "Tập cardio (chạy bộ, đi xe đạp)",
+                "duration": "30 phút",
+                "calories": 250,
+                "details": [
+                    { "exercise": "Chạy bộ", "sets": 10, "reps": 1 },
+                    { "exercise": "Đi xe đạp", "sets": 10, "reps": 1 }
+                ]
+            },
+            "Thứ 4": {
+                "workout": "Tập gym (cơ vai, cơ lưng, cơ tay sau, cơ bụng)",
+                "duration": "45 phút",
+                "calories": 350,
+                "details": [
+                    { "exercise": "Seated dumbbell press", "sets": 3, "reps": 8 },
+                    { "exercise": "Lat pulldown", "sets": 3, "reps": 12 },
+                    { "exercise": "Bicep dumbbell curl", "sets": 3, "reps": 12 },
+                    { "exercise": "Russian twist", "sets": 3, "reps": 12 }
+                ]
+            },
+            "Thứ 5": {
+                "workout": "Tập cardio (chạy bộ, đi xe đạp)",
+                "duration": "30 phút",
+                "calories": 250,
+                "details": [
+                    { "exercise": "Chạy bộ", "sets": 10, "reps": 1 },
+                    { "exercise": "Đi xe đạp", "sets": 10, "reps": 1 }
+                ]
+            },
+            "Thứ 6": {
+                "workout": "Tập gym (cơ chân, cơ bụng)",
+                "duration": "45 phút",
+                "calories": 350,
+                "details": [
+                    { "exercise": "Squat", "sets": 3, "reps": 8 },
+                    { "exercise": "Leg press", "sets": 3, "reps": 12 },
+                    { "exercise": "Calf raise", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 7": {
+                "workout": "Tập cardio (chạy bộ, đi xe đạp)",
+                "duration": "30 phút",
+                "calories": 250,
+                "details": [
+                    { "exercise": "Chạy bộ", "sets": 10, "reps": 1 },
+                    { "exercise": "Đi xe đạp", "sets": 10, "reps": 1 }
+                ]
+            },
+            "Chủ nhật": {
+                "workout": "Nghỉ ngơi",
+                "duration": "",
+                "calories": 0
+            }
+        },
+        "keep_body": {
+            "Thứ 2": {
+                "workout": "Tập gym (cơ ngực, cơ tay trước, cơ bụng)",
+                "duration": "30 phút",
+                "calories": 200,
+                "details": [
+                    { "exercise": "Incline dumbbell press", "sets": 3, "reps": 12 },
+                    { "exercise": "Incline dumbbell flyes", "sets": 3, "reps": 12 },
+                    { "exercise": "Tricep dumbbell extension", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 3": {
+                "workout": "Tập cardio",
+                "duration": "20 phút",
+                "calories": 150,
+                "details": [
+                    { "exercise": "Chạy bộ nhẹ nhàng", "sets": 10, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ", "sets": 1, "reps": 10 }
+                ]
+            },
+            "Thứ 4": {
+                "workout": "Yoga",
+                "duration": "20 phút",
+                "calories": 100,
+                "details": [
+                    { "exercise": "Downward-facing dog", "sets": 3, "reps": 30 },
+                    { "exercise": "Warrior pose", "sets": 3, "reps": 30 },
+                    { "exercise": "Triangle pose", "sets": 3, "reps": 30 },
+                    { "exercise": "Seated forward fold", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 5": {
+                "workout": "Tập cardio",
+                "duration": "20 phút",
+                "calories": 150,
+                "details": [
+                    { "exercise": "Chạy bộ nhẹ nhàng", "sets": 10, "reps": 1 },
+                    { "exercise": "Cardio không dụng cụ", "sets": 1, "reps": 10 }
+                ]
+            },
+            "Thứ 6": {
+                "workout": "Tập gym (cơ chân, cơ bụng)",
+                "duration": "30 phút",
+                "calories": 200,
+                "details": [
+                    { "exercise": "Squat", "sets": 3, "reps": 12 },
+                    { "exercise": "Leg press", "sets": 3, "reps": 12 },
+                    { "exercise": "Calf raise", "sets": 3, "reps": 12 },
+                    { "exercise": "Plank", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Thứ 7": {
+                "workout": "Yoga",
+                "duration": "20 phút",
+                "calories": 100,
+                "details": [
+                    { "exercise": "Downward-facing dog", "sets": 3, "reps": 30 },
+                    { "exercise": "Warrior pose", "sets": 3, "reps": 30 },
+                    { "exercise": "Triangle pose", "sets": 3, "reps": 30 },
+                    { "exercise": "Seated forward fold", "sets": 3, "reps": 30 }
+                ]
+            },
+            "Chủ nhật": {
+                "workout": "Nghỉ ngơi",
+                "duration": "",
+                "calories": 0
+            }
+        }
+    }
+}

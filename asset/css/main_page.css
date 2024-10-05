@@ -15,215 +15,207 @@ body {
   }
 
   /* Header */
-.head {
-  position: fixed;
-  top: 0;
-  background-color: #121212;
-  width: 100%;
-  height: auto;
-  z-index: 10;
-}
-
-.header-container {
-  width: 100%;
-  z-index: 10; /* Đảm bảo phần đầu trang ở trên hình ảnh */
-  padding: 20px;
-  background: rgba(255, 255, 255, 0); /* Nền trong suốt */
-  display: flex;
-  box-sizing: border-box; /* Đảm bảo padding không làm phần tử rộng hơn 100% */
-  overflow: hidden; /* Ngăn chặn nội dung tràn ra ngoài */
-  align-items: center;
-}
-.header-container .app-name {
-  text-decoration: none;
-  display: flex;
-  box-shadow: 5px 5px 10px 0 #ff4d00;
-
-}
-.header-container .app-name p {
-  margin: 0;
-}
-.header-container .app-name .health {
-  background-color: #ff4d00; 
-  color: #000; 
-  padding: 0 4px;
-  display: flex;
-  align-items: center;
-}
-.app-name .health p {
-  font-family: 'FutureSport';
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-@font-face {
-  font-family: 'FutureSport'; /* Đặt tên cho font */
-  src: url('../font/TechnoRaceItalic-eZRWe.otf') format('truetype'); /* Đường dẫn đến file font */
-  font-weight: normal;
-  font-style: normal;
-}
-.header-container .app-name .system {
-  color: #ff4d00; 
-  padding: 8px 14px;
-  background-color: black; 
-  margin-left: 5px;
-  border: 2px solid #ff4d00;
-}
-.app-name .system p{
-  letter-spacing: 4px;
-  font-family: 'FutureSport';
-  font-weight: bold;
-  font-size: 14px;
-}
-/* Brand */
-.brand {
-display: flex;
-align-items: center;
-}
-
-.brand i {
-color: #06ff8f;
-font-size: 32px;
-margin-right: 10px;
-}
-
-.brand h2 {
-color: #11ad67;
-margin: 0;
-font-size: 32px;
-font-weight: 700;
-font-family: 'Bebas Neue', sans-serif;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-}
-
-/* Navigation */
-.nav {
-  display: flex;
-  margin-left: auto;
-  margin-right: 40px;
-}
-
-.nav a {
-  color: #ffffff; /* Darker text for nav items */
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 18px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #ff4d00;
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-.nav a:hover {
-  color: #ff4d00;
-}
-.header-container .nav-bar {
-  display: flex;
-  font-weight: bold;
-  padding: 8px;
-  border: none;
-  background-color: #121212;
-  cursor: pointer;
-}
-.header-container .nav-bar:hover i {
-  color: #FF6025;
-}
-.header-container .nav-bar i {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-.header-container .container-nav-bar {
-  opacity: 0;
-  position: fixed;
-  inset: 0px;
-  z-index: 1;
-  display: none;
-  background-color: #000000a1;
-  transition: opacity 0.5s linear;
-}
-.container-nav-bar.show {
-  opacity: 1;
-}
-.header-container .container-nav-bar i {
-  font-weight: bold;
-  font-size: 16px;
-}
-.container-nav-bar .close-btn {
-  display: flex;
-  max-width: 375px;
-  background-color: #2A2A2A;
-  padding: 12px 24px;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 100%;
-  justify-content: flex-end;
-  z-index: 3;
-}
-.container-nav-bar .close-btn button {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-.container-nav-bar .close-btn i {
-  color: #fff;
-
-}
-.container-nav-bar ul {
-  background: #2A2A2A;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 24px;
-  position: absolute;
-  top: 44px;
-  bottom: 0px;
-  right: 0px;
-  width: 100%;
-  max-width: 375px;
-  z-index: 2;
-  list-style: none;
-  margin: 0;
-}
-.container-nav-bar ul li {
-  border-bottom: 1px solid #ffffff14;
-  cursor: pointer;
-}
-.container-nav-bar ul li button{
-  color: #fff;
-  font-size: 18px;
-  padding: 16px 24px 16px 40px;
-  margin: 0 -24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  line-height: 26px;
-  width: calc(100% + 48px);
-  font-family: sans-serif;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-.container-nav-bar ul li button:hover {
-  background-color: #393939;
-}
+  .head {
+    position: fixed;
+    top: 0;
+    background-color: #121212;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+  }
+  
+  .header-container {
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0); /* Nền trong suốt */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .header-container .app-name {
+    text-decoration: none;
+    display: flex;
+    box-shadow: 5px 5px 10px 0 #ff4d00;
+  }
+  
+  .header-container .app-name p {
+    margin: 0;
+  }
+  
+  .header-container .app-name .health {
+    background-color: #ff4d00;
+    color: #000;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .app-name .health p {
+    font-family: 'FutureSport';
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .header-container .app-name .system {
+    color: #ff4d00;
+    padding: 8px 14px;
+    background-color: black;
+    margin-left: 5px;
+    border: 2px solid #ff4d00;
+  }
+  
+  .app-name .system p {
+    letter-spacing: 4px;
+    font-family: 'FutureSport';
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  /* Thanh điều hướng (nav) */
+  .nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  
+  .nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4d00;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+  }
+  
+  .nav a:hover {
+    color: #ff4d00;
+  }
+  
+  .header-container .nav-bar {
+    display: flex;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    background-color: #121212;
+    cursor: pointer;
+  }
+  
+  .header-container .nav-bar:hover i {
+    color: #FF6025;
+  }
+  
+  .header-container .nav-bar i {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Menu container nav bar */
+  .header-container .container-nav-bar {
+    opacity: 0;
+    position: fixed;
+    inset: 0px;
+    z-index: 1;
+    display: none;
+    background-color: #000000a1;
+    transition: opacity 0.5s linear;
+  }
+  
+  .container-nav-bar.show {
+    opacity: 1;
+  }
+  
+  .header-container .container-nav-bar i {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Nút đóng menu */
+  .container-nav-bar .close-btn {
+    display: flex;
+    max-width: 375px;
+    background-color: #2A2A2A;
+    padding: 12px 24px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+  
+  .container-nav-bar .close-btn button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .container-nav-bar .close-btn i {
+    color: #fff;
+  }
+  
+  /* Danh sách trong menu */
+  .container-nav-bar ul {
+    background: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 24px;
+    position: absolute;
+    top: 44px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    max-width: 375px;
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .container-nav-bar ul li {
+    border-bottom: 1px solid #ffffff14;
+    cursor: pointer;
+  }
+  
+  .container-nav-bar ul li button {
+    color: #fff;
+    font-size: 18px;
+    padding: 16px 24px 16px 40px;
+    margin: 0 -24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    line-height: 26px;
+    width: calc(100% + 48px);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .container-nav-bar ul li button:hover {
+    background-color: #393939;
+  }
+  
 
 
   .container {

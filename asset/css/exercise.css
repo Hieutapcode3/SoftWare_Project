@@ -1,0 +1,319 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2a2a2a;
+    color: #333;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2a2a2a;
+    color: #ff4d00;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: #343a40;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+
+nav ul li:active {
+    background-color: #ff4d00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.exercise-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.exercise-table th{
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    padding: 5px;
+    background-color: #ff4d00;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.exercise-table th:first-child{
+    width: 100px;
+}
+.exercise-table th:nth-child(2) {
+    
+}
+
+
+.exercise-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: center;
+}
+
+
+.exercise-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.exercise-table tr:hover {
+    background-color: #ef9a55;
+    transition: background-color 0.2s ease;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sort-button {
+    background: none; /* Không có nền */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua */
+    padding: 5px 10px; /* Thêm padding để tăng vùng nhấp chuột */
+    outline: none; /* Không có đường viền khi nhấn */
+    color: inherit; /* Kế thừa màu sắc từ phần tử cha */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    box-sizing: border-box;
+}
+
+/* Thay đổi màu khi hover */
+.sort-button:hover {
+    background-color: #fff; /* Nền màu khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ khi hover */
+    color: #ff4d00;
+    border-radius: 4px;
+}
+
+.sort-button i {
+    margin: 0; /* Không có khoảng cách */
+    font-size: 14px; /* Kích thước biểu tượng */
+    transition: transform 0.2s;
+    width: 14px;
+}
+
+/* Các màu cho icon khi sắp xếp */
+.sort-button i.fa-sort-up {
+    color: #ff4d00; /* Màu cho icon sắp xếp tăng */
+}
+
+.sort-button i.fa-sort-down {
+    color: red; /* Màu cho icon sắp xếp giảm */
+}
+
+
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.food-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 160px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.food-item.fruit {
+    background-color: #ffe5d9;
+}
+
+.food-item.vegetable {
+    background-color: #d9f7e5;
+}
+
+.food-item.meat {
+    background-color: #ffd5d5;
+}
+
+.food-item.grain {
+    background-color: #fff3d4;
+}
+
+.food-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.food-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.search {
+    position: relative; /* Để các phần tử con có thể sử dụng position tuyệt đối */
+    width: 100%;
+    max-width: 300px; /* Tùy chỉnh độ rộng của ô tìm kiếm */
+}
+
+.search input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Thêm padding bên phải để dành chỗ cho biểu tượng */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search i {
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #ff4d00; 
+    cursor: pointer; 
+    
+}
+
+/* CSS cho hiệu ứng mờ dần */
+#foodList tr {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+}
+
+#foodList tr.hidden {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+/* Style cho input tìm kiếm */
+#searchInput {
+    padding: 10px;
+    margin: 20px 0; /* Khoảng cách phía trên và dưới */
+    width: 100%; /* Chiều rộng đầy đủ của container */
+    max-width: 400px; /* Chiều rộng tối đa */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 4px; /* Bo góc */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+/* Hiệu ứng focus cho input */
+#searchInput:focus {
+    border-color: #ff4d00; /* Đổi màu đường viền khi focus */
+    outline: none; /* Bỏ đường viền mặc định */
+}
+
+.searchInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+}
+
+#pagination button {
+    margin: 0 4px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+#pagination button:hover {
+    font-weight: bold;
+    background-color: #ff4d00;
+    color: white;
+}
+
+#pagination button.active {
+    font-weight: bold;
+    background-color: #ff4d00;
+    color: white;
+}
+
+#pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#pagination i {
+    color: #333; /* Màu sắc của biểu tượng */
+}
+
+#pagination i:disabled {
+    color: #aaa; /* Màu sắc của biểu tượng khi bị vô hiệu hóa */
+}
+
+#prevPage:disabled, #nextPage:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#pageNumbers {
+    display: flex;
+    gap: 2px;
+}
+
+
