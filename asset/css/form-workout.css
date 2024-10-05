@@ -1,7 +1,12 @@
+* {
+    font-family: Arial, Helvetica, sans-serif ;
+}
 html{
     margin: 0;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif !important;
+}
+html::-webkit-scrollbar {
+    display: none;
 }
 button {
     border: none;
@@ -50,16 +55,11 @@ button i {
 
 
 
-
-
-
 #page{
-    background: linear-gradient(rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.8) 0%, rgb(18, 18, 18) 100%);
+    background-color: #121212;
     overflow: auto;
 }
-#page::-webkit-scrollbar {
-    display: none;
-}
+
 .p-default {
     font-size: 13px;
     line-height: 16px;
@@ -129,7 +129,6 @@ nav .language {
     font-weight: bold;
     padding: 6px 16px;
     margin-right: 24px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 nav .nav-bar {
     display: flex;
@@ -207,7 +206,6 @@ nav .container-nav-bar i {
     background-color: #393939;
 }
 .container-body {
-    height: 100vh;
 }
 .container-body .container-complete-percent {
     padding: 80px 24px 0;
@@ -215,7 +213,7 @@ nav .container-nav-bar i {
     position: fixed;
     width: 100%;
     z-index: 100;
-    background-color: #000;
+    background-color: #121212;
 }
 .container-complete-percent .complete-percent {
     display: flex;
@@ -269,7 +267,6 @@ nav .container-nav-bar i {
 .container-body form {
     padding-top: 140px;
     min-height: 100vh;
-    background-color: #000;
 }
 .container-body form .container-form-select {
     padding: 0 24px 80px;
@@ -299,7 +296,6 @@ nav .container-nav-bar i {
     font-weight: 700;
     line-height: 48px;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .container-form-select .form-selection .container-options {
     width: 100%;
@@ -320,6 +316,13 @@ nav .container-nav-bar i {
     overflow: hidden;
     position: relative;
 }
+.container-options .options > label .checkbox-wrapper-19 input[type=checkbox]:checked + .check-box, .checkbox-wrapper-19 .check-box.checked {
+    border-color: #FF6025; 
+ }
+ .container-options .options > label > .checkbox-wrapper-19 .check-box::before, 
+ .container-options .options > label .checkbox-wrapper-19 .check-box::after {
+    background-color: #FF6025;
+ }
 .container-options .options > label:focus-visible {
     border: 2px solid #FF6025;
 }
@@ -339,7 +342,6 @@ nav .container-nav-bar i {
     font-size: 22px;
     font-weight: 700;
     line-height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding-right: 16px;
 }
@@ -348,4 +350,199 @@ nav .container-nav-bar i {
     position: absolute;
     right: 12px;
     width: 120px;
+}
+.container-options .container-slider-img {
+    position: relative;
+    margin: 26px auto 40px;
+    z-index: 0;
+}
+.container-options .container-slider-img .select-slider {
+    top: 0px;
+    width: 100%;
+    border: 2px solid rgb(57, 57, 57);
+    background: rgb(23, 23, 23);
+    box-sizing: content-box;
+    position: relative;
+    opacity: 1;
+    z-index: 5;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+}
+.container-slider-img .select-slider img {
+    width: 100%;
+    object-fit: contain;
+}
+.container-slider-img .select-slider h2 {
+    margin: 0;
+    bottom: 0px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    line-height: 26px;
+    padding: 7px 24px;
+    background-color: rgb(57, 57, 57);
+    color: rgb(255, 255, 255);
+    clip-path: polygon(calc(100% - 16px) 0px, 100% 16px, 100% 100%, 0px 100%, 0px 0px);
+}
+.container-options .container-slider-img .container-squat {
+    z-index: 4;
+    top: 0px;
+    width: 100%;
+    border: 2px solid rgb(57, 57, 57);
+    background: rgb(23, 23, 23);
+    box-sizing: content-box;
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    transform: scale(0.95) translateY(-8px);
+    transform-origin: center top;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+}
+.container-options .container-slider-img .container-push-up {
+    z-index: 3;
+    top: 0px;
+    width: 100%;
+    border: 2px solid rgb(57, 57, 57);
+    background: rgb(23, 23, 23);
+    box-sizing: content-box;
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    transform: scale(0.9) translateY(-16px);
+    transform-origin: center top;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+}
+.container-options .container-slider-img .container-dips {
+    z-index: 2;
+    top: 0px;
+    width: 100%;
+    border: 2px solid rgb(57, 57, 57);
+    background: rgb(23, 23, 23);
+    box-sizing: content-box;
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    transform: scale(0.85) translateY(-24px);
+    transform-origin: center top;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+}
+.container-options .container-slider-img .container-cardio {
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    border: 2px solid rgb(57, 57, 57);
+    background: rgb(23, 23, 23);
+    box-sizing: content-box;
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    transform: scale(0.8) translateY(-32px);
+    transform-origin: center top;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+}
+.container-options .container-selection {
+    display: flex;
+    justify-content: space-between;
+}
+.container-options .container-selection button {
+    padding: 12px 8px 8px;
+    background-color: #1E1E1E;
+    width: calc(100% / 3 - 20px);
+}
+.container-options .container-selection button:hover {
+    background-color: #393939;
+}
+.container-options .container-selection button span{
+    width: 100%;
+    display: block;
+    line-height: 58px;
+}
+.container-options .container-selection button span i{
+    font-size: 32px;
+    color: #FF6025;
+}
+.container-options .container-selection button p {
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+.go-to-left {
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+    opacity: 0 !important;
+}
+.go-to-right {
+    transform: translateX(100%) !important;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+    opacity: 0 !important;
+}
+.go-up {
+    transform: translateY(-100%) !important;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+    opacity: 0 !important;
+}
+.form-selection .container-options.RS {
+    margin-bottom: 40px;
+}
+.container-options.RS .options {
+}
+.container-options.RS .options label {
+    height: auto;
+    padding: 14px;
+    margin-bottom: 16px;
+    color: #fff;
+    align-items: flex-start;
+}
+.container-options.RS .options label input {
+    display: flex;
+    appearance: none;
+    margin-top: 4px;
+
+}
+.container-options.RS .options label input::before {
+    content: "";
+    width: 22px; 
+    display: block;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #212529;
+    border: 3px solid #B3B3B3; 
+}
+.container-options.RS .options label input:checked::before {
+    display: none;
+}
+.container-options.RS .options label input:checked {
+    display: flex;
+    width: 24px; 
+    height: 22px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #FF6025; 
+}
+
+.container-options.RS .options label input:checked::after {
+    content: "";
+    display: block;
+    width: 12px; 
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF6025;
+}
+.container-options.RS .options label span {
+    font-size: 18px;
+    padding-left: 16px;
+    line-height: 26px;
+}
+.container-options.RS .options label span p:first-child {
+    margin: 0;
+    font-weight: 600;
+}
+.container-options.RS .options label span p:nth-child(2) {
+    margin: 0;
+    font-weight:100;
+    font-size: 14px;
+    color: #DADADA;
 }

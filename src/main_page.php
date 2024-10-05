@@ -89,12 +89,12 @@ $conn->close();
           <div class="arrow">
             <div class="body_img">
               <div class="body_muscle">
-                <img src="../asset/img/bodyfat_<?php echo $bodyFatIndex; ?>.jpg" alt="" class="img-1">
+                <img src="../asset/img/person/bodyfat_<?php echo $bodyFatIndex; ?>.jpg" alt="" class="img-1">
               </div>
             </div>
             <div class="body_img">
               <div class="body_muscle">
-                <img src="../asset/img/bodytarget_6.jpg" alt="" class="img-2">
+                <img src="../asset/img/person/bodytarget_6.jpg" alt="" class="img-2">
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@ $conn->close();
       <figure class="half-circle">
         <div>
           <span>
-            <img src="../asset/img/circle.svg" alt="">
+            <img src="../asset/img/person/circle.svg" alt="">
           </span>
         </div>
         <figcaption>
@@ -290,11 +290,11 @@ $conn->close();
         <p>Kế hoạch ăn được điều chỉnh theo sở thích và yêu cầu của bạn</p>
         <p>Công thức nấu ăn rất dễ thực hiện, bạn có thể ăn bất cứ thứ gì bạn muốn và có được vóc dáng đẹp hơn</p>
       </div>
-      <img src="../asset/img/mealPlan.webp" alt="meal plan image">
+      <img src="../asset/img/person/mealPlan.webp" alt="meal plan image">
     </div>
     
     <div class="habitSystemSection">
-      <img src="../asset/img/habitSystem.webp" alt="habit system image">
+      <img src="../asset/img/person/habitSystem.webp" alt="habit system image">
       <div class="habitSystemText">
         <h2>Hệ thống xây dựng thói quen</h2>
         <p>Cải thiện không chỉ vóc dáng mà còn phát triển những thói quen và thể lực lành mạnh</p>

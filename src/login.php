@@ -11,49 +11,67 @@ if ($_POST) {
         $user = mysqli_real_escape_string($conn, $user);
         $query = "SELECT * FROM user WHERE email = '$user'";
         $result = mysqli_query($conn, $query);
+    
         if (mysqli_num_rows($result) > 0 && !empty($user) && !empty($pass)) {
             $row = mysqli_fetch_assoc($result);
-            if ($pass === $row['password']) {
+            
+            if ($row['email_verified'] == 0) {
+                $_SESSION['error_login_message'] = "Tài khoản của bạn chưa được xác thực. Vui lòng kiểm tra email.";
+            } else if ($pass === $row['password']) {
                 $_SESSION['user'] = $row['CustomerName'];
                 $_SESSION['CustomerID'] = $row['CustomerID'];
-                echo 'wtf';
                 header("Location: index.html");  
                 exit();
             } else {
-                $_SESSION['error_login_message'] = "Incorrect username or password!";
+                $_SESSION['error_login_message'] = "Sai tên đăng nhập hoặc mật khẩu!";
             }
         } else {
-            $_SESSION['error_login_message'] = "Please fill in all the required information!";
+            $_SESSION['error_login_message'] = "Vui lòng nhập đủ thông tin!";
         }
         header("Location: login.php");  
         exit(); 
     }
     
+    
     if (isset($_POST['dangky'])) {
         $fullname = $_POST['FullName'];
         $username = $_POST['user_name'];
         $password = $_POST['user_pass'];
-
+    
         if (!empty($fullname) && !empty($username) && !empty($password)) {
             $fullname = mysqli_real_escape_string($conn, $fullname);
             $username = mysqli_real_escape_string($conn, $username);
             $password = mysqli_real_escape_string($conn, $password);
-
-            $sql = "INSERT INTO `user` (`CustomerName`, `email`, `password`) VALUES ('$fullname', '$username', '$password')";
-
+    
+            // Tạo mã xác thực ngẫu nhiên
+            $verification_code = md5(rand());
+    
+            $sql = "INSERT INTO `user` (`CustomerName`, `email`, `password`, `verification_code`, `email_verified`) 
+                    VALUES ('$fullname', '$username', '$password', '$verification_code', 0)";
+    
             if ($conn->query($sql) === TRUE) {
-                $_SESSION['success_signup_message'] = "Registration successful, please log in.";
-                header("Location: login.php");  
-                exit(); 
+                // Thông tin email
+                $to = $username; 
+                $subject = "Xác thực tài khoản của bạn";
+                $message = "Vui lòng nhấp vào liên kết sau để xác thực tài khoản của bạn: ";
+                $message .= "http://localhost/HealthTrackApp/src/verify.php?code=$verification_code";
+                $headers = "From: hieupham9155@gmail.com";
+                if (mail($to, $subject, $message, $headers)) {
+                    $_SESSION['success_signup_message'] = "Vui lòng kiểm tra email để xác thực tài khoản.";
+                } else {
+                    $_SESSION['error_signup_message'] = "Lỗi trong quá trình gửi email.";
+                }
             } else {
                 $_SESSION['error_signup_message'] = "Error: " . $conn->error;
             }
         } else {
-            $_SESSION['error_login_message'] = "Please fill in all the required information!";
+            $_SESSION['error_signup_message'] = "Vui lòng điền đủ thông tin!";
         }
-        header("Location: login.php");  
+        header("Location: login.php");
         exit(); 
     }
+    
+    
 }
 
 if (isset($_SESSION['error_login_message'])) {

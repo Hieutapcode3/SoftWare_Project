@@ -80,14 +80,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const bodyFatImg = document.getElementById("bodyFatImg");
 
   const bodyFatImages = [
-    "../asset/img/bodyfat_1.jpg", // value = 0 -> bodyfat_1.jpg
-    "../asset/img/bodyfat_2.jpg", // value = 1 -> bodyfat_2.jpg
-    "../asset/img/bodyfat_3.jpg", // value = 2 -> bodyfat_3.jpg
-    "../asset/img/bodyfat_4.jpg", // value = 3 -> bodyfat_4.jpg
-    "../asset/img/bodyfat_5.jpg", // value = 4 -> bodyfat_5.jpg
-    "../asset/img/bodyfat_6.jpg", // value = 5 -> bodyfat_6.jpg
-    "../asset/img/bodyfat_7.jpg", // value = 6 -> bodyfat_7.jpg
-    "../asset/img/bodyfat_8.jpg", // value = 7 -> bodyfat_8.jpg
+    "../asset/img/person/bodyfat_1.jpg", // value = 0 -> bodyfat_1.jpg
+    "../asset/img/person/bodyfat_2.jpg", // value = 1 -> bodyfat_2.jpg
+    "../asset/img/person/bodyfat_3.jpg", // value = 2 -> bodyfat_3.jpg
+    "../asset/img/person/bodyfat_4.jpg", // value = 3 -> bodyfat_4.jpg
+    "../asset/img/person/bodyfat_5.jpg", // value = 4 -> bodyfat_5.jpg
+    "../asset/img/person/bodyfat_6.jpg", // value = 5 -> bodyfat_6.jpg
+    "../asset/img/person/bodyfat_7.jpg", // value = 6 -> bodyfat_7.jpg
+    "../asset/img/person/bodyfat_8.jpg", // value = 7 -> bodyfat_8.jpg
   ];
   rangeInput.addEventListener("input", function () {
     continueBtns.forEach((continueBtn) => {

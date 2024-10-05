@@ -12,7 +12,7 @@ button i {
 }
 
 #page{
-    background-image: url(../img/BackGround.jpg);
+    background-image: url(../img/person/BackGround.jpg);
     height: 100vh;
     overflow-y: hidden;
 }

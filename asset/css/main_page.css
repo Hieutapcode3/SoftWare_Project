@@ -245,7 +245,7 @@ text-transform: uppercase;
   }
   
   .part1 .arrow {
-    background-image: url("../img/arrows.png"); /* Hình mũi tên chỉ từ trái sang phải */
+    background-image: url("../img/person/arrows.png"); /* Hình mũi tên chỉ từ trái sang phải */
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -533,7 +533,7 @@ text-transform: uppercase;
   display: block;
   height: 14px;
   width: 14px;
-  background: url(../img/triangle.svg) center center no-repeat;
+  background: url(../img/person/triangle.svg) center center no-repeat;
   transition: left 1s ease-in-out;
   opacity: 1;
   left: var(--marker-left, 0%);
@@ -690,7 +690,7 @@ text-transform: uppercase;
   width: 22px; /* Kích thước của mỗi hình ảnh */
   height: 32px;
   background-size: cover;
-  background-image: url('../img/glass_empty.svg');
+  background-image: url('../img/person/glass_empty.svg');
   margin-right: 4px; /* Khoảng cách giữa các hình ảnh */
 } 
 

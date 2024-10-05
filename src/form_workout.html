@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../asset/icon/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../asset/css/checkbox.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Workout Plan</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
                 </div>
             </nav>
         </header>
-        <div class="container-body" style="display: block;">
+        <div class="container-body" >
             <div class="container-complete-percent">
                 <div class="complete-percent">
                     <button type="button" title="Go back" class="back-btn"><i class="ti-angle-left"></i></button>
@@ -46,7 +47,7 @@
             </div>
             <form method="POST" action="main_page.php">
                 <div class="container-form-select">
-                    <div class="form-selection" id = "question-1" data-question ="1">
+                    <div class="form-selection" id = "question-1" data-question ="1" style="display: none;">
                         <div class="question">
                             <h1>Chọn vùng có vấn đề</h1>
                         </div>
@@ -58,7 +59,7 @@
                                         <label for="chest" class="check-box">
                                     </div>
                                     <span>Ngực yếu</span>
-                                    <img src="../asset/img/chest.jpg" alt="">
+                                    <img src="../asset/img/person/chest.jpg" alt="">
                                 </label>
                             </div>
                             <div class="options">
@@ -68,7 +69,7 @@
                                         <label for="arms" class="check-box">
                                     </div>
                                     <span>Cánh tay mảnh khảnh</span>
-                                    <img src="../asset/img/arms.jpg" alt="" >
+                                    <img src="../asset/img/person/arms.jpg" alt="" >
                                 </label>
                             </div>
                             <div class="options">
@@ -78,7 +79,7 @@
                                         <label for="tummy" class="check-box">
                                     </div>
                                     <span>Bụng bia</span>
-                                    <img src="../asset/img/tummy.jpg" alt="">
+                                    <img src="../asset/img/person/tummy.jpg" alt="">
                                 </label>
                             </div>
                             <div class="options">
@@ -88,7 +89,215 @@
                                         <label for="legs" class="check-box">
                                     </div>
                                     <span>Đôi chân mảnh khảnh</span>
-                                    <img src="../asset/img/legs.jpg" alt="">
+                                    <img src="../asset/img/person/legs.jpg" alt="">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-2" data-question ="2" style="display: none;">
+                        <div class="question">
+                            <h1>Thích hay không thích</h1>
+                        </div>
+                        <div class="container-options">
+                            <div class="container-slider-img">
+                                <div class="container-pull-up select-slider">
+                                    <img src="../asset/img/person/pull-up.jpg" alt="">
+                                    <h2>Kéo xà</h2>
+                                </div>
+                                <div class="container-squat select-slider">
+                                    <img src="../asset/img/person/squat.jpg" alt="">
+                                    <h2>Squat với tạ</h2>
+                                </div>
+                                <div class="container-push-up select-slider">
+                                    <img src="../asset/img/person/push-ups.jpg" alt="" >
+                                    <h2>Chống đẩy</h2>
+                                </div>
+                                <div class="container-dips select-slider">
+                                    <img src="../asset/img/person/dips.jpg" alt="">
+                                    <h2>Xà ngang</h2>
+                                </div>
+                                <div class="container-cardio select-slider">
+                                    <img src="../asset/img/person/cardio.jpg" alt="">
+                                    <h2>Cardio</h2>
+                                </div>
+                            </div>
+                            <div class="container-selection">
+                                <button type="button" title="Thích">
+                                    <span><i class="fa-regular fa-thumbs-up"></i></span>
+                                    <p>Thích</p> 
+                                </button>
+                                <button type="button" title="Trung lập">
+                                    <span><i class="fa-regular fa-face-meh"></i></span>
+                                    <p>Trung lập</p>
+                                </button>
+                                <button type="button" title="Không thích">
+                                    <span><i class="fa-regular fa-thumbs-down"></i></span>
+                                    <p>Không thích</p>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-3" data-question ="3" style="display: block;">
+                        <div class="question">
+                            <h1>Bạn có thể thực hiện bao nhiêu cái chống đẩy trong một hiệp?</h1>
+                        </div>
+                        <div class="container-options push-amount RS " name="Chống đẩy">
+                            <div class="options">
+                                <label for="push-amount-1">
+                                    <input type="radio" name="push-amount" class="input-select" value="Dưới 10 " id="push-amount-1">
+                                    <span>
+                                        <p>Dưới 10 💪</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="push-amount-2">
+                                    <input type="radio" name="push-amount" class="input-select" value="10 đến 20 "id="push-amount-2">
+                                    <span>
+                                        <p>10 đến 20 💪🏾💪🏾</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="push-amount-3">
+                                    <input type="radio" name="push-amount" class="input-select" value="21 đến 30 " id="push-amount-3">
+                                    <span>
+                                        <p>21 đến 30 💪💪💪</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="push-amount-4">
+                                    <input type="radio" name="push-amount" class="input-select" value="Hơn 30 " id="push-amount-4">
+                                    <span>
+                                        <p>Hơn 30 😤</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-4" data-question ="4" style="display: block;">
+                        <div class="question">
+                            <h1>Bạn có thể thực hiện bao nhiêu lần kéo xà trong một hiệp?</h1>
+                        </div>
+                        <div class="container-options pull-amount RS" name="Kéo xà">
+                            <div class="options">
+                                <label for="pull-amount-1">
+                                    <input type="radio" name="pull-amount" class="input-select" value="0 " id="pull-amount-1">
+                                    <span>
+                                        <p>Tôi không thể thực hiện 1 lần kéo nào </p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="pull-amount-2">
+                                    <input type="radio" name="pull-amount" class="input-select" value="Dưới 5 "id="pull-amount-2">
+                                    <span>
+                                        <p>Dưới 5 🔥</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="pull-amount-3">
+                                    <input type="radio" name="pull-amount" class="input-select" value="5 đến 10 " id="pull-amount-3">
+                                    <span>
+                                        <p>5 đến 10 🔥🔥</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="pull-amount-4">
+                                    <input type="radio" name="pull-amount" class="input-select" value="Hơn 10 " id="pull-amount-4">
+                                    <span>
+                                        <p>Hơn 10 🔥🔥🔥</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-5" data-question ="5" style="display: block;">
+                        <div class="question">
+                            <h1>Chọn địa điểm tập luyện của bạn</h1>
+                        </div>
+                        <div class="container-options workout-place RS" name="Địa điểm tập">
+                            <div class="options">
+                                <label for="workout-place-1">
+                                    <input type="radio" name="workout-place" class="input-select" value="Nhà" id="workout-place-1">
+                                    <span>
+                                        <p>Nhà 🏡</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="workout-place-2">
+                                    <input type="radio" name="workout-place" class="input-select" value="phòng gym "id="workout-place-2">
+                                    <span>
+                                        <p>Phòng gym 🏋️</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="next-question-btn type_1">
+                            <button type="button">
+                                <p>Tiếp tục</p>
+                                <i class="ti-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-selection" id = "question-6" data-question ="6" style="display: block;">
+                        <div class="question">
+                            <h1>Bạn sẵn sàng dành bao nhiêu thời gian cho một buổi tập luyện?</h1>
+                        </div>
+                        <div class="container-options workout-time-spend RS" name="Thời gian tập">
+                            <div class="options">
+                                <label for="workout-time-spend-1">
+                                    <input type="radio" name="workout-time-spend" class="input-select" value="30 phút" id="workout-time-spend-1">
+                                    <span>
+                                        <p>30 phút ⏰</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="workout-time-spend-2">
+                                    <input type="radio" name="workout-time-spend" class="input-select" value="45 phút "id="workout-time-spend-2">
+                                    <span>
+                                        <p>45 phút ⏰</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="workout-time-spend-3">
+                                    <input type="radio" name="workout-time-spend" class="input-select" value="1 giờ "id="workout-time-spend-3">
+                                    <span>
+                                        <p>1 giờ  🕐</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="workout-time-spend-4">
+                                    <input type="radio" name="workout-time-spend" class="input-select" value="Hãy để HealSystem quyết định "id="workout-time-spend-4">
+                                    <span>
+                                        <p>Hãy để HealSystem quyết định </p>
+                                    </span>
                                 </label>
                             </div>
                         </div>
@@ -101,6 +310,7 @@
                     </div>
 
 
+
                 </div>
             </form>
 
@@ -109,5 +319,5 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="../asset/js/form-nutri.js"></script>
+<script src="../asset/js/form-workout.js"></script>
 </html>
