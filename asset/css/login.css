@@ -197,6 +197,7 @@
     box-shadow: 6px 6px 10px #d1d9e6, -6px -6px 10px #f9f9f9;
     border: none;
     outline: none;
+    cursor: pointer;
   }
   .form__button.button:hover {
     box-shadow: 3px 3px 5px #d1d9e6, -3px -3px 5px #f9f9f9;

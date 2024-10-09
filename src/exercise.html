@@ -6,8 +6,35 @@
     <title>Phân Loại Bài Tập</title>
     <link rel="stylesheet" href="../asset/css/exercise.css"> <!-- Đảm bảo rằng CSS phù hợp với exercise -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../asset/icon/themify-icons/themify-icons.css">
 </head>
 <body>
+    <div class="head">
+        <div class="header-container">
+            <a href="main_page.php" class="app-name">
+                <div class="health"><p>HEALTH</p></div>
+                <div class="system"><p>SYSTEM</p></div>
+            </a>
+            <div class="nav">
+                <a href="./exercise_schedule.html">Workout Plan</a>
+                <a href="./nutrition.html">Dinh dưỡng</a>
+            </div>
+            <button type="button" class="nav-bar">
+                <i class="ti-align-justify"></i>
+            </button>
+            <div class="container-nav-bar">
+                <div class="close-btn">
+                    <button><i class="ti-close"></i></button> 
+                </div>
+                <ul>
+                    <li><button>Điều khoản & Chính sách <i class="ti-angle-right"></i></button></li>
+                    <li><button>Tài khoản của tôi <i class="ti-angle-right"></i></button></li>
+                    <li><button>Hỗ trợ</button></li>
+                    <li><button>Về chúng tôi</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <nav>
         <ul>
             <li><a href="#" onclick="filterExercise('all')">Tổng hợp <i class="fas fa-list"></i></a></li>
@@ -22,7 +49,7 @@
         <table class="exercise-table">        
             <div class="searchInfo" id="searchInfo">
                 <div class="infoDisplay">
-                    <h2>Bảng tính lượng calo tổng hợp</h2>
+                    <h2>Danh sách bài tập luyện</h2>
                 </div>
                 <div class="search">
                     <i class="fa fa-search"></i> 
@@ -93,7 +120,29 @@
             </button>
         </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/unorm/1.4.1/unorm.js"></script>
-    <script src="../asset/js/exercise.js"></script>
+    <div class="footer">
+        <div class="contact-follow">
+            <h2>Liên hệ và theo dõi</h2>
+            <div class="facebook">
+                <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">Instagram</a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30">
+                </a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">Facebook</a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
+                </a>
+            </div>
+        </div>
+        <div class="address">
+            <p>Địa chỉ: Hà Nội</p>
+            <p>Điện thoại: 123-456-JQKA</p>
+            <p>Email: HealthTrackSystem@gmail.com</p>
+        </div>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/unorm/1.4.1/unorm.js"></script>
+<script src="../asset/js/exercise.js"></script>
 </html>

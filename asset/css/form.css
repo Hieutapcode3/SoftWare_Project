@@ -106,7 +106,7 @@ header .app-name .health {
     src: url('../font/TechnoRaceItalic-eZRWe.otf') format('truetype'); /* Đường dẫn đến file font */
     font-weight: normal;
     font-style: normal;
-  }
+}
 header .app-name .system {
     color: #ff4d00; 
     padding: 8px 14px;
@@ -308,25 +308,25 @@ nav .container-nav-bar i {
     display: flex;
     flex-direction: column;
 }
-.form-selection .container-options.water-drink {
+.form-selection .container-options.RS {
     margin-bottom: 40px;
 }
-.container-options.water-drink .options {
+.container-options.RS .options {
 }
-.container-options.water-drink .options label {
+.container-options.RS .options label {
     height: auto;
     padding: 14px;
     margin-bottom: 16px;
     color: #fff;
     align-items: flex-start;
 }
-.container-options.water-drink .options label input {
+.container-options.RS .options label input {
     display: flex;
     appearance: none;
     margin-top: 4px;
 
 }
-.container-options.water-drink .options label input::before {
+.container-options.RS .options label input::before {
     content: "";
     width: 22px; 
     display: block;
@@ -335,10 +335,10 @@ nav .container-nav-bar i {
     background-color: #212529;
     border: 3px solid #B3B3B3; 
 }
-.container-options.water-drink .options label input:checked::before {
+.container-options.RS .options label input:checked::before {
     display: none;
 }
-.container-options.water-drink .options label input:checked {
+.container-options.RS .options label input:checked {
     display: flex;
     width: 24px; 
     height: 22px;
@@ -348,7 +348,7 @@ nav .container-nav-bar i {
     border: 3px solid #FF6025; 
 }
 
-.container-options.water-drink .options label input:checked::after {
+.container-options.RS .options label input:checked::after {
     content: "";
     display: block;
     width: 12px; 
@@ -356,16 +356,16 @@ nav .container-nav-bar i {
     border-radius: 50%;
     background-color: #FF6025;
 }
-.container-options.water-drink .options label span {
+.container-options.RS .options label span {
     font-size: 18px;
     padding-left: 16px;
     line-height: 26px;
 }
-.container-options.water-drink .options label span p:first-child {
+.container-options.RS .options label span p:first-child {
     margin: 0;
     font-weight: 600;
 }
-.container-options.water-drink .options label span p:nth-child(2) {
+.container-options.RS .options label span p:nth-child(2) {
     margin: 0;
     font-weight:100;
     font-size: 14px;

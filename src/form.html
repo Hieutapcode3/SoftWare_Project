@@ -12,7 +12,7 @@
 <body>
     <div id="page">
         <header>
-            <a href="#" class="app-name">
+            <a href="form.html" class="app-name">
                 <div class="health"><p>HEALTH</p></div>
                 <div class="system"><p>SYSTEM</p></div>
             </a>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-selection" id = "question-2" data-question="2" style="display: none;">
+                    <div class="form-selection" id = "question-2" data-question="purpose" style="display: none;">
                         <div class="question">
                             <h1>Chọn mục tiêu của bạn</h1>
                         </div>
@@ -226,7 +226,7 @@
                         <div class="question">
                             <h1>Hằng ngày bạn uống bao nhiêu nước?</h1>
                         </div>
-                        <div class="container-options water-drink">
+                        <div class="container-options water-drink RS" name="Water-drink">
                             <div class="options">
                                 <label for="water-1"">
                                     <input type="radio" name="water-drink" class="input-select" value="Chỉ cà phê hoặc trà " id="water-1">
@@ -444,7 +444,36 @@
                             </button>
                         </div>
                     </div>
-                    <div class="form-selection" id= "question-8" data-question="height-fit" style = "display:none;">
+                    <div class="form-selection" id= "question-8" data-question="Gender" style = "display:block;">
+                        <div class="question">
+                            <h1>Giới tính của bạn?</h1>
+                        </div>
+                        <div class="container-options gender RS" name="Gender">
+                            <div class="options">
+                                <label for="gender-1"">
+                                    <input type="radio" name="gender" class="input-select" value="Nam" id="gender-1">
+                                    <span>
+                                        <p>Nam</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="options">
+                                <label for="gender-2"">
+                                    <input type="radio" name="gender" class="input-select" value="Nữ"id="gender-2">
+                                    <span>
+                                        <p>Nữ</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="next-question-btn type_1">
+                                <button type="button">
+                                    <p>Tiếp tục</p>
+                                    <i class="ti-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-selection" id= "question-9" data-question="height-fit" style = "display:none;">
                         <div class="question">
                             <h1>Chiều cao của bạn là bao nhiêu?</h1>
                         </div>
@@ -472,7 +501,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="form-selection" id= "question-9" data-question="weight-fit" style = "display:block;">
+                    <div class="form-selection" id= "question-10" data-question="weight-fit" style = "display:none;">
                         <div class="question">
                             <h1>Cân nặng hiện tại và mục tiêu của bạn là bao nhiêu?</h1>
                         </div>

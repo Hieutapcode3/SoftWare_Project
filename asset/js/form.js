@@ -212,8 +212,13 @@ document.addEventListener("DOMContentLoaded", function () {
   radioButtons.forEach((radio) => {
     radio.addEventListener("change", function () {
       if (this.checked) {
-        const questionNumber = "Water Intek";
-        userAnswers[questionNumber] = this.value;
+        const container = this.closest(".container-options");
+        const exerciseName = container.getAttribute("name");
+        const questionKey = `question-${currentQuestionIndex + 1}`;
+        if (!userAnswers[questionKey]) {
+          userAnswers[questionKey] = {};
+        }
+        userAnswers[exerciseName] = this.value;
         console.log(userAnswers);
         clearBorders();
         this.parentElement.style.border = "2px solid #FF6025";

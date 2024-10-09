@@ -130,12 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
       currentIndex = nextIndex;
-
-      // Kiểm tra xem còn hình ảnh nào không
       if (currentIndex === 0) {
-        // Nếu đã quay lại đầu danh sách hình ảnh
-        currentQuestionIndex++; // Tăng currentQuestionIndex
-        showQuestion(currentQuestionIndex); // Hiển thị câu hỏi tiếp theo
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
       }
     }, 200);
 
@@ -160,22 +157,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const continueBtns = document.querySelectorAll(
     ".next-question-btn.type_1 button"
   );
+  const submitBtn = document.querySelector(".next-question-btn.submit button");
   continueBtns.forEach((continueBtn) => {
     continueBtn.disabled = true;
   });
-  continueBtns.forEach((continueBtn) => {
+  continueBtns.forEach((continueBtn, index) => {
     continueBtn.addEventListener("click", function () {
       if (currentQuestionIndex < allQuestions.length - 1) {
         currentQuestionIndex++;
         showQuestion(currentQuestionIndex);
-      } else {
-        window.location.href = "index.html";
       }
       continueBtns.forEach((continueBtn) => {
         continueBtn.disabled = true;
       });
+
+      if (
+        index === continueBtns.length - 1 &&
+        window.location.pathname.endsWith("form_workout.html")
+      ) {
+        window.location.href = "exercise_schedule.html";
+        window.alert("Dữ liệu đã được lưu thành công");
+      }
+      if (submitBtn != null) submitBtn.disabled = true;
     });
   });
+  if (submitBtn != null) {
+    submitBtn.addEventListener("click", function () {
+      fetch("submit_formnutri.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userAnswer),
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          alert(data);
+        })
+        .catch((error) => {
+          console.error("Lỗi:", error);
+        });
+    });
+  }
 
   const radioButtons = document.querySelectorAll('input[type="radio"]');
   const labels = document.querySelectorAll(".options > label");
@@ -204,6 +227,57 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  const check5 = document.getElementById("check-5");
+  const categoryLists = document.querySelectorAll(".ct ul li");
+  const containerCategory = document.querySelector(".container-category");
+  let selectedInVeg = false;
+  let selectedInGrains = false;
+  let selectedInIngredients = false;
+  function checkMinimumSelection() {
+    selectedInVeg =
+      document.querySelector(".category-1 ul li.selected") !== null;
+    selectedInGrains =
+      document.querySelector(".category-2 ul li.selected") !== null;
+    selectedInIngredients =
+      document.querySelector(".category-3 ul li.selected") !== null;
+    submitBtn.disabled = !(
+      selectedInVeg &&
+      selectedInGrains &&
+      selectedInIngredients
+    );
+  }
+  if (check5 != null) {
+    check5.addEventListener("change", function () {
+      if (this.checked) {
+        categoryLists.forEach((li) => {
+          li.style.borderColor = "transparent";
+          li.classList.remove("selected");
+        });
+        containerCategory.style.opacity = "0.4";
+        if (submitBtn != null) submitBtn.disabled = false;
+      } else {
+        containerCategory.style.opacity = "1";
+        checkMinimumSelection();
+      }
+    });
+  }
+  if (categoryLists != null) {
+    categoryLists.forEach((li) => {
+      li.addEventListener("click", function () {
+        if (!check5.checked) {
+          if (this.classList.contains("selected")) {
+            this.classList.remove("selected");
+            this.style.borderColor = "transparent";
+          } else {
+            this.classList.add("selected");
+            this.style.borderColor = "#ff6025";
+          }
 
+          checkMinimumSelection();
+        }
+      });
+    });
+  }
+  if (check5 != null) checkMinimumSelection();
   showQuestion(currentQuestionIndex);
 });

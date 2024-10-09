@@ -116,9 +116,9 @@ function updateWaterProgress(liters) {
 
   document.querySelectorAll(".water").forEach((div, index) => {
     if (liters > index * litersPerDiv) {
-      div.style.backgroundImage = 'url("../asset/img/glass_full.svg")'; // Đường dẫn đến ảnh ly đầy
+      div.style.backgroundImage = 'url("../asset/img/person/glass_full.svg")'; // Đường dẫn đến ảnh ly đầy
     } else {
-      div.style.backgroundImage = 'url("../asset/img/glass_empty.svg")'; // Đường dẫn đến ảnh ly rỗng
+      div.style.backgroundImage = 'url("../asset/img/person/glass_empty.svg")'; // Đường dẫn đến ảnh ly rỗng
     }
   });
 }

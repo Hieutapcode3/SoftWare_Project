@@ -55,13 +55,13 @@ $conn->close();
   <!-- Thanh điều hướng -->
   <div class="head">
     <div class="header-container">
-      <a href="#" class="app-name">
+      <a href="main_page.php" class="app-name">
         <div class="health"><p>HEALTH</p></div>
         <div class="system"><p>SYSTEM</p></div>
       </a>
       <div class="nav">
-        <a href="#section2">Dinh dưỡng</a>
-        <a href="#section3">Tập luyện</a>
+        <a href="nutrition.html">Dinh dưỡng</a>
+        <a href="exercise.html">Tập luyện</a>
         <a href="#service">Dịch vụ</a>
         <a href="#bmi">Tính BMI</a>
       </div>
@@ -76,7 +76,8 @@ $conn->close();
               <li><button>Điều khoản & Chính sách <i class="ti-angle-right"></i></button></li>
               <li><button>Tài khoản của tôi <i class="ti-angle-right"></i></button></li>
               <li><button>Hỗ trợ</button></li>
-              <li><button>Về chúng tôi</button></li>
+              <li><a href="index.html"><button>Thực hiện khảo sát</button></a></li>
+              <li><a href="login.php"><button>Đăng xuất</button></a></li>
           </ul>
       </div>
     </div>
@@ -229,9 +230,6 @@ $conn->close();
             </div>
           </div>
         </div>
-
-
-
       </div>
     </div>
 
@@ -315,7 +313,7 @@ $conn->close();
                 <li><span>☑️</span> Cân bằng dinh dưỡng để đạt hiệu quả tối ưu</li>
                 <li><span>☑️</span> Tạo lối sống bền vững</li>
               </ul>
-              <a href="#" class="cta-button">Khám phá thêm</a>
+              <a href="form_nutrition.html" class="cta-button">Nhận kế hoạch dinh dưỡng</a>
             </div>
           </li>
           <!-- Slide 2: Workout Plan -->
@@ -327,7 +325,7 @@ $conn->close();
                 <li><span>☑️</span> Giảm mỡ thừa trong cơ thể và cải thiện cường độ tập luyện</li>
                 <li><span>☑️</span> Đạt được mục tiêu của bạn và thay đổi cuộc sống của mình mãi mãi</li>
               </ul>
-              <a href="#" class="cta-button">Nhận kế hoạch tập luyện</a>
+              <a href="form_workout.html" class="cta-button">Nhận kế hoạch tập luyện</a>
             </div>
           </li>
         </ul>
@@ -441,17 +439,16 @@ $conn->close();
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
             </a>
         </div>
-        
     </div>
     <div class="address">
         <p>Địa chỉ: Hà Nội</p>
         <p>Điện thoại: 123-456-JQKA</p>
         <p>Email: HealthTrackSystem@gmail.com</p>
     </div>
-</div>
+  </div>
 
-</div>
 
-  <script src="../asset/js/main_page.js"></script>
 
+  
 </body>
+<script src="../asset/js/main_page.js"></script>

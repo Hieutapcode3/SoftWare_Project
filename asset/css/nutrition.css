@@ -5,6 +5,9 @@ body {
     background-color: #2a2a2a;
     color: #333;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 
 *{
     box-sizing: border-box;
@@ -22,7 +25,7 @@ header {
 .head {
     position: fixed;
     top: 0;
-    background-color: #121212;
+    background-color: #2b2b2b;
     width: 100%;
     height: auto;
     z-index: 10;
@@ -31,7 +34,7 @@ header {
   .header-container {
     width: 100%;
     z-index: 10; /* Đảm bảo phần đầu trang ở trên hình ảnh */
-    padding: 20px;
+    padding: 16px 24px 18px;
     background: rgba(255, 255, 255, 0); /* Nền trong suốt */
     display: flex;
     box-sizing: border-box; /* Đảm bảo padding không làm phần tử rộng hơn 100% */
@@ -59,6 +62,7 @@ header {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 1px;
+    line-height: 41px;
   }
   @font-face {
     font-family: 'FutureSport'; /* Đặt tên cho font */
@@ -78,29 +82,9 @@ header {
     font-family: 'FutureSport';
     font-weight: bold;
     font-size: 14px;
-  }
-  /* Brand */
-  .brand {
-  display: flex;
-  align-items: center;
-  }
-  
-  .brand i {
-  color: #06ff8f;
-  font-size: 32px;
-  margin-right: 10px;
-  }
-  
-  .brand h2 {
-  color: #11ad67;
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  }
-  
+    line-height: 21px;
+
+  } 
   /* Navigation */
   .nav {
     display: flex;
@@ -142,8 +126,8 @@ header {
     font-weight: bold;
     padding: 8px;
     border: none;
-    background-color: #ff4d00;
     cursor: pointer;
+    background-color: transparent;
   }
   .header-container .nav-bar:hover i {
     color: #FF6025;
@@ -232,7 +216,7 @@ header {
 nav {
     background-color: transparent;
     padding: 15px;
-    margin-top: 70px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -246,6 +230,7 @@ nav ul {
 nav ul li {
     display: inline;
     padding: 10px 15px;
+    border-radius: 6px;
 }
 
 nav ul li a {
@@ -255,14 +240,6 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-
-
-nav ul li:active {
-    background-color: #ff4d00;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-}
 
 .container {
     max-width: 1200px;
@@ -524,6 +501,64 @@ nav ul li:active {
 #pageNumbers {
     display: flex;
     gap: 2px;
+}
+.footer {
+  padding: 20px;
+  background: radial-gradient(64.53% 62.88% at 50.13% 45.92%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(0deg, rgb(35, 35, 35), rgb(35, 35, 35));;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.contact-follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.contact-follow h2 {
+  margin-bottom: 15px;
+  color: #bebcbc;
+}
+.contact-follow .facebook,
+.contact-follow .instagram {
+  margin-bottom: 10px;
+}
+.contact-follow a {
+  text-decoration: none;
+  color: #bebcbc;
+  font-size: 16px;
+  margin: 5px;
+}
+.contact-follow a:hover {
+  color: #ffff;
+}
+.contact-follow img {
+  vertical-align: middle;
+}
+.address {
+  flex: 1;
+}
+.address p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #bebcbc;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-left, .content-right {
+    width: 100%;
+  }
+
+  .content-right {
+    margin-top: 20px;
+  }
 }
 
 

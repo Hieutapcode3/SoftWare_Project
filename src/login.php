@@ -14,23 +14,31 @@ if ($_POST) {
     
         if (mysqli_num_rows($result) > 0 && !empty($user) && !empty($pass)) {
             $row = mysqli_fetch_assoc($result);
-            
             if ($row['email_verified'] == 0) {
                 $_SESSION['error_login_message'] = "Tài khoản của bạn chưa được xác thực. Vui lòng kiểm tra email.";
-            } else if ($pass === $row['password']) {
+            } 
+            else if ($pass === $row['password']) {
                 $_SESSION['user'] = $row['CustomerName'];
                 $_SESSION['CustomerID'] = $row['CustomerID'];
-                header("Location: index.html");  
+                if ($row['ischecked'] == 0) {
+                    sleep(2);
+                    header("Location: index.html");
+                } else {
+                    sleep(2);
+                    header("Location: main_page.php");
+                }
                 exit();
-            } else {
+            } 
+            else {
                 $_SESSION['error_login_message'] = "Sai tên đăng nhập hoặc mật khẩu!";
             }
         } else {
             $_SESSION['error_login_message'] = "Vui lòng nhập đủ thông tin!";
         }
-        header("Location: login.php");  
-        exit(); 
+        header("Location: login.php");
+        exit();
     }
+    
     
     
     if (isset($_POST['dangky'])) {

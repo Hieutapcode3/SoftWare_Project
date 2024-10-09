@@ -1,44 +1,82 @@
-async function fetchNutritionData(gender) {
-    try {
-        // Xác định đường dẫn file JSON dựa vào giới tính
-        const filePath = gender === 'male' ? '/asset/data/nutrition_schedule/male.json' : '/asset/data/nutrition_schedule/female.json';
-        
-        const response = await fetch(filePath);
-        
-        // Kiểm tra xem phản hồi có thành công không
-        if (!response.ok) {
-            throw new Error('Mạng không thành công: ' + response.statusText);
-        }
+const genderMapping = {
+  Nam: "male",
+  Nữ: "female",
+};
 
-        // Chuyển đổi dữ liệu từ response sang JSON
-        const nutritionData = await response.json();
-        
-        // Trả về dữ liệu
-        return nutritionData;
-    } catch (error) {
-        console.error('Lỗi khi lấy dữ liệu:', error);
+const purposeMapping = {
+  "Giảm cân": "weight_loss",
+  "Tăng cân": "weight_gain",
+  "Giữ vóc dáng": "keep_body",
+};
+
+const dietMapping = {
+  "Eat Clean": "eat_clean",
+  "Low Carb": "low_carb",
+  Vegan: "vegan",
+  HCG: "hcg",
+};
+
+async function fetchUserData() {
+  try {
+    const response = await fetch("userdetails.php");
+    if (!response.ok) {
+      throw new Error(
+        "Không thể lấy dữ liệu người dùng: " + response.statusText
+      );
     }
+    const userData = await response.json();
+    return {
+      gender: userData.gender,
+      purpose: userData.purpose,
+      dietType: userData.dietType,
+    };
+  } catch (error) {
+    console.error("Lỗi khi lấy dữ liệu người dùng:", error);
+  }
+}
+
+async function fetchNutritionData(gender, purpose, dietType) {
+  try {
+    const mappedGender = genderMapping[gender];
+    const mappedPurpose = purposeMapping[purpose];
+    const mappedDiet = dietMapping[dietType];
+    const filePath =
+      mappedGender === "male"
+        ? "../asset/data/nutrition_schedule/male.json"
+        : "../asset/data/nutrition_schedule/female.json";
+    const response = await fetch(filePath);
+    if (!response.ok) {
+      throw new Error("Mạng không thành công: " + response.statusText);
+    }
+    const nutritionData = await response.json();
+    console.log(nutritionData);
+    return nutritionData[mappedGender][mappedPurpose][mappedDiet];
+  } catch (error) {
+    console.error("Lỗi khi lấy dữ liệu dinh dưỡng:", error);
+  }
 }
 
 async function generateWeeklySchedule() {
-    const gender = document.getElementById("gender").value; // Lấy giá trị giới tính
-    const purpose = document.getElementById("purpose").value; // Lấy giá trị mục đích
-    const dietType = document.getElementById("dietType").value; // Lấy giá trị loại thực đơn
+  const userData = await fetchUserData();
+  console.log(userData);
 
-    // Gọi hàm fetchNutritionData với giới tính
-    const nutritionData = await fetchNutritionData(gender);
+  if (!userData) {
+    console.error("Không có dữ liệu người dùng.");
+    return;
+  }
 
-    // Kiểm tra nếu có dữ liệu
-    if (nutritionData) {
-        const diet = nutritionData[gender][purpose][dietType]; // Thay đổi để lấy dữ liệu đúng từ cấu trúc JSON
-        const schedule = diet; // Lấy lịch trình
+  const gender = userData.gender;
+  const purpose = userData.purpose;
+  const dietType = userData.dietType;
 
-        // Tạo bảng
-        const table = document.getElementById("weeklySchedule");
-        table.innerHTML = ""; // Xóa nội dung bảng cũ
+  const nutritionData = await fetchNutritionData(gender, purpose, dietType);
 
-        // Tiêu đề bảng
-        let headerRow = `<tr>
+  if (nutritionData) {
+    const schedule = nutritionData;
+
+    const table = document.getElementById("weeklySchedule");
+    table.innerHTML = "";
+    let headerRow = `<tr>
                             <th>Ngày</th>
                             <th>Bữa sáng</th>
                             <th>Bữa trưa</th>
@@ -46,19 +84,18 @@ async function generateWeeklySchedule() {
                             <th>Bữa tối</th>
                             <th>Tổng Calo</th>
                          </tr>`;
-        table.innerHTML += headerRow;
+    table.innerHTML += headerRow;
 
-        // Duyệt qua từng ngày và thêm vào bảng
-        schedule.forEach(dayData => {
-            const breakfastCalories = dayData.meals.breakfast.calories;
-            const lunchCalories = dayData.meals.lunch.calories;
-            const snackCalories = dayData.meals.snack.calories;
-            const dinnerCalories = dayData.meals.dinner.calories;
+    // Tạo nội dung bảng
+    schedule.forEach((dayData) => {
+      const breakfastCalories = dayData.meals.breakfast.calories;
+      const lunchCalories = dayData.meals.lunch.calories;
+      const snackCalories = dayData.meals.snack.calories;
+      const dinnerCalories = dayData.meals.dinner.calories;
+      const totalCalories =
+        breakfastCalories + lunchCalories + snackCalories + dinnerCalories;
 
-            // Tính tổng calo cho ngày hiện tại
-            const totalCalories = breakfastCalories + lunchCalories + snackCalories + dinnerCalories;
-
-            let row = `<tr>
+      let row = `<tr>
                             <td>${dayData.day}</td>
                             <td>${dayData.meals.breakfast.name}<br>(${breakfastCalories} cal)</td>
                             <td>${dayData.meals.lunch.name}<br>(${lunchCalories} cal)</td>
@@ -66,7 +103,11 @@ async function generateWeeklySchedule() {
                             <td>${dayData.meals.dinner.name}<br>(${dinnerCalories} cal)</td>
                             <td>${totalCalories} cal</td>
                         </tr>`;
-            table.innerHTML += row;
-        });
-    }
+      table.innerHTML += row;
+    });
+  }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  generateWeeklySchedule();
+});

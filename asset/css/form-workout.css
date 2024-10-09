@@ -297,6 +297,11 @@ nav .container-nav-bar i {
     line-height: 48px;
     margin: 0;
 }
+.form-selection .question .bcd {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 12px;
+}
 .container-form-select .form-selection .container-options {
     width: 100%;
     display: flex;
@@ -545,4 +550,69 @@ nav .container-nav-bar i {
     font-weight:100;
     font-size: 14px;
     color: #DADADA;
+}
+.form-selection .container-auto-select {
+    color: #fff;
+    margin-bottom: 40px;
+}
+.form-selection .container-auto-select>label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    border-top: 1px solid #393939;
+    border-bottom: 1px solid #393939;
+}
+.form-selection .container-auto-select label span:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    width: 85%;
+}
+.form-selection .container-auto-select label span:last-of-type {
+    font-size: 14px;
+    padding-top: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.form-selection .container-auto-select label input {
+    display: none;
+}
+.form-selection .container-category .ct {
+    color: #fff;
+    margin-bottom: 40px;
+}
+.form-selection .container-category .ct .title {
+    font-size: 28px;
+    line-height: 40px;
+    margin: 0;
+    font-weight: bold;
+}
+.form-selection .container-category .ct ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-left: -8px;
+    list-style-position: inside;
+}
+.form-selection .container-category .ct ul li {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 4px 10px;
+    border: 2px solid transparent;
+    margin: 8px;
+    background-color: #2A2A2A;
+    cursor: pointer;
+}
+
+.next-question-btn.center {
+    justify-content: center;   
+    position: fixed;
+    padding: 8px 16px 16px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
 }

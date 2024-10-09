@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif ;
@@ -18,7 +21,7 @@ body {
   .head {
     position: fixed;
     top: 0;
-    background-color: #121212;
+    background-color: #1c1c1c;
     width: 100%;
     height: auto;
     z-index: 10;
@@ -26,7 +29,7 @@ body {
   
   .header-container {
     width: 100%;
-    padding: 20px;
+    padding: 16px 24px 18px;
     background: rgba(255, 255, 255, 0); /* Nền trong suốt */
     display: flex;
     align-items: center;
@@ -57,6 +60,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 1px;
+    color: #000;
   }
   
   .header-container .app-name .system {
@@ -72,8 +76,14 @@ body {
     font-family: 'FutureSport';
     font-weight: bold;
     font-size: 14px;
+    color: #FF6025;
   }
-  
+  @font-face {
+    font-family: 'FutureSport'; /* Đặt tên cho font */
+    src: url('../font/TechnoRaceItalic-eZRWe.otf') format('truetype'); /* Đường dẫn đến file font */
+    font-weight: normal;
+    font-style: normal;
+}
   /* Thanh điều hướng (nav) */
   .nav {
     display: flex;
@@ -116,7 +126,7 @@ body {
     font-weight: bold;
     padding: 8px;
     border: none;
-    background-color: #121212;
+    background-color: transparent;
     cursor: pointer;
   }
   
@@ -211,7 +221,10 @@ body {
     border: 0;
     cursor: pointer;
   }
-  
+  .container-nav-bar ul li button a {
+    text-decoration: none;
+    color: #fff;
+  }
   .container-nav-bar ul li button:hover {
     background-color: #393939;
   }

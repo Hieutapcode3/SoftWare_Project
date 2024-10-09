@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thời gian biểu dinh dưỡng 7 ngày</title>
+    <title>Nutrition Plan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../asset/css/schedule.css">
+    <link rel="stylesheet" href="../asset/icon/themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="head">
         <div class="header-container">
-          <a href="#" class="app-name">
+          <a href="main_page.php" class="app-name">
             <div class="health"><p>HEALTH</p></div>
             <div class="system"><p>SYSTEM</p></div>
           </a>
           <div class="nav">
-            <a href="./main_page.php">Trang chủ</a>
             <a href="./nutrition.html">Dinh dưỡng</a>
             <a href="./exercise.html">Tập luyện</a>
           </div>
@@ -38,39 +38,11 @@
 
     <div class="content">
         <h1>Thời gian biểu dinh dưỡng 7 ngày</h1>
-        
-        <form id="nutritionForm">
-            <label for="gender">Giới tính:</label>
-            <select id="gender">
-                <option value="male">Nam</option>
-                <option value="female">Nữ</option>
-            </select>
-        
-            <label for="purpose">Mục đích:</label>
-            <select id="purpose">
-                <option value="weight_loss">Giảm cân</option>
-                <option value="weight_gain">Tăng cân</option>
-                <option value="keep_body">Giữ vóc dáng</option>
-            </select>
-        
-            <label for="workoutType">Loại hình tập luyện:</label>
-            <select id="workoutType">
-                <option value="strength_training">Tập sức mạnh</option>
-                <option value="cardio">Tập thể dục tim mạch</option>
-                <option value="flexibility">Tập dẻo dai</option>
-                <option value="high_intensity">Tập cường độ cao (HIIT)</option>
-                <option value="yoga">Yoga</option>
-                <!-- Thêm các loại hình tập luyện khác tại đây -->
-            </select>
-
-        
-            <button type="button" onclick="generateWeeklySchedule()">Tạo thời gian biểu</button>
-        </form> 
     </div>
+
     <div class="table-wrapper">
-                <table id="weeklySchedule"></table>
+        <table id="weeklySchedule"></table>
     </div>
     <script src="../asset/js/nutrition_schedule.js"></script>
-    <script src="../asset/js/main_page.js"></script>
 </body>
 </html>

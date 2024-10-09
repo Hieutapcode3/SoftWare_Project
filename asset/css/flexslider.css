@@ -58,17 +58,17 @@
 }
 
 #main-slider .slides > li {
-  display: none;
-  list-style: none; /* Xóa dấu chấm hoặc ký hiệu của li */
-  margin: 0; /* Xóa margin của li */
-  padding: 104px 0; /* Xóa padding của li */
-  background: linear-gradient(0deg, #121212 0%, rgba(31, 147, 255, 0.275) 50%, #121212 100%);
+  display: block;
+  list-style: none; 
+  margin: 0; 
+  padding: 104px 0; 
+  background: linear-gradient(0deg, #1a1515 0%, rgba(31, 147, 255, 0.275) 50%, #1a1515 100%);
 
 }
 
 #main-slider .slides >li:last-child{
-  background: linear-gradient(0deg, #121212 0%, rgba(4, 138, 155, 0.8) 50%, #121212 100%);
-
+  background: linear-gradient(0deg, #1a1515 0%, rgba(4, 138, 155, 0.8) 50%, #1a1515 100%);
+  display: none;
 }
 
 /* Hiển thị slide hiện tại */
